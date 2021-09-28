@@ -1,12 +1,12 @@
 
-;KOLLA Pè BUPPEN! (ILLEGAL SPARNING?)
+;KOLLA PÔøΩ BUPPEN! (ILLEGAL SPARNING?)
 
-;fADNINGAR GJORDA MED MACROT REPOUTSB, SOM E LITE SLîARE, TILLRÑCKLIGT?????
+;fADNINGAR GJORDA MED MACROT REPOUTSB, SOM E LITE SL√∂ARE, TILLR√§CKLIGT?????
 
-CHECK1NUM=4EH	;JéMT!
+CHECK1NUM=4EH	;J√ÑMT!
 finmenu=1
 showall=0	;visa mig ALLT! (Snuskigt???)
-NOOFWORDS=64 ;OBS SôK SLUMPEN!
+NOOFWORDS=64 ;OBS S√ñK SLUMPEN!
 demover=0
 keyhandler=65h
 NOFILLIT=0
@@ -38,14 +38,14 @@ charwith=18
 charheight=14
 mellanrum=4
 FONTW=18	;"BOKSTAV-MED"
-sdrsizze=35	;ca sizen pÜ en sdr!!!
+sdrsizze=35	;ca sizen p√• en sdr!!!
 WORDLEN=8	;EVEN NUMBER!!!!
 mod1size=252868
 pos1=3		;mod1size/65536
 pos2=56260	;mod1size-pos1*65536
 nosnd_needed=530-sdrsizze		;ska ha ca 2 k mer (start!!)
 needed=573-sdrsizze		;ska ha ca 2 k mer (start!!)
-lsize=300		;obs!!!!! KOM I HèG è KOLLA!!!
+lsize=300		;obs!!!!! KOM I HÔøΩG ÔøΩ KOLLA!!!
 basememreq_cp=(needed-lsize)			;free mem required (size needed-size of intro+size of start.exe)
 nosoundmemreq_cp=(nosnd_needed-lsize)		;if no music, or XMS detected
 nosoundmemreq=basememreq_cp/16*1000+trim-38000/16					;nosoundmemreq_cp/16*1000+trim
@@ -67,7 +67,7 @@ TEXTCOLOR=60
 clear_boxen macro vart_start,bredden,hojden
 local	lajban_laban_o_lajla_samt_det_lilla_spoket_laban
 	move	es,0a000h
-	mov	al,es:[128/8+3]		;dÑr Ñr det svart min vÑn!!
+	mov	al,es:[128/8+3]		;d√§r √§r det svart min v√§n!!
 	mov	cx,hojden
 	mov	di,vart_start
 lajban_laban_o_lajla_samt_det_lilla_spoket_laban:
@@ -85,8 +85,8 @@ repoutsb	macro
 lerum:
 	outsb
 	jmp	$+2
-	loop	lerum		;nîdvÑndigt lÜngsam!!
-endm	
+	loop	lerum		;n√∂dv√§ndigt l√•ngsam!!
+endm
 STRLEN	MACRO DEST,TEXT		;DOES NOT INCLUDE ,0
 	LOCAL	NXTCH,NOMRCC,TEMPCNT
 	PUSHA
@@ -120,8 +120,8 @@ SetRBPL macro   BPLnr
                 mov     al,4
                 out     dx,ax
                 endm
-		
-		
+
+
 
 STRCOPY	MACRO DEST,SOURCE
 	PUSHA
@@ -351,13 +351,13 @@ LOCAL	TRULLE
 	mov	ax,0f02h
 	out	dx,ax
 	mova	es,0a000h
-	mov	cx,32760 ;vem vet, det kanske blir exception om den îverskrider
+	mov	cx,32760 ;vem vet, det kanske blir exception om den √∂verskrider
 	xor	ax,ax
 	mov	di,ax
 TRULLE:	NOP
 	stosw
 	NOP
-	LOOP	TRULLE	;TRULLSON ASSè!
+	LOOP	TRULLE	;TRULLSON ASSÔøΩ!
 endm
 
 movpal	macro sseg,source,dseg,dest
@@ -408,7 +408,7 @@ wait_sync macro	times
 local	lo,ko,sko
 
 	mov cx,times
-	
+
 lo:	push	cx
 	synca
 IF	NOFILLIT
@@ -426,7 +426,7 @@ ENDIF
 	call	dword ptr es:[keyhandler*4]
 if	demover
 	cmp	al,57
-	jne	sko	
+	jne	sko
 	mov	cs:laddaden,true
 sko:
 endif
@@ -463,12 +463,12 @@ if	demover
 	CMP	AL,01
 	JE	SPYAN_STEWART
 	cmp	al,57
-	jne	sko	
+	jne	sko
 	mov	cs:laddaden,true
 	JMP	KO
 ELSE
 	cmp	al,57
-	jne	sko	
+	jne	sko
 	mov	cs:laddaden,true
 	JMP	KO
 endif
@@ -511,7 +511,7 @@ ENDIF
 	call	dword ptr es:[keyhandler*4]
 if	demover
 	cmp	al,57
-	jne	sko	
+	jne	sko
 	mov	cs:laddaden,true
 sko:
 endif
@@ -542,7 +542,7 @@ ENDIF
 	call	dword ptr es:[keyhandler*4]
 if	demover
 	cmp	al,57
-	jne	sko	
+	jne	sko
 	mov	cs:laddaden,true
 sko:
 endif
@@ -616,7 +616,7 @@ fade	macro	hast,pal1seg,pal1adr,pal2seg,pal2adr
 	local fada
 	mov	cs:steg,hast
 	mov	cL,cs:steg
-;	INC	CL		;FôR ATT UNDVIKA BAJSET!!!
+;	INC	CL		;F√ñR ATT UNDVIKA BAJSET!!!
 	XOR	CH,CH
 fada:	move	ds,data
 	mov	SI,pal2adr
@@ -712,7 +712,7 @@ gnuor:
 	mov	dx,3c8h
 	mov	al,1
 	out	dx,al
-	
+
 	fade1	52,sped
 	fade1	52,sped
 	fade1	62,sped
@@ -730,7 +730,7 @@ gnuor:
 	fade1	25,sped
 	synca
 
-	loop	gnuor		
+	loop	gnuor
 endm
 fade3b	 macro sped
 	local gnuor
@@ -739,7 +739,7 @@ gnuor:
 	mov	dx,3c8h
 	mov	al,1
 	out	dx,al
-	
+
 	fade1B	52,sped
 	fade1B	52,sped
 	fade1B	62,sped
@@ -758,7 +758,7 @@ gnuor:
 	synca
 	inc cx
 	cmp cx,sped
-	jne	gnuor		
+	jne	gnuor
 endm
 ;************
 fade256	macro	hast,pal1seg,pal1adr,pal2seg,pal2adr
@@ -793,7 +793,7 @@ movepic	macro nisse,goran
 	mov	ax,0a000h
 	mov	es,ax
 	mov	ds,ax
-	mov	cx,95	;Bildhîjd
+	mov	cx,95	;Bildh√∂jd
 	mov	di,nisse
 	mov	si,goran
 taljan:	push	cx
@@ -855,7 +855,7 @@ db 'Refer to your manual for further information.',13,10
 db 13,10,'Press ESCape to quit or P to proceed...$'
 comment\
 notenoughmess	db 'Pinball Fantasies requires at least 555 kbytes (568000) free base memory',13,10
-		db "or 520 kbytes (530000) for 'Gravis UltraSound' or 'nosound' drivers.",13,10  
+		db "or 520 kbytes (530000) for 'Gravis UltraSound' or 'nosound' drivers.",13,10
 		db 'Please look in Your manual how to free up DOS memory!',13,10,'$',0
 \
 notenoughmess label byte
@@ -863,14 +863,14 @@ db    "You do not have enough free memory to run Pinball Fantasies.",13,10
 db    "You need to have at least 530K (542700 bytes) free to run ",13,10
 db    "the game if you are using a Gravis Ultrasound sound card or ",13,10
 db    "are planning to run the game with no sound at all.",13,10,13,10
-     
- db "If you want to have sound in the game, you will need at",13,10 
+
+ db "If you want to have sound in the game, you will need at",13,10
  db "least 560K (573440 bytes) free.",13,10,13,10
-      
+
      db "Please type CHKDSK or MEM (DOS 4 or higher) at the dos prompt",13,10
      db "to display free memory.",13,10,13,10
-     
-     db 'Please refer to the "troubleshooting" section in your',13,10 
+
+     db 'Please refer to the "troubleshooting" section in your',13,10
      db "instruction manual for guidance on how to free your ",13,10
      db "computers memory.",13,10,0,"$"
 
@@ -899,7 +899,7 @@ HI_SCORE_LIST LABEL BYTE
 	db 0,0,0, 0,1,0, 0,0,0, 0,0,0,'ANY',0
 	db 0,0,0, 0,0,5, 0,0,0, 0,0,0,'J L',0
 HI_SCORE_LIST2 LABEL BYTE
-	db 0,0,0, 1,0,0, 0,0,0, 0,0,0,'TSP',0	;HASTIGHETSJéVLARNA
+	db 0,0,0, 1,0,0, 0,0,0, 0,0,0,'TSP',0	;HASTIGHETSJ√ÑVLARNA
 	db 0,0,0, 0,5,0, 0,0,0, 0,0,0,'J L',0
 	db 0,0,0, 0,2,5, 0,0,0, 0,0,0,'ICE',0
 	db 0,0,0, 0,1,0, 0,0,0, 0,0,0,'ANY',0
@@ -914,7 +914,7 @@ HI_SCORE_LIST4 LABEL BYTE
 	db 0,0,0, 0,2,5, 0,0,0, 0,0,0,'ANY',0
 	db 0,0,0, 0,1,0, 0,0,0, 0,0,0,'J L',0
 
-;HéR!
+;H√ÑR!
 MENU_ITEMS	LABEL WORD
 		DW L_BALLS
 		DW L_ANGLE
@@ -966,7 +966,7 @@ HEXTBL		DB "0123456789ABCDEF"
 	DB 16 DUP (2)
 
 TEXTLISTA LABEL WORD
-	DW HITEXT1	;OBS!!! Higscore vill ligga hÑr
+	DW HITEXT1	;OBS!!! Higscore vill ligga h√§r
 ;GNU
 	dw -1
 	dw -1
@@ -1024,8 +1024,8 @@ TEXT2	DB 0
 	DB 0
 	DB 0
 TEXT4	DB 0
-	DB 0 
-	DB 0 
+	DB 0
+	DB 0
 	DB 0
 	DB '-WINNERS-',0
 	DB '-DO NOT USE-',0
@@ -1036,8 +1036,8 @@ TEXT4	DB 0
 	DB 0
 	DB 0
 TEXT3	DB 'SELECTOR INSTRUCTIONS',0
-	DB 0 
-	DB 'F1 - PARTYLAND     ',0 
+	DB 0
+	DB 'F1 - PARTYLAND     ',0
 	DB 'F2 - SPEED DEVILS  ',0
 	DB 'F3 - BILLION DOLLAR',0
 	DB 'F4 - STONES N BONES',0
@@ -1048,7 +1048,7 @@ TEXT3	DB 'SELECTOR INSTRUCTIONS',0
 	DB 0
 	DB 0
 
-;HéR!
+;H√ÑR!
 TRE		DB '3',0
 FEM		DB '5',0
 NORMAL		DB 'NORMAL',0
@@ -1069,8 +1069,8 @@ ZCOLOR		DB 'COLOR',0
 MONO		DB 'MONO ',0
 
 PIL	DB '>',0
-MENUtext DB 'OPTIONS MENU',0 
-	DB 0 
+MENUtext DB 'OPTIONS MENU',0
+	DB 0
 FIRSTCHOICE	LABEL BYTE
 T_BALLS		DB '  BALLS:                '   ;3, 5
 T_ANGLE		DB '  ANGLE:                '   ;NORMAL, HIGH
@@ -1078,7 +1078,7 @@ T_SCROLLING	DB '  SCROLLING:            '	;BRUTAL, FIRM, *SMOOTH*, SLIMY
 T_IM		DB '  INGAME MUSIC:         '	;ON, OFF
 T_RESOLUTION	DB '  RESOLUTION:           '	;NORMAL, HIGH
 T_MODE		DB '  COLOR MODE:           '	;COLOR, MONOCHROME
-	DB 0 
+	DB 0
 	DB '  SAVE AND EXIT         '
 	DB 0
 	DB 0
@@ -1233,17 +1233,17 @@ extrn	intpic2:byte
 ends
 
 presentseg	segment para public 'data'
-extrn	present:byte	
+extrn	present:byte
 ends
 
 
 
 fl1seg	segment para public 'data'
-extrn	fl1:byte	
+extrn	fl1:byte
 ends
 
 fl2seg	segment para public 'data'
-extrn	fl2:byte	
+extrn	fl2:byte
 ends
 
 if demover
@@ -1319,11 +1319,11 @@ synca macro
 	mov	es,ax
 	MOV	AX,0
 	MOV	DS,AX
-venta:	
+venta:
 	MOV	AX,8
 	PUSHF
 	CALL	DWORD PTR DS:[66H*4]
-	inc	cs:slumpen	
+	inc	cs:slumpen
 	cmp	byte ptr es:[76h],0
 	jz	venta
 	mov	byte ptr es:[76h],0
@@ -1362,7 +1362,7 @@ TOGGLAREN_READY:
 	POPA
 
 	mov	ax,0
-	int	keyhandler	;kolla om fîrsta gÜngen . . 
+	int	keyhandler	;kolla om f√∂rsta g√•ngen . .
 	cmp	ah,false
 	je	notfirstime_SO_NO_PMTEST
 ;******************************************************************************
@@ -1416,13 +1416,13 @@ POPA
 	call	set240
 	move es,ds
 	move ds,data
-	call	set_pal		;slÑck paletten	
+	call	set_pal		;sl√§ck paletten
 	CALL	UNPKPICS
 	mov bx,cs:minneskillen
 
 	mov es,bx
 	neg bx
-if	demover		;ingen îverrÑnning!!
+if	demover		;ingen √∂verr√§nning!!
 	add bx,qsune
 else
 	add bx,dumpningsplats
@@ -1434,7 +1434,7 @@ endif
 	call	init_sound
 
 	mov ah,48h
-	mov bx,0ffffh		;sÜ mycket minne har ingen!!
+	mov bx,0ffffh		;s√• mycket minne har ingen!!
 	int 21h
 	PUSH	BX
 ;	debugval 0,5,bx,'Free mem after intro + SDR load'
@@ -1464,9 +1464,9 @@ minneskillen dw ?
 minnesaron:
 	CALL	MAKE_IT_NICE	;THE OPTIONS SCREEN
 
-;******************** Om fîrsta gÜngen spela mod 1 ******************
+;******************** Om f√∂rsta g√•ngen spela mod 1 ******************
 	mov	ax,0
-	int	keyhandler	;kolla om fîrsta gÜngen . . 
+	int	keyhandler	;kolla om f√∂rsta g√•ngen . .
 	cmp	ah,false
 	je	notfirstime_sonofirsttimemoduleplaying
 	MOV	DX,OFFSET introMOD
@@ -1489,9 +1489,9 @@ moduleloaded:
 	filepoint bx,pos1,pos2
 	usel=offset chksum
 	readfile bx,2,usel
-	CLC	
+	CLC
 
-;**************************** flyttad pga cp idÇ!!!
+;**************************** flyttad pga cp id‚Äö!!!
 
 	CALL	READ_HIGHS
 	mov	ax,11
@@ -1516,7 +1516,7 @@ moduleloaded:
 
 
 
-if demover 
+if demover
 jmp	firsttime_init
 endif
 
@@ -1569,7 +1569,7 @@ ALL_OVER_AGAIN:
 	checkquit
 
 	setscr	0
-	
+
 	mov	dx,3c4h
 	mov	ax,0f02h
 	out	dx,ax
@@ -1584,7 +1584,7 @@ GNUOR:	stosw
 	mov	di,offset cs:faded_pal
 	mov	cx,256*3
 	xor	al,al
-	rep	stosb		;rensa pallen sÜ att set_pal slÑcker
+	rep	stosb		;rensa pallen s√• att set_pal sl√§cker
 	CALL	SET_PAL256
 
 	fillmusicbuf
@@ -1603,7 +1603,7 @@ GNUOR:	stosw
 	fade	20,presentseg,presentpaloff,data,blackpaloff
 	checkquit
 
-	
+
 
 
 	cleargfx
@@ -1613,19 +1613,19 @@ GNUOR:	stosw
 	INT	10H  ;********************* 640*480,16 *******************
 	CALL	BLANK_ON
 
-	
+
 ;	setvga
 ;	sethires
 
 	FILLMUSICBUF
 	fade	1,data,blackpaloff,data,blackpaloff
-	FILLMUSICBUF	
-	
+	FILLMUSICBUF
+
 	CALL	BLANK_OFF
 	CALL	SET_EGAPAL
 	CALL	BLANK_ON
 	FILLMUSICBUF
-	
+
 	mov	ax,0
 	mov	bx,intpic2pos
 	mov	cx,640
@@ -1635,11 +1635,11 @@ GNUOR:	stosw
 	call	unpklbm
 	mov	intpic2paloff,dx
 	FILLMUSICBUF
-	
+
 	fade	20,data,blackpaloff,intpic2seg,intpic2paloff
 	wait_music fantasietime
 	fade	20,intpic2seg,intpic2paloff,data,blackpaloff
-;************ HéRIFRèN
+;************ H√ÑRIFRÔøΩN
 	fillmusicbuf
 	checkquit
 	jmp	trasselsudd
@@ -1648,7 +1648,7 @@ skip_the_intro_bra_att_hoppa_till_da:
 	setvga
 	sethires
 	fade	1,data,blackpaloff,data,blackpaloff
-trasselsudd:		;kan de bli rîrigare??
+trasselsudd:		;kan de bli r√∂rigare??
 
 	SYNCA
 	setvga
@@ -1665,10 +1665,10 @@ trasselsudd:		;kan de bli rîrigare??
 JMP SVEN_GURKA
 
 GetKey:
-read_again_my_friend:	
+read_again_my_friend:
 	move	ds,data
 	mov	ax,12h
-	int	keyhandler	;report scancode 0=no key pressed     cp! calla isÑllet
+	int	keyhandler	;report scancode 0=no key pressed     cp! calla is√§llet
 	push	ax
 	synca
 	pop	ax
@@ -1681,7 +1681,7 @@ retn
 GetKey2:
 	move	ds,data
 	mov	ax,12h
-	int	keyhandler	;report scancode 0=no key pressed     cp! calla isÑllet
+	int	keyhandler	;report scancode 0=no key pressed     cp! calla is√§llet
 	push	ax
 	synca
 	pop	ax
@@ -1788,7 +1788,7 @@ ENDM
 	jz	ventaTT
 	mov	byte ptr es:[76h],0
 	pop	CX DS es
-	LOOP	KULO	
+	LOOP	KULO
 	POPA
 	RETN
 ANDHAMTNING ENDP
@@ -1802,7 +1802,7 @@ PUTCHAR2 PROC NEAR	;INPUT:AL=CHAR,DI=SCR_DEST,DL=COLOR
 	MOV	BX,320
 	DIV	BX
 	MOV	DX,AX
-	PUSH	DX		;YPOS Pè STACKEN
+	PUSH	DX		;YPOS PÔøΩ STACKEN
 	MOV	BX,320
 	MUL	BX
 	POP	DX
@@ -1830,7 +1830,7 @@ PUTCHAR2 PROC NEAR	;INPUT:AL=CHAR,DI=SCR_DEST,DL=COLOR
 	XCHG	AX,DX
 	XCHG	DX,DX
 
-;* buf2 *	
+;* buf2 *
 	MOVE	ES,0A000H
 	MOVE	DS,DATA
 	MOV	CS:SIDA,0
@@ -1878,7 +1878,7 @@ DOTHEINPUT:
 	ADC	CH,0
 NXTINP:
 	CALL	WINDOWS_PRINT
-	call	GetKey	;INT	16H (nÑstan)
+	call	GetKey	;INT	16H (n√§stan)
 	CMP	AL,13
 	JE	ENTERT
 	CMP	AL,8
@@ -1920,7 +1920,7 @@ VAL2DECASC MACRO STRINGEN,VALUE
 	PUSH	VALUE
 	POP	AX
 	POP	DI
-	
+
 	NIL	DX
 	MOV	BX,10000
 	DIV	BX
@@ -2027,7 +2027,7 @@ fillmusicbuf
 	mov	di,offset cs:faded_pal
 	mov	cx,256*3
 	xor	al,al
-	rep	stosb		;rensa pallen sÜ att set_pal slÑcker
+	rep	stosb		;rensa pallen s√• att set_pal sl√§cker
 	CALL	SET_PAL256
 choosern_init:
 if demover
@@ -2036,22 +2036,22 @@ if demover
 	setlores
 	call	set240
 	CALL	BLANK_ON
-	
+
 ;	MOV	AX,0EH
 ;	SIMINT	10H			;640*200,16
 endif
-	
+
 	FILLMUSICBUF
 	cleargfx
-	
+
 if demover
 	fade	1,data,blackpaloff,data,blackpaloff
-else	
+else
 	SETLORES ;************************ 640*240*16 *********************
 	fade	3,data,blackpaloff,data,blackpaloff
 ;	slackA 320
 ;	slack	1
-endif	
+endif
 if demover
 else
 ;************ checksum!!!!
@@ -2069,7 +2069,7 @@ liiirarn:
 
 
 
-;erbjud vÑxling mellan 2 st 16-paletter
+;erbjud v√§xling mellan 2 st 16-paletter
 	synca
 	mov	dx,3dah
 	in	al,dx
@@ -2083,12 +2083,12 @@ liiirarn:
 	or	al,80h
 	out	dx,al
 endif
-	FILLMUSICBUF	
+	FILLMUSICBUF
 IF DEMOVER
 	JMP	JAGARN
-ELSE	
+ELSE
 ;setscr 240*80+95*3*80
-;packa upp & spara bilderna RèTT!!
+;packa upp & spara bilderna RÔøΩTT!!
 	mov	ax,hsl1seg
 	call	packa_upde
 	mov	di,offset savearea1
@@ -2100,7 +2100,7 @@ ELSE
 	jmp	jagarn
 packa_upde:
 	mov	cx,640
-	mov	bx,0		
+	mov	bx,0
 	mov	bp,0b
 	mov	dx,0
 	mov	es,ax
@@ -2132,7 +2132,7 @@ lajlas_kusin:
 	pop	cx
 	loop	ynkes
 	move	ds,data
-retn	
+retn
 
 put_the_hslogo1:
 	pusha
@@ -2163,8 +2163,8 @@ nologga2:
 retn
 
 perverted_rave_party:
-	call	aronsson_bort	;jasÜ aronsson fÜr inte va med pÜ rave
-;bp = dest, si = sÜs
+	call	aronsson_bort	;jas√• aronsson f√•r inte va med p√• rave
+;bp = dest, si = s√•s
 	mov	bl,1
 	mov	cx,4
 	move	es,0a000h
@@ -2186,8 +2186,8 @@ lajlas_syssling:
 	shl	bl,1
 	pop	cx
 	loop	ynke
-retn	
-	
+retn
+
 jagarn:
 if	demover
 	slackA 320
@@ -2195,9 +2195,9 @@ if	demover
 else
 	slackA 130
 	SYNCA
-	mov	cx,7	;Fonten ligger pÜ slutet!! Inte lÑngre, de funkade ej!!
+	mov	cx,7	;Fonten ligger p√• slutet!! Inte l√§ngre, de funkade ej!!
 endif
-	mov	bx,0		
+	mov	bx,0
 
 makefjups:
 	push	cx
@@ -2232,7 +2232,7 @@ ENDIF
 if demover
 else
 	setscr 130/4/2
-;	fade	1,tabletabell[0],tablepaloff[0],tabletabell[0],tablepaloff[0] ;SÑtt rÑtt!!
+;	fade	1,tabletabell[0],tablepaloff[0],tabletabell[0],tablepaloff[0] ;S√§tt r√§tt!!
 endif
 if demover
 ;	mov	al,0
@@ -2240,7 +2240,7 @@ if demover
 ;	call	julius
 	SETSCR	80*28
 	SYNCA
-	fade	40,data,blackpaloff,tabletabell[0],tablepaloff[0] ;SÑtt rÑtt!!
+	fade	40,data,blackpaloff,tabletabell[0],tablepaloff[0] ;S√§tt r√§tt!!
 	jmp	demoversion
 endif
 
@@ -2257,7 +2257,7 @@ NXXXXT:	MOV	CL,[SI]
 	INC	DI
 	JMP	SHORT NXXXXT
 ENDOFIT:
-	MOVE	ES,0A000H	;CP, OCH INTE NôDVéNDIGT!
+	MOVE	ES,0A000H	;CP, OCH INTE N√ñDV√ÑNDIGT!
 ENDM
 
 ;*******************************************************************
@@ -2266,7 +2266,7 @@ ENDM
 nuvaranden=offset nuvarande
 	mov	al,16
 	mov	bx,10
-	call	julius		;Ceasar sÑtter en palett!!
+	call	julius		;Ceasar s√§tter en palett!!
 	mov	al,0
 	mov	bx,10
 	call	julius
@@ -2277,7 +2277,7 @@ nuvaranden=offset nuvarande
 	MOV	CS:CHANGE16PAL,TRUE
 
 	slacka	130
-	
+
 	mov	cx,4
 loket:
 	push	cx
@@ -2289,7 +2289,7 @@ loket:
 	MOV	CS:SIDOBAR,TRUE
 	wait_sync_spec2 20
 	slackA 320
-;************************** HéR E NYA SKYDDET!!!!!!!!!! ***********************
+;************************** H√ÑR E NYA SKYDDET!!!!!!!!!! ***********************
 	call	aronsson
 
 	MOVE	DS,DATA
@@ -2314,9 +2314,9 @@ start_kek2:
 	ADD	CS:AVSLUTA_PSEUDO,AX
 	CMP	CS:AVSLUTA_PSEUDO,OFFSET CS:SHOWMENU
 	MOV	CS:AVSLUTA_PSEUDO,OFFSET CS:AVSLUTA
-	je	no_skydd	;lÜter faligt!! Ñr Ñnnu farligare!!!
+	je	no_skydd	;l√•ter faligt!! √§r √§nnu farligare!!!
 
-	call	getkey2		;vill du se en stjÑrna, se(mikolon) pÜ mig! (e de erroR flynn??)
+	call	getkey2		;vill du se en stj√§rna, se(mikolon) p√• mig! (e de erroR flynn??)
 
 	MOVE	ES,0A000H
 	NIL	DX
@@ -2364,7 +2364,7 @@ COMMENT\
 	VAL2DECASC TEMPTEXT,AX
 	ARRLEFT TEMPTEXT,'0'
 	STRADD	TEXTEN3,TEMPTEXT
-	
+
 ;	STRADD	TEXTEN3,TEXTEN5		;'.'!!!
 
 ;	PRINTA2 TEXTEN1,90*320+8,TEXTCOLOR
@@ -2372,7 +2372,7 @@ COMMENT\
 
 	STRLEN	AL,TEXTEN1
 	NIL	AH
-	INC	AX		;NOLLAN OXè!
+	INC	AX		;NOLLAN OXÔøΩ!
 	MOV	DI,OFFSET WHATS_HAPPENING
 	DATAMOV	DI,TEXTEN1,AX
 	ADD	DI,AX
@@ -2389,7 +2389,7 @@ COMMENT\
 
 NO_SKYDD:
 stop_kek2:
-;********************************SLUT Pè SKYDD*********************************
+;********************************SLUT PÔøΩ SKYDD*********************************
 ;******************************************************************************
 	mov	cs:menubaren_on,true
 	call	aronsson
@@ -2415,11 +2415,11 @@ showpics:
 	jne	pics2
 	mov	al,16
 	mov	bx,6
-	call	julius		;Ceasar sÑtter en palett!!
+	call	julius		;Ceasar s√§tter en palett!!
 	mov	al,0
 	mov	bx,8
 	call	julius
-	
+
 nuvaranden=offset nuvarande
 	movpal	tabletabell[6],tablepaloff[6],data,nuvaranden+16*3
 	movpal	tabletabell[8],tablepaloff[8],data,nuvaranden
@@ -2442,7 +2442,7 @@ pics2:
 	MOV	CS:CHANGE16PAL,TRUE
 	mov	bp,55*95*2
 	call	rastra
-	
+
 	mov	cs:deccet,menutime*60
 keyread:
 	synca
@@ -2452,7 +2452,7 @@ keyread:
 	call	dword ptr es:[keyhandler*4]
 	cmp	al,01
 	je	quit_ing
-	
+
 	cmp	al,3bh		;f1
 	je	f1
 	cmp	al,3ch		;f2
@@ -2508,7 +2508,7 @@ WAITEND:
 	MOV	TEXTLISTA[0],OFFSET HITEXT2
 NEDU_DUDU:
 
-	
+
 	MOV	CS:DECCET,MENUTIME*60
 	JMP	CHOOSERN
 f5:
@@ -2526,8 +2526,8 @@ f3:
 f4:
 	mov	bl,4
 	jmp	savebana
-	
-savebana:	
+
+savebana:
 	mov	bh,0
 
 if	finmenu
@@ -2554,9 +2554,9 @@ f3t:
 f4t:
 	mov	bl,4
 	jmp	savebana2
-	
+
 savebana2:
-		
+
 	mov	bh,0
 if finmenu
 else
@@ -2564,13 +2564,13 @@ else
 endif
 	mov	ax,0ffffh
 	int	keyhandler
-	setscr	44580		;bîr ligga pÜ rasterint
+	setscr	44580		;b√∂r ligga p√• rasterint
 	fade3b	20
 
 
 	call	aronsson
 	call	clearall
-	setscr	0		;bîr ligga pÜ rasterint
+	setscr	0		;b√∂r ligga p√• rasterint
 	MOV	CS:CHANGE16PAL,true
 
 	pop	ax	;retn tabort
@@ -2587,7 +2587,7 @@ SPYAN_STEWART:
 	cleargfx
 	CALL	BLANK_OFF
 	MOV	CS:CHANGE16PAL,FALSE
-	mov	bx,0		;Quitta helt Ü hÜllet!!
+	mov	bx,0		;Quitta helt √• h√•llet!!
 	mov	ax,0ffffh
 	int	keyhandler
 ;	mov	ax,3
@@ -2621,10 +2621,10 @@ else
 endif
 	jmp	quit
 not_enough:
-	mov	bx,0		;Quitta helt Ü hÜllet!!
+	mov	bx,0		;Quitta helt √• h√•llet!!
 	mov	ax,0ffffh
 	int	keyhandler
-	
+
 	;uninstall fn0
 	mov	ax,0
 	int	66h			;UNINST MS
@@ -2633,7 +2633,7 @@ not_enough:
 	int	10h
 	mov	dx,offset notenoughmess
 	mov	ax,900h
-	int	21h	
+	int	21h
 
 	MOVE	DS,DATA
 	MOV	BX,BUPPEN_FILEN
@@ -2654,7 +2654,7 @@ julius:
 	mov	ds,tabletABELL[bx]
 	MOV	CX,16*3
 	mov	dx,3c8h
-	;al Ñr: 0-15, 16-31
+	;al √§r: 0-15, 16-31
 	out	dx,al
 	mov	dx,3c9h
 	repoutsb
@@ -2681,18 +2681,18 @@ IF DEMOVER
 	SHIFTPAL 16,new_cov2seg,tablepaloff
 ENDIF
 	RETN
-	
+
 	in	al,60h
 	mov	ah,al
 feel_key:
 	push	ax
-	FILLMUSICBUF	
+	FILLMUSICBUF
 	pop	ax
 	in	al,60h
 	cmp	al,ah
 	jne	fadedown
 
-	jmp	feel_key	
+	jmp	feel_key
 fadedown:
 ;	fade	40,dtseg,demotext2paloff,data,blackpaloff
 
@@ -2714,7 +2714,7 @@ quit:
 
 	mov	ax,4c00h
 	int	21h
-	
+
 SET_MCGAB PROC NEAR
 	MOV	AX,9876
 	MOV	BL,NUMRET
@@ -2746,15 +2746,15 @@ SET_MCGAB PROC NEAR
 	MOV	DX,3D4H			;MODE CONTROL (STANDARD ADRESSING MODE)
 	MOV	AL,17H
 	MOV	AH,11100011B
-	OUT	DX,AX	
+	OUT	DX,AX
 NO_1417:
 
 	MOV	DX,3CCH
 	IN	AL,DX
 	MOV	DX,3C2H
 	OR	AL,11000000B
-	OUT	DX,AL			;sÑtt 240-linjers skÑrmhîjd
-;	CALL	BLANK_ON	
+	OUT	DX,AL			;s√§tt 240-linjers sk√§rmh√∂jd
+;	CALL	BLANK_ON
 	RETN
 SET_MCGAB ENDP
 SET240	PROC NEAR
@@ -2768,7 +2768,7 @@ SET240	PROC NEAR
                 dec    dx
                 cld
 		MOV	SI,OFFSET XPARABL
-		MOV	CX,10		
+		MOV	CX,10
 xvploop:
                 mov    ax,cs:[si]
                 add    si,02h
@@ -2778,7 +2778,7 @@ xvploop:
                 loop   xvploop
 
 		RETN
-		
+
 
 xparabl  db 06h,0Dh ,07h,03eh ,09h,40H+80H,10h,0EAh ,11h,0ch ,12h,0dfh ,14h,00h
         db 15h,0eah,016h,06h,17h,0e3h
@@ -2789,11 +2789,11 @@ steg db 200
 make_pal proc near
 	;ds:si=pal1
 	;es:di=pal2
-	;cl=pos	
+	;cl=pos
 
-;(v1*(steg-pos)+v2*pos)/steg=v ;steg=antal steg Ü tona pÜ, pos=pos+1 v1=old v2=new
+;(v1*(steg-pos)+v2*pos)/steg=v ;steg=antal steg √• tona p√•, pos=pos+1 v1=old v2=new
 	;cs:bx=destpal
-	
+
 	mov	bx,offset cs:faded_pal
 tona_next:
 	lodsb			;ladda ax me v1
@@ -2803,7 +2803,7 @@ tona_next:
 	mov	bp,ax	;save v1*(steg-pos)
 	mov	al,es:[di]	;ladda ax me v2
 	inc	di
-	
+
 	mul	cl
 	add	ax,bp
 	div	cs:steg
@@ -2813,15 +2813,15 @@ tona_next:
 	jb	tona_next
 	retn
 endp
-	
+
 make_pal1 proc near
 	;ds:si=pal1
 	;es:di=pal2
-	;cl=pos	
+	;cl=pos
 pusha
-;(v1*(steg-pos)+v2*pos)/steg=v ;steg=antal steg Ü tona pÜ, pos=pos+1 v1=old v2=new
+;(v1*(steg-pos)+v2*pos)/steg=v ;steg=antal steg √• tona p√•, pos=pos+1 v1=old v2=new
 	;cs:bx=destpal
-	
+
 	mov	bx,offset cs:faded_pal
 tona_next1:
 	lodsb			;ladda ax me v1
@@ -2831,7 +2831,7 @@ tona_next1:
 	mov	bp,ax	;save v1*(steg-pos)
 	mov	al,es:[di]	;ladda ax me v2
 	inc	di
-	
+
 	mul	cl
 	add	ax,bp
 	div	cs:steg
@@ -2841,7 +2841,7 @@ tona_next1:
 	jb	tona_next1
 	popa
 	retn
-endp		
+endp
 
 set_pal proc near
 	push	cx
@@ -2878,11 +2878,11 @@ endp
 make_pal256 proc near
 	;ds:si=pal1
 	;es:di=pal2
-	;cl=pos	
+	;cl=pos
 
-;(v1*(steg-pos)+v2*pos)/steg=v ;steg=antal steg Ü tona pÜ, pos=pos+1 v1=old v2=new
+;(v1*(steg-pos)+v2*pos)/steg=v ;steg=antal steg √• tona p√•, pos=pos+1 v1=old v2=new
 	;cs:bx=destpal
-	
+
 	mov	bx,offset cs:faded_pal
 tona_next256:
 	lodsb			;ladda ax me v1
@@ -2892,7 +2892,7 @@ tona_next256:
 	mov	bp,ax	;save v1*(steg-pos)
 	mov	al,es:[di]	;ladda ax me v2
 	inc	di
-	
+
 	mul	cl
 	add	ax,bp
 	div	cs:steg
@@ -2901,7 +2901,7 @@ tona_next256:
 	cmp	bx,offset cs:faded_pal+256*3
 	jb	tona_next256
 	retn
-endp		
+endp
 set_pal256 proc near
 	push	cx
 	mova	ds,cs
@@ -2940,7 +2940,7 @@ unpkpics:
 	mov	di,offset pelle1
 	rep	movsb
 	pop	ds es
-	
+
 	mov	ax,0
 	mov	bx,139+t21stpos
 	mov	cx,320
@@ -3009,9 +3009,9 @@ unpkpics2:
 	move	es,t21st1seg
 	call	unpklbm
 	MOVE	DS,DATA
-	CALL	ANDHAMTNING ;Tag lyft fîr att Üter kunna dyka pÜ djupt vatten!
-			    ;(sÜdeles fîrhindra att datorn dyker!!!!)
-	
+	CALL	ANDHAMTNING ;Tag lyft f√∂r att √•ter kunna dyka p√• djupt vatten!
+			    ;(s√•deles f√∂rhindra att datorn dyker!!!!)
+
 	mov	ax,0
 	mov	bx,139+t21stpos
 	mov	cx,320
@@ -3019,8 +3019,8 @@ unpkpics2:
 	mov	dx,0
 	move	es,t21st2seg
 	call	unpklbm
-	CALL	ANDHAMTNING ;Tag lyft fîr att Üter kunna dyka pÜ djupt vatten!
-			    ;(sÜdeles fîrhindra att datorn dyker!!!!)
+	CALL	ANDHAMTNING ;Tag lyft f√∂r att √•ter kunna dyka p√• djupt vatten!
+			    ;(s√•deles f√∂rhindra att datorn dyker!!!!)
 
 	MOVE	DS,DATA
 	mov	ax,0
@@ -3031,8 +3031,8 @@ unpkpics2:
 	move	es,viking2seg
 	call	unpklbm16
 	MOVE	DS,DATA
-	CALL	ANDHAMTNING ;Tag lyft fîr att Üter kunna dyka pÜ djupt vatten!
-			    ;(sÜdeles fîrhindra att datorn dyker!!!!)
+	CALL	ANDHAMTNING ;Tag lyft f√∂r att √•ter kunna dyka p√• djupt vatten!
+			    ;(s√•deles f√∂rhindra att datorn dyker!!!!)
 
 	mov	ax,0
 	mov	bx,125+vikingpos
@@ -3042,8 +3042,8 @@ unpkpics2:
 	move	es,viking1seg	;ETT
 	call	unpklbm	;16
 	MOVE	DS,DATA
-	CALL	ANDHAMTNING ;Tag lyft fîr att Üter kunna dyka pÜ djupt vatten!
-			    ;(sÜdeles fîrhindra att datorn dyker!!!!)
+	CALL	ANDHAMTNING ;Tag lyft f√∂r att √•ter kunna dyka p√• djupt vatten!
+			    ;(s√•deles f√∂rhindra att datorn dyker!!!!)
 
 	mov	ax,0
 	mov	bx,fld_logopos	;+20
@@ -3054,8 +3054,8 @@ unpkpics2:
 	call	unpklbm16
 	MOVE	DS,DATA
 
-	CALL	ANDHAMTNING ;Tag lyft fîr att Üter kunna dyka pÜ djupt vatten!
-			    ;(sÜdeles fîrhindra att datorn dyker!!!!)
+	CALL	ANDHAMTNING ;Tag lyft f√∂r att √•ter kunna dyka p√• djupt vatten!
+			    ;(s√•deles f√∂rhindra att datorn dyker!!!!)
 	mov	ax,0
 	mov	bx,fld_logopos+fl1storlek;+20
 	mov	cx,320
@@ -3064,8 +3064,8 @@ unpkpics2:
 	move	es,fl2seg
 	call	unpklbm
 	MOVE	DS,DATA
-	CALL	ANDHAMTNING ;Tag lyft fîr att Üter kunna dyka pÜ djupt vatten!
-			    ;(sÜdeles fîrhindra att datorn dyker!!!!)
+	CALL	ANDHAMTNING ;Tag lyft f√∂r att √•ter kunna dyka p√• djupt vatten!
+			    ;(s√•deles f√∂rhindra att datorn dyker!!!!)
 retn
 
 rastra:
@@ -3092,7 +3092,7 @@ done_raster:
 
 rastraclear:
 	move	es,0a000h
-	mov	al,es:[128/8+3]		;dÑr Ñr det svart min vÑn!!
+	mov	al,es:[128/8+3]		;d√§r √§r det svart min v√§n!!
 	mov	bx,offset rastatab
 next_raster2:
 	mov	al,[bx]
@@ -3183,7 +3183,7 @@ clearraster2:
 
 clearall:
 	move	es,0a000h
-	mov	al,es:[128/8+3]		;dÑr Ñr det svart min vÑn!!
+	mov	al,es:[128/8+3]		;d√§r √§r det svart min v√§n!!
 	mov	cx,240
 	mov	di,128/8+4
 lajban_lasse:
@@ -3205,7 +3205,7 @@ lajban_laban:
 	retn
 clearalmostall:
 	move	es,0a000h
-	mov	al,es:[128/8+3]		;dÑr Ñr det svart min vÑn!!
+	mov	al,es:[128/8+3]		;d√§r √§r det svart min v√§n!!
 	mov	cx,240
 	mov	di,44580+128/8+4
 lajban_laban_o_lajla:
@@ -3216,10 +3216,10 @@ lajban_laban_o_lajla:
 	pop	cx
 	loop	lajban_laban_o_lajla
 	retn
-	
+
 clearalmostall2:
 	move	es,0a000h
-	mov	al,es:[128/8+3]		;dÑr Ñr det svart min vÑn!!
+	mov	al,es:[128/8+3]		;d√§r √§r det svart min v√§n!!
 	mov	cx,CHARHEIGHT
 	mov	di,128/8+4+80*2*18-80*4+80*(LINJEN-1)*18
 lajban_laban_o_lajla2:
@@ -3233,7 +3233,7 @@ lajban_laban_o_lajla2:
 
 clearalmostall3:
 	move	es,0a000h
-	mov	al,es:[128/8+3]		;dÑr Ñr det svart min vÑn!! (NEGER)
+	mov	al,es:[128/8+3]		;d√§r √§r det svart min v√§n!! (NEGER)
 	mov	cx,CHARHEIGHT
 	mov	di,128/8+4+44580+80*2*18-80*4+80*(LINJEN-1)*18
 lajban_laban_o_lajla3:
@@ -3340,7 +3340,7 @@ doc16:
 	jz	nocuttodo
 doc17:
 linesync macro
-	local test1,test2	
+	local test1,test2
 	mov	dx,3dah
 test1:	in	al,dx
 	test	al,1
@@ -3362,7 +3362,7 @@ cli
 	mov	al,13h
 	mov	ah,40
 	out	dx,ax
-	
+
 sti
 	mov	al,0dh
 	mov	ah,CS:cutlen
@@ -3371,7 +3371,7 @@ sti
 	out	dx,ax
 nocuttodo:
 \
-NOC16:	
+NOC16:
 	retf
 CUTLEN DB 0
 CUTADD DB 1
@@ -3529,7 +3529,7 @@ doclpf:
 	mov	ah,0fh
 	out	dx,ax
 	MOV	BP,3
-LOC_LOOP1:	
+LOC_LOOP1:
 	mova	es,0a000h
 	mov	di,95
 	sub	di,pfcounter
@@ -3576,7 +3576,7 @@ prntchars:
 	ADD	BX,INFO_TEXT_2_USE
 	MOV	AL,CS:[BX]
 	push	di ax
-	CALL	WRITEROMCHAR	
+	CALL	WRITEROMCHAR
 	pop	ax di
 	add	di,44580
 	call	writeromchar
@@ -3597,7 +3597,7 @@ prntc:
 	loop	prntc
 	mova	ds,data
 	retn
-copy_pf_loggan:	
+copy_pf_loggan:
 	call	aronsson
 	mov	si,95*bpl+2
 	mov	di,-90*14
@@ -3612,7 +3612,7 @@ rader:	push	cx
 	loop	rader
 	mova	ds,data
 ;	mov	cs:menubaren_on,true
-	retn	
+	retn
 DUMRET:RETN
 dumretf:	;VBLANK
 	add	CS:SLUMPEN,3	;INTE FJUMPEN!!
@@ -3639,7 +3639,7 @@ endm
 noc162:
 	cmp	menubaren_on,true
 	calle	pftask
-	retf	
+	retf
 s_p	dw ?
 s_s	dw ?
 sidobar DB FALSE
@@ -3653,7 +3653,7 @@ PUTCHAR:	;DX Points at X destination for char
 
 		;cs:sida=adress till dest
 		;cs:fonten=adress till fonten
-			
+
 	push	dx
 	shr	dx,3
 	mov	di,dx
@@ -3681,8 +3681,8 @@ bipl:	push	cx si di
 	pop	dx
 	shl	wbpl,1
 	inc	rbpl
-	
-	mov	cx,14		;hîjd	
+
+	mov	cx,14		;h√∂jd
 nextchar:
 	push	cx
 	mov	cl,dl
@@ -3691,21 +3691,21 @@ nextchar:
 	mov	ah,0
 	ror	ax,cl
 	or	[di],al
-	
+
 	mov	al,[si+1]
 	mov	ch,ah
 	mov	ah,0
 	ror	ax,cl
 	or	al,ch
 	or	[di+1],al
-	
+
 	mov	al,[si+2]
 	mov	ch,ah
 	mov	ah,0
 	ror	ax,cl
 	or	al,ch
 	or	[di+2],al
-	
+
 	pop	cx
 	add	si,80
 	add	di,80
@@ -3713,14 +3713,14 @@ nextchar:
 	pop	di si cx
 	loop	bipl
 DONT_PUT_SPACE_YOU_BLOODY_FOOL:
-	move	ds,data	
+	move	ds,data
 RETN
 aronsson:
 ;set aronsson
 	mov	dx,3ceh
 	mov	ax,0105h
 	out	dx,ax
-;Ü bitplanen
+;√• bitplanen
 	mov	dx,3c4h
 	mov	ax,0f02h
 	out	dx,ax
@@ -3734,7 +3734,7 @@ aronsson_bort:
 sida	dw ?
 fonten	dw ?
 writepage:
-;bx pekar pÜ textstarten!! ds skall sjÑlvklart va data ;-)
+;bx pekar p√• textstarten!! ds skall sj√§lvklart va data ;-)
 	mov	cx,12
 nextline:
 	push	cx
@@ -3755,7 +3755,7 @@ nextline:
 	JCXZ	NOLINE
 
 nextcharS:		;bx points to asc char, ax=xpos dx=ypos of char
-			
+
 	push	ax cx bx dx
 	mov	bl,[bx]
 
@@ -3765,7 +3765,7 @@ nextcharS:		;bx points to asc char, ax=xpos dx=ypos of char
 	add	dx,charwith
 	loop	nextcharS
 
-	add	ax,(charheight+mellanrum)	
+	add	ax,(charheight+mellanrum)
 	pop	cx
 	loop	nextline
 	retn
@@ -3814,7 +3814,7 @@ movelogobar:
 	push	es ds
 	move	ds,0a000h
 	move	es,0a000h
-	
+
 	mov	cx,240*80
 	mov	si,0
 	mov	di,44580	;where the shit ends . . .
@@ -3838,7 +3838,7 @@ kexchoklad2	dw 0
 showtext_prot:
 	call	rastraclear
 	call	aronsson_bort
-	
+
 	mov	al,0
 	mov	bx,6
 	call	julius
@@ -3856,13 +3856,13 @@ showtext_prot:
 	jmp	$+2
 	jmp	$+2
 	jmp	$+2
-	mov	al,0		;vÑlj 16 palette 0
+	mov	al,0		;v√§lj 16 palette 0
 	out	dx,al
 
 	mov	dx,128+4+1
 	mov	ax,14
 	mov	bx,offset prottxt
-	
+
 	mov	cs:sida,44580
 	mov	cs:fonten,80*14*2
 	call	writepage
@@ -3877,12 +3877,12 @@ showtext_prot:
 	mov	cs:sida,0
 	mov	cs:fonten,0
 	call	writepage
-	
-;hÑr ska de 3 fÑrgerna fÑjdas . . 
+
+;h√§r ska de 3 f√§rgerna f√§jdas . .
 ;	slackA	320
 	synca
 	fade3	20
-	setscr	0		;bîr ligga pÜ rasterint
+	setscr	0		;b√∂r ligga p√• rasterint
 	synca
 	call	aronsson
 	call	clearalmostall
@@ -3892,7 +3892,7 @@ showtext_prot:
 	mov	cs:sida,44580
 	mov	cs:fonten,0
 	mov	bx,offset protTXT
-	call	writepage		;flerfÑrgsfont
+	call	writepage		;flerf√§rgsfont
 
 
 
@@ -3910,36 +3910,36 @@ showtext_prot:
 	mov	cs:sida,44580
 	mov	cs:fonten,80*14*2
 	mov	bx,offset WORDTXT
-	call	writepage		;3 fÑrgsfont
+	call	writepage		;3 f√§rgsfont
 
 	mov	dx,128+4+1
 	mov	ax,14
 	mov	cs:sida,44580
 	mov	cs:fonten,80*14*2
 	mov	bx,offset PROTTXT
-	call	writepage		;3 fÑrgsfont
-	
-	setscr	44580		;bîr ligga pÜ rasterint
+	call	writepage		;3 f√§rgsfont
+
+	setscr	44580		;b√∂r ligga p√• rasterint
 	fade3b	20
 
 
 	call	aronsson
 	call	clearall
-	setscr	0		;bîr ligga pÜ rasterint
+	setscr	0		;b√∂r ligga p√• rasterint
 	MOV	CS:CHANGE16PAL,true
 retn
 
-;*****************	
+;*****************
 showtext:
 	call	rastraclear
 	call	aronsson_bort
-	
+
 	mov	al,0
 	mov	bx,6
 	call	julius
 
 ;	slackA	128/2
-;	setscr	44580		;bîr ligga pÜ rasterint
+;	setscr	44580		;b√∂r ligga p√• rasterint
 ;	fade3b	5
 
 	MOV	CS:CHANGE16PAL,false
@@ -3959,7 +3959,7 @@ ok:
 ;********************************
 	out	dx,al
 	jmp	$+2
-	mov	al,0		;vÑlj 16 palette 0
+	mov	al,0		;v√§lj 16 palette 0
 	out	dx,al
 
 	mov	dx,128+4+1
@@ -3976,14 +3976,14 @@ nohisorry:
 	JNE	NOREZ
 	MOV	CS:TEXTPEK,2
 ;	mov	bx,TEXTLISTA[2]		;offset texten
-	jmp	bupper	
+	jmp	bupper
 NOREZ:
 
-	
+
 	PUSH	BX
 	mov	cs:sida,44580
 	mov	cs:fonten,80*14*2
-	call	put_the_hslogo2		;NÑrdÜ dÜ??
+	call	put_the_hslogo2		;N√§rd√• d√•??
 	call	writepage
 	PUSHA
 	fade3B	5
@@ -3995,23 +3995,23 @@ NOREZ:
 	POP	BX
 	mov	cs:sida,0
 	mov	cs:fonten,0
-	call	put_the_hslogo1		;NÑrdÜ dÜ??
+	call	put_the_hslogo1		;N√§rd√• d√•??
 	call	writepage
-	
-;hÑr ska de 3 fÑrgerna fÑjdas . . 
-;	slackA	320
-	
-	fade3	20
-	setscr	0		;bîr ligga pÜ rasterint
 
-	wait_sync2 60*texttime		;vÑnta med den snygga fonten pÜ . . .
-	setscr	44580		;bîr ligga pÜ rasterint
+;h√§r ska de 3 f√§rgerna f√§jdas . .
+;	slackA	320
+
+	fade3	20
+	setscr	0		;b√∂r ligga p√• rasterint
+
+	wait_sync2 60*texttime		;v√§nta med den snygga fonten p√• . . .
+	setscr	44580		;b√∂r ligga p√• rasterint
 	fade3b	20
 
 
 	call	aronsson
 	call	clearall
-	setscr	0		;bîr ligga pÜ rasterint
+	setscr	0		;b√∂r ligga p√• rasterint
 	MOV	CS:CHANGE16PAL,true
 retn
 
@@ -4028,32 +4028,32 @@ keyread_demo:
 	call	dword ptr es:[keyhandler*4]
 	cmp	al,01
 	je	quit_ing
-	
+
 	cmp	al,39h	;space
 	je	spruttan_bleble
 	synca
-	dec	cs:mager	
-	jnz	keyread_demo	
+	dec	cs:mager
+	jnz	keyread_demo
 	mov	al,23
 	int	66H	;reset timer!!
 	jmp	firsttime_again
 spruttan_bleble:
-	fadeM	40,tabletabell[0],tablepaloff[0],data,blackpaloff ;SÑtt rÑtt!!
+	fadeM	40,tabletabell[0],tablepaloff[0],data,blackpaloff ;S√§tt r√§tt!!
 space2:
 	mov	bx,1
 	mov	banpek,0
 	jmp	savebana
 mager	dw ?
 firsttime_again:
-	fade	40,tabletabell[0],tablepaloff[0],data,blackpaloff ;SÑtt rÑtt!!
+	fade	40,tabletabell[0],tablepaloff[0],data,blackpaloff ;S√§tt r√§tt!!
 	CALL	BLANK_OFF
 	mov	ax,12h	;anders
 	int	10h
 	call	set_mcgab
 	call	set240
-	call	set_pal		;slÑck paletten	
+	call	set_pal		;sl√§ck paletten
 	CALL	BLANK_ON
-	fade256	4,data,blackpaloff,data,blackpaloff ;SÑtt rÑtt!!
+	fade256	4,data,blackpaloff,data,blackpaloff ;S√§tt r√§tt!!
 	call	shift_up_palettes
 	CALL	UNPKPICS2
 	fade256	4,data,blackpaloff,data,blackpaloff
@@ -4152,7 +4152,7 @@ MAKE_HI_TABLES:
 	REPMOVSB HITEXT2+TB*9+5,HI_SCORE_LIST4+16+12,3
 	REPMOVSB HITEXT2+TB*10+5,HI_SCORE_LIST4+2*16+12,3
 	REPMOVSB HITEXT2+TB*11+5,HI_SCORE_LIST4+3*16+12,3
-	
+
 	MOVSCORE HITEXT1+TB*2+11,HI_SCORE_LIST+0
 	MOVSCORE HITEXT1+TB*3+11,HI_SCORE_LIST+16
 	MOVSCORE HITEXT1+TB*4+11,HI_SCORE_LIST+16*2
@@ -4199,7 +4199,7 @@ cantfindmod:
 	MOV	AX,3
 	INT	10H
 cantfmess equ     "Pinball Fantasies cannot find one of the music and sound",13,10,"effects files in the game directory.  Please re-install the ",13,10,"game to make sure all the files are properly copied to your",13,10,"hard disk.",13,10
- 
+
 
 	SPYMESS cantfmess
 	MOV	AX,0
@@ -4231,14 +4231,14 @@ nils_gurka:
 input_pos=150*320+(80-55)*8
 	INPUTA AFTER_PROT,20,input_pos,TEXTCOLOR
 
-;	call	tudor		;DET ANAR VI INTE!  JORè, FôR HAN MEJJAR B000!
+;	call	tudor		;DET ANAR VI INTE!  JORÔøΩ, F√ñR HAN MEJJAR B000!
 
 	move	ds,data
 	mov	bx,offset AFTER_PROT
-	mov	si,0			;si pekar pÜ kÜdposten (ej offset)!!!
+	mov	si,0			;si pekar p√• k√•dposten (ej offset)!!!
 	mov	si,thepost
 	lea	si,ordlista[si].thetext
-	
+
 next_tst:
 	mov	ah,byte ptr ds:[bx]
 	inc	bx
@@ -4254,17 +4254,17 @@ next_tst:
 	cmp	al,ah
 	je	next_tst
 nils_bedrup:
-;	mov	chksum,0	;Pajja keck summeringen fîr den fan! NEEEJ!!!
+;	mov	chksum,0	;Pajja keck summeringen f√∂r den fan! NEEEJ!!!
 	MOVE	DS,DATA
 	MOVE	ES,DATA
 	DATAMOV	AFTER_PROT,SPCS,21
 ;	PRINTA2 rensa_input,input_pos,TEXTCOLOR
 	jmp	nils_gurka		;YO!
-klart_som_korvspad:	
+klart_som_korvspad:
 	cmp	ah,0
 	jne	nils_bedrup		;YO!
 klart_som_korvspad2:
-	
+
 	MOVE	DS,DATA
 	MOVE	ES,DATA
 
@@ -4277,7 +4277,7 @@ klart_som_korvspad2:
 	MOV	AX,5701H
 	POP	DX CX
 	INT	21H			;SET TIME'N'DATE
-	
+
 	retn
 
 FELVARDE DW 27643
@@ -4288,7 +4288,7 @@ PUSH	DS ES
 
 ;*
 	synca
-	setscr	0		;bîr ligga pÜ rasterint
+	setscr	0		;b√∂r ligga p√• rasterint
 	synca
 	call	aronsson
 	call	clearalmostall3
@@ -4298,10 +4298,10 @@ PUSH	DS ES
 	mov	cs:sida,44580
 	mov	cs:fonten,0
 	mov	bx,offset WORDtxt
-	call	writepage		;flerfÑrgsfont
+	call	writepage		;flerf√§rgsfont
 
 	synca
-	setscr	44580	;bîr ligga pÜ rasterint
+	setscr	44580	;b√∂r ligga p√• rasterint
 	synca
 	call	aronsson
 	call	clearalmostall2
@@ -4311,7 +4311,7 @@ PUSH	DS ES
 	mov	cs:sida,0
 	mov	cs:fonten,0
 	mov	bx,offset WORDtxt
-	call	writepage		;flerfÑrgsfont
+	call	writepage		;flerf√§rgsfont
 
 ;*
 POP ES DS
@@ -4325,7 +4325,7 @@ put_pilen:
 	mov	ax,cs:pilpos
 	cmp	ax,high_menu-1
 	jne	nope_notthelastone
-	inc	ax			;sÑtt den sista lite lÑngre ned!!!
+	inc	ax			;s√§tt den sista lite l√§ngre ned!!!
 nope_notthelastone:
 	mov	cl,(charheight+mellanrum)
 	mul	cl
@@ -4341,7 +4341,7 @@ again_it:
 	CMP	CS:LOOSER_BUT_SAVER,TRUE
 	JNE	READ_again_my_friend_again
 	RETN
-read_again_my_friend_again:	
+read_again_my_friend_again:
 	mov	ax,12h
 	int	keyhandler	;report scancode 0=no key pressed
 	push	ax
@@ -4349,7 +4349,7 @@ read_again_my_friend_again:
 	pop	ax
 	cmp	al,0
 	je	read_again_my_friend_again
-		
+
 	cmp	al,1
 	je	exitera_dig
 	cmp	al,80
@@ -4376,20 +4376,20 @@ pilned:
 	JMP	PUT_PILEN
 ;	jmp	again_it	;no need to putit
 
-	
+
 space_pigs:
 	mov	bx,cs:pilpos
 	shl	bx,1
 	pusha
 	call	[bx+offset menu_items]
 	popa
-	jmp	again_it	
+	jmp	again_it
 ;******************************  the menu *************************************
-;sîk menu items fîr att hitta menyn!!!
-;kom i hÜg att lÑgg sparning av config vid quit (dÜ musik ej spelar!)
-;radering i jÑmna bytes!!! Kan behîva trimmas!!!!!!!
-;man kanske ska lÑgga in texten i options texten, sÜ det ser snyggt ut dÜ
-;det tonas (den anvÑnds dÜ!)
+;s√∂k menu items f√∂r att hitta menyn!!!
+;kom i h√•g att l√§gg sparning av config vid quit (d√• musik ej spelar!)
+;radering i j√§mna bytes!!! Kan beh√∂va trimmas!!!!!!!
+;man kanske ska l√§gga in texten i options texten, s√• det ser snyggt ut d√•
+;det tonas (den anv√§nds d√•!)
 
 ;******************************************************************************
 
@@ -4457,9 +4457,9 @@ UPDATEIT PROC NEAR		;UPDATES THE SCREEN AND THE TEXT
 UPDATEIT ENDP
 
 UPDATE_TEXT PROC NEAR
-	INC	CX			;LéGG Pè SPACE EFTER KOLON
+	INC	CX			;L√ÑGG PÔøΩ SPACE EFTER KOLON
 
-	MOV	CX,13			;TVINGA DUBBEL VéNSTER-JUSTERING!
+	MOV	CX,13			;TVINGA DUBBEL V√ÑNSTER-JUSTERING!
 
 	MOV	DX,CS:PILPOS		;DX=RADEN (0-6)
 	MOV	CS:CPLOSNING,BX
@@ -4469,10 +4469,10 @@ UPDATE_TEXT PROC NEAR
 	MUL	BX
 	ADD	AX,CX
 	ADD	AX,OFFSET FIRSTCHOICE+3	;AX=OFFSET IN THE TEXT
-	
+
 	MOV	BX,CS:CPLOSNING
 	STRCOPY2 AX,BX			;UPDATE TEXT!
-	
+
 	RET
 UPDATE_TEXT ENDP
 
@@ -4491,7 +4491,7 @@ UPDATE_SCREEN PROC NEAR
 	MOV	BX,18
 	MUL	BX
 	SHR	AX,3
-	ADD	AX,2			;1 FôR MEJ OCH 1 FôR DEJ!
+	ADD	AX,2			;1 F√ñR MEJ OCH 1 F√ñR DEJ!
 	MOV	CS:BREDDEN,AX		;CS:BREDDEN=SUDDBREDD
 
 	MOV	BX,CS:CPLOSNING
@@ -4501,7 +4501,7 @@ CPLOSNING DW ?
 UPDATE_SCREEN ENDP
 
 
-;HéR!
+;H√ÑR!
 
 
 ;******************************************************************************
@@ -4621,7 +4621,7 @@ LOOSER_BUT_SAVER DB ?
 
 bredden dw ?
 
-tjolahopp:	
+tjolahopp:
 	mov	ax,cs:pilpos
 	mov	cl,(charheight+mellanrum)
 	mul	cl
@@ -4648,13 +4648,13 @@ putarrow:
 
 exitera_dig:
 	retn
-	
+
 
 PRINT_IT:
 	PUSHA
 	PUSH	DS ES
 	;bx=offset mess (0 terminated), ax=x, dx=y
-	
+
 ;*
 	pusha
 	synca
@@ -4665,7 +4665,7 @@ PRINT_IT:
 	pusha
 	mov	cs:sida,44580
 	mov	cs:fonten,0
-	call	print_in_a_mess		;flerfÑrgsfont
+	call	print_in_a_mess		;flerf√§rgsfont
 
 	synca
 	setscr	44580
@@ -4675,7 +4675,7 @@ PRINT_IT:
 
 	mov	cs:sida,0
 	mov	cs:fonten,0
-	call	print_in_a_mess		;flerfÑrgsfont
+	call	print_in_a_mess		;flerf√§rgsfont
 
 ;*
 	POP ES DS
@@ -4684,9 +4684,9 @@ PRINT_IT:
 
 print_in_a_mess:	;until 0
 	move	ds,data
-	move	es,0a000h	
+	move	es,0a000h
 nextchar__:		;bx points to asc char, ax=xpos dx=ypos of char
-			
+
 	push	ax cx bx dx
 	mov	bl,[bx]
 	cmp	bl,0
@@ -4702,10 +4702,10 @@ endofmess:
 
 showmenu:
 	MOV	CS:INFO_TEXT,OFFSET CS:OPTIONS_INFO
-	
+
 	call	rastraclear
 	call	aronsson_bort
-	
+
 	mov	al,0
 	mov	bx,6
 	call	julius
@@ -4718,13 +4718,13 @@ showmenu:
 	mov	al,14h+20h
 	out	dx,al
 	jmp	$+2
-	mov	al,0		;vÑlj 16 palette 0
+	mov	al,0		;v√§lj 16 palette 0
 	out	dx,al
 
 	mov	dx,128+4+1
 	mov	ax,14
 	mov	bx,offset menutext
-	
+
 	mov	cs:sida,44580
 	mov	cs:fonten,80*14*2
 	call	writepage
@@ -4739,12 +4739,12 @@ showmenu:
 	mov	cs:sida,0
 	mov	cs:fonten,0
 	call	writepage
-	
-;hÑr ska de 3 fÑrgerna fÑjdas . . 
+
+;h√§r ska de 3 f√§rgerna f√§jdas . .
 ;	slackA	320
 	synca
 	fade3	40
-	setscr	0		;bîr ligga pÜ rasterint
+	setscr	0		;b√∂r ligga p√• rasterint
 	synca
 	call	aronsson
 	call	clearalmostall
@@ -4754,7 +4754,7 @@ showmenu:
 	mov	cs:sida,44580
 	mov	cs:fonten,0
 	mov	bx,offset menuTeXT
-	call	writepage		;flerfÑrgsfont
+	call	writepage		;flerf√§rgsfont
 ;***********************************
 	;menu logic
 	pusha
@@ -4780,7 +4780,7 @@ lethal:
 	pusha
 	synca
 	popa
-	loop	lethal	
+	loop	lethal
 endif
 
 	SYNCA
@@ -4795,22 +4795,22 @@ endif
 	mov	cs:sida,44580
 	mov	cs:fonten,80*14*2
 	mov	bx,offset menuteXT
-	call	writepage		;3 fÑrgsfont
+	call	writepage		;3 f√§rgsfont
 
 	mov	dx,128+4+1
 	mov	ax,14
 	mov	cs:sida,44580
 	mov	cs:fonten,80*14*2
 	mov	bx,offset menuTeXT
-	call	writepage		;3 fÑrgsfont
-	
-	setscr	44580		;bîr ligga pÜ rasterint
+	call	writepage		;3 f√§rgsfont
+
+	setscr	44580		;b√∂r ligga p√• rasterint
 	fade3b	40
 
 
 	call	aronsson
 	call	clearall
-	setscr	0		;bîr ligga pÜ rasterint
+	setscr	0		;b√∂r ligga p√• rasterint
 	MOV	CS:CHANGE16PAL,true
 	retn
 menunext db 0
@@ -4855,7 +4855,7 @@ end start
 
 
 COMMENT\
-item1:	
+item1:
 	;BALLS: 3,5
 	XOR	TOGGLAREN.S_BALLS,1
 	jNz	nike
@@ -4867,10 +4867,10 @@ nike:
 	mov	byte ptr ds:[offset i1+8],'5'	;CHANGE REALTEXT TOO!
 
 justdoit:
-	mov	cs:bredden,3	;RADERINGSBREDD fîr radering (i bytes) (trimma!)
+	mov	cs:bredden,3	;RADERINGSBREDD f√∂r radering (i bytes) (trimma!)
 	mov	bp,308		;RADERINGSSTART start i pixel (trimma!)
 	;FINA: BX,BP,CS:BREDDEN
-	call	tjolahopp	;rensa Ü skriv ut!!! (PIPPI LèNGSTRUMP!)
+	call	tjolahopp	;rensa √• skriv ut!!! (PIPPI LÔøΩNGSTRUMP!)
 	retn
 
 \

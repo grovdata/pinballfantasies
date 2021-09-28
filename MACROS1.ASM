@@ -1,8 +1,8 @@
-;ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ                                                                            บ
-;บ                  The SpacePigs' standard set of macros (1)                 บ
-;บ                                                                            บ
-;ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;รรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรยป
+;ยบ                                                                            ยบ
+;ยบ                  The SpacePigs' standard set of macros (1)                 ยบ
+;ยบ                                                                            ยบ
+;รรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรยผ
 FALSE EQU 0	;MUST BE 0!
 TRUE EQU 255	;MUST BE 255!
 
@@ -80,7 +80,7 @@ NEHE:	ENDM
 SET_ES	MACRO SEGADR
 	PUSH	SEGADR
 	POP	ES
-ENDM		
+ENDM
 
 SET_DS	MACRO SEGADR
 	PUSH	SEGADR
@@ -184,7 +184,7 @@ PRINTMESS2 MACRO MESSAGE
 	PUSHA
 	MOV	DX,OFFSET MESSAGE
 	MOV	AX,900H
-	INT	21H	
+	INT	21H
 	POPA
 	ENDM
 
@@ -198,7 +198,7 @@ GNU:	PUSHA
 	MOV	DS,AX
 	MOV	DX,OFFSET CS:MESS
 	MOV	AX,900H
-	INT	21H	
+	INT	21H
 	POP	DS
 	POPA
 	ENDM
@@ -432,7 +432,7 @@ CREATEFILE MACRO FILENAME	;RETURNS HANDLE IN BX
 	MOV	BX,AX
 	POP	DX
 	POP	CX
-	POP	AX	
+	POP	AX
 	ENDM
 
 CREATEFILE2 MACRO FILENAME
@@ -443,7 +443,7 @@ CREATEFILE2 MACRO FILENAME
 	MOV	DX,FILENAME
 	INT	21H
 	POP	DX
-	POP	CX	
+	POP	CX
 	ENDM
 
 CLOSEFILE MACRO HANDLE
@@ -485,7 +485,7 @@ GETDRIVE MACRO
 	MOV	AH,19H
 	INT	21H
 	ENDM
-	
+
 GETDIR	MACRO DRIVE,BUF
 	LOCAL	ZEROGNU,YSED,ZFI
 	PUSH	DX
@@ -505,7 +505,7 @@ ZEROGNU:INC	SI
 	JCXZ	YSED
 ZFI:	INC	SI
 	MOV	BYTE PTR DS:[SI],0
-	LOOP	ZFI	
+	LOOP	ZFI
 YSED:	POP	SI
 	POP	DX
 	ENDM
@@ -566,7 +566,7 @@ COMMENT\
 	MOV	DX,3D4H			;MODE CONTROL (STANDARD ADRESSING MODE)
 	MOV	AL,17H
 	MOV	AH,11100011B
-	OUT	DX,AX	
+	OUT	DX,AX
 ;\
 	ENDM
 
@@ -679,10 +679,10 @@ SETMCGAB MACRO MEMORY_LINELEN,LINELEN_IN_SIGHT
 	MOV	DX,3D4H			;MODE CONTROL (STANDARD ADRESSING MODE)
 	MOV	AL,17H
 	MOV	AH,11100011B
-	OUT	DX,AX	
+	OUT	DX,AX
 	ENDM
 
-;****************************** VRIGA MACROS *********************************
+;****************************** ร–VRIGA MACROS *********************************
 SETMASK	MACRO MASK			;INTERRUPT MASKEN!
 	MOV	AL,MASK
 	OUT	21H,AL

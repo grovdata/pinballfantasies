@@ -7,8 +7,8 @@
 
 ;BONUS X10 I INACTIVE-SLINGAN
 ;FEL LOOP COMBO-TEXT
-;RIGHT PASSAGE REAGERAR P MISSLYCKADE F™RS™K VID SUPERLŽGEN
-;R™DARE MATRIX
+;RIGHT PASSAGE REAGERAR PÅ MISSLYCKADE FÖRSÖK VID SUPERLÄGEN
+;RÖDARE MATRIX
 
 INCLUDELIB STONES.LIB
 INCLUDELIB CLEAR.LIB
@@ -22,7 +22,7 @@ IF CREATE_FLIP_DATA
 LEFTFLIPTAB	DW 42*(2*MAXDIFS1) DUP (1)
 RIGHTFLIPTAB	DW 42*(2*MAXDIFS2) DUP (1)
 LEFTFLIP2TAB	DW ?
-TEMPTAB		DW 2*MAXDIFS DUP (1)	
+TEMPTAB		DW 2*MAXDIFS DUP (1)
 ELSE
 	EXTRN LEFTFLIPTAB,RIGHTFLIPTAB,LEFTFLIP2TAB
 ENDIF
@@ -66,7 +66,7 @@ MAX_NO_OF_WAIT_SYNCS=50
 NOOFTASKS=20
 FIRSTMASK_GFXADR=BPL*(SPLH+BANH)
 GFXADR_FOR_FLIP_ANIM_DATA=FIRSTMASK_GFXADR+BPL*40
-springsourceadr=GFXADR_FOR_FLIP_ANIM_DATA-3*23	;3*23 ŽR F™R FJŽDERNS GFX
+springsourceadr=GFXADR_FOR_FLIP_ANIM_DATA-3*23	;3*23 ÄR FÖR FJÄDERNS GFX
 springdestadr=(splh+556)*bpl+304/4
 RGB_BUFFER_LEN=1200
 
@@ -93,7 +93,7 @@ TRIGHOSTSPEED=18
 TOWERSPEED=20
 SKILLSPEED=1
 KICKSPEED=18
-SULPSPEED=16	;ŽVEN MBSPEED & 2X_SCREAMSSPEED
+SULPSPEED=16	;ÄVEN MBSPEED & 2X_SCREAMSSPEED
 MBFASTFLASHSPEED=1
 SULPFASTFLASHSPEED=1
 TBSPEED=18
@@ -106,7 +106,7 @@ MATRIXLO equ 79
 MATRIXHI equ 231
 MATRIXCOLS equ MATRIXLO+MATRIXHI*256
 public matrixlo,matrixhi,matrixcols
-BIT2COL			DB 0,0,0,0,252,255,48,0	;flipper f„rgerna
+BIT2COL			DB 0,0,0,0,252,255,48,0	;flipper färgerna
 
 PARTY_ON_SPEED=3	;?
 SHOOT_AGAIN_SPEED=3	;?
@@ -288,7 +288,7 @@ ENDS
 SHOOTTHEBALL	DW	SJINGLE2	;SJINGLE0 ;CP?
 		DB	0,0,0, 0,0,0, 0,0,0, 0,0,0	;CP?
 		DB	0,0,0, 0,0,0, 0,0,0, 0,0,0	;CP?
-		DW	SHOOTTHEBALLTS		
+		DW	SHOOTTHEBALLTS
 
 MULTIDEMONS	DW	0
 		DB	100
@@ -528,7 +528,7 @@ JUMP_AT2	DW SJINGLE9B
 		DB 0,0,0, 0,0,0, 0,0,0, 0,0,0
 		DW JUMP_AT2_TS
 
-LOSTBALL	DW S_LOSTBALL	
+LOSTBALL	DW S_LOSTBALL
 		DB 0,0,0, 0,0,0, 0,0,0, 0,0,0
 		DB 0,0,0, 0,0,0, 0,0,0, 0,0,0
 		DW ball_lostTS
@@ -681,7 +681,7 @@ AreaLista_L	LABEL	WORD
 		DW	Close1
 		DW	130,15,160,40	;IN TILL TOWER
 		DW	Bygel15
-		DW	285,50,310,80	;UPP TILL BUMPER-OMRDET
+		DW	285,50,310,80	;UPP TILL BUMPER-OMRÅDET
 		DW	Bygel16
 		DW	184,51,194,61	;K
 		DW	Bygel5
@@ -691,15 +691,15 @@ AreaLista_L	LABEL	WORD
 		DW	Bygel7
 		DW	278,248,288,258	;THE WELL
 		DW	GropB
-		DW	1,400,20,430	;VŽ DRAIN ™VRE
+		DW	1,400,20,430	;VÄ DRAIN ÖVRE
 		DW	Bygel19
-		DW	25,435,35,445	;VŽ FLIPPER-RŽNNA
+		DW	25,435,35,445	;VÄ FLIPPER-RÄNNA
 		DW	Bygel3
-		DW	263,435,273,445	;H™ FLIPPER-RŽNNA
+		DW	263,435,273,445	;HÖ FLIPPER-RÄNNA
 		DW	Bygel4
-		DW	1,450,20,480	;VŽ DRAIN NEDRE
+		DW	1,450,20,480	;VÄ DRAIN NEDRE
 		DW	Bygel1
-		DW	284,450,294,470	;H™ DRAIN
+		DW	284,450,294,470	;HÖ DRAIN
 		DW	Bygel2
 		DW	1,530,20,550	;THE VAULT
 		DW	GropC
@@ -718,7 +718,7 @@ AreaLista_L	LABEL	WORD
 		DW	0
 
 AreaLista_U	LABEL	WORD
-		DW	135,140,155,160	;TOWER SUG-HL
+		DW	135,140,155,160	;TOWER SUG-HÅL
 		DW	GropA
 		DW	100,5,130,30	;LOOP MIDDLE
 		DW	Bygel8
@@ -736,13 +736,13 @@ AreaLista_U	LABEL	WORD
 		DW	Bygel9
 		DW	49,140,69,170	;GRID-RAMP START RIGHT
 		DW	Bygel10
-		DW	22,200,42,230	;GRID-RAMP B™J1 LEFT
+		DW	22,200,42,230	;GRID-RAMP BÖJ1 LEFT
 		DW	Open6
-		DW	49,200,69,230	;GRID-RAMP B™J1 RIGHT
+		DW	49,200,69,230	;GRID-RAMP BÖJ1 RIGHT
 		DW	Close6
-		DW	22,250,42,280	;GRID-RAMP B™J2 LEFT
+		DW	22,250,42,280	;GRID-RAMP BÖJ2 LEFT
 		DW	Open7
-		DW	49,250,69,280	;GRID-RAMP B™J2 RIGHT
+		DW	49,250,69,280	;GRID-RAMP BÖJ2 RIGHT
 		DW	Close7
 		DW	5,400,20,430	;TO THE VAULT
 		DW	Bygel18
@@ -756,30 +756,30 @@ AREALISTA_L_T	LABEL WORD
 		DW	GropB_T
 		DW	1,530,20,550	;THE VAULT
 		DW	GropC
-		DW	135,140,155,160	;TOWER SUG-HL (TILT)
+		DW	135,140,155,160	;TOWER SUG-HÅL (TILT)
 		DW	GropA_T
 		DW	0
 
 AREALISTA_U_T	LABEL WORD
 		DW	1,530,20,550	;THE VAULT
 		DW	GropC
-		DW	135,140,155,160	;TOWER SUG-HL (TILT)
+		DW	135,140,155,160	;TOWER SUG-HÅL (TILT)
 		DW	GropA_T
 		DW	22,140,42,170	;GRID-RAMP START LEFT
 		DW	Bygel9
 		DW	49,140,69,170	;GRID-RAMP START RIGHT
 		DW	Bygel10
-		DW	22,200,42,230	;GRID-RAMP B™J1 LEFT
+		DW	22,200,42,230	;GRID-RAMP BÖJ1 LEFT
 		DW	Open6
-		DW	49,200,69,230	;GRID-RAMP B™J1 RIGHT
+		DW	49,200,69,230	;GRID-RAMP BÖJ1 RIGHT
 		DW	Close6
-		DW	22,250,42,280	;GRID-RAMP B™J2 LEFT
+		DW	22,250,42,280	;GRID-RAMP BÖJ2 LEFT
 		DW	Open7
-		DW	49,250,69,280	;GRID-RAMP B™J2 RIGHT
+		DW	49,250,69,280	;GRID-RAMP BÖJ2 RIGHT
 		DW	Close7
 		DW	0
 
-LEVEL1LISTA	LABEL WORD	;AREOR SOM ANGER HOPP TILL LEVEL 1 FRN LEVEL 2
+LEVEL1LISTA	LABEL WORD	;AREOR SOM ANGER HOPP TILL LEVEL 1 FRÅN LEVEL 2
 ;PARTY ON?	DW	213,4,245,25
 		DW	16,8,42,45
 		DW	90,80,115,120
@@ -794,7 +794,7 @@ LEVEL1LISTA	LABEL WORD	;AREOR SOM ANGER HOPP TILL LEVEL 1 FRN LEVEL 2
 		DW	1,526,20,576
 		DW	-1
 
-LEVEL2LISTA	LABEL WORD	;AREOR SOM ANGER HOPP TILL LEVEL 2 FRN LEVEL 1
+LEVEL2LISTA	LABEL WORD	;AREOR SOM ANGER HOPP TILL LEVEL 2 FRÅN LEVEL 1
 		DW	42,8,66,38
 		DW	136,36,156,60
 		DW	91,38,133,55
@@ -885,7 +885,7 @@ FLASHLIST	LABEL WORD
 		DW 0,0,T2,T2,1		;KEY
 		DW 0,T2,T2,T2,2
 		DW 0,0,T2,T2,3
-		
+
 		T2=9
 		DW 0,0,T2,T2,26		;STONE BONE
 		DW 0,T2,T2,T2,27
@@ -900,7 +900,7 @@ FLASHLIST	LABEL WORD
 		T2=12
 		DW 0,T2,T2,T2,15	;LOCK & LOCK
 		DW 0,0,T2,T2,25
-		
+
 		T2=7
 		DW 0,0,T2,T2,39		;X2X4X6X8X10
 		DW 0,T2,T2,T2,40
@@ -971,12 +971,12 @@ LON14	DB 199		;DOUBLE-BONUS
 	DB 2
 	DB 60,60,60
 	DB 96,96,96
-LON15	DB 142		;LS
+LON15	DB 142		;LÅS
 	DB 3
 	DB 33,58,33
 	DB 39,70,39
 	DB 52,89,52
-LON16	DB 145		;SP™KE
+LON16	DB 145		;SPÖKE
 	DB 3
 	DB 58,58,58
 	DB 70,70,70
@@ -1015,7 +1015,7 @@ LON24	DB 180		;MB
 	DB 58,58,58
 	DB 70,70,70
 	DB 95,95,95
-LON25	DB 183		;LS
+LON25	DB 183		;LÅS
 	DB 2
 	DB 33,58,33
 	DB 52,89,52
@@ -1063,7 +1063,7 @@ LON33	DB 80		;MUMIEN
 	DB 70,70,70
 	DB 52,8,14
 	DB 95,0,0
-LON34	DB 85		;BLA ANSIKTET
+LON34	DB 85		;BLÅA ANSIKTET
 	DB 7
 	DB 20,27,33
 	DB 27,33,45
@@ -1089,7 +1089,7 @@ LON36	DB 100		;PEPPARKAKS-GUBBEN
 	DB 77,52,27
 	DB 95,83,20
 	DB 95,95,95
-LON37	DB 105		;R™D-LUVAN
+LON37	DB 105		;RÖD-LUVAN
 	DB 7
 	DB 39,0,0
 	DB 52,8,14
@@ -1139,7 +1139,7 @@ LON43	DB 178		;X10
 LON44	DB 185		;SPARKA TILLBAKA
 	DB 2
 	DB 58,58,58
-	DB 95,95,95	
+	DB 95,95,95
 MATRIXON DB matrixlo ;(MATRIXCOL LOW BYTE)
 	DB 1
 	DB 95,83,20
@@ -1279,7 +1279,7 @@ EXTRABALLTEXT		DB 'EXTRA BALL',0
 ;******************************************************************************
 
 ;*********************************************************
-;******* OBS!!! KOM IHG ATT ASSUMERA ANIMATIONER TILL DATA2 OCH 
+;******* OBS!!! KOM IHÅG ATT ASSUMERA ANIMATIONER TILL DATA2 OCH
 ;******* SCROLLAR TILL DATA !!!!!
 
 BEATENSCROLL	DB 21 DUP (1),'YOU HAVE BEATEN THE HIGHSCORE',21 DUP(1),255
@@ -1438,7 +1438,7 @@ MUMMYHEADTS	LABEL WORD
 		DW _VAULTEND,?
 		DW 0
 
-LOOPCOMBOTS	LABEL WORD	;CP! INTE S I ALLA FALL!!
+LOOPCOMBOTS	LABEL WORD	;CP! INTE SÅ I ALLA FALL!!
 		CLEARIT
 		DW _FLASHON,2
 		DW _PRINT13,LOOPCOMBOTEXT,SW*4/4
@@ -1646,7 +1646,7 @@ EXTRABALLTS	LABEL WORD
 		DW _ANIMATION,_CLEAR
 		DW _TOWEREND,?
 		DW 0
-		
+
 M2TS		LABEL WORD
 		ASSUME DS:DATA2
 		DW _ANIMATION,_CLEAR
@@ -1699,7 +1699,7 @@ TOWERHUNTTS	LABEL WORD
 		DW 0
 
 ;*****************************************
-party_onTS	LABEL BYTE	;Turn on party on . . . 
+party_onTS	LABEL BYTE	;Turn on party on . . .
 		CLEARIT
 		DW _FLASHON,PARTY_ON_SPEED
 		DW _PARTYONN,1
@@ -1707,7 +1707,7 @@ party_onTS	LABEL BYTE	;Turn on party on . . .
 		DW _PARTYON,1
 		DW 0
 
-party_offTS	LABEL WORD	;Turn it off	
+party_offTS	LABEL WORD	;Turn it off
 		CLEARIT
 		DW _PARTYOFF,1
 		DW _FLASHOFF,1
@@ -1743,7 +1743,7 @@ OffRoad_endingTS Label Word
 
 		assume	ds:data2
 		dw _wait,60		;CPW!
-		
+
 		dw _animation,_clear
 		DW _FLASHON,1
 		assume	ds:data
@@ -1807,7 +1807,7 @@ TurboMode_endingTS Label Word
 
 		assume	ds:data2
 		dw _wait,60		;CPW!
-		
+
 		CLEARIT
 		DW _FLASHON,1
 		DW _PRINT13_NUMBER,tm_total,SW*4/4+16*2/4 ;CP! RUTCENT
@@ -1898,7 +1898,7 @@ ball_lostTS	LABEL WORD
 		dw _Sound_Effect,s_MultiLjud,0
 
 		DW _JBONUSX1,NoBonusXTS
-		CLEARIT	;CP! CLEARIT ŽR ON™DIGT BRUTAL!
+		CLEARIT	;CP! CLEARIT ÄR ONÖDIGT BRUTAL!
 		DW _BONUS_X_CALCS,?
 		DW _PRINT5,BONUS_X_TEXT,SW*1*2/4+16*7/4-4*2
 		DW _PRINT8_NUMBER_CENT,BONUSSIFFRORNA,7*2*SW/4+TOTCENT
@@ -1954,21 +1954,21 @@ no_MEGA_LAUGHTS LABEL WORD
 		dw _beaten_matrix
 no_bonus2TS	LABEL WORD
 		DW _KOLLA_XXBALL	;EXEKVERAS ENDAST VID XXBALLE
-					;UTF™R XBALLES VUNNA UNDER XXBALLEN 
+					;UTFÖR XBALLES VUNNA UNDER XXBALLEN
 					;OCH HOPPAR TILL CHECK_XXBALLE
 				;VID EJ XXBALLE: DUMRET
-				;VID XXBALLE: NŽSTA SPELARE ELLER AVSLUTA
+				;VID XXBALLE: NÄSTA SPELARE ELLER AVSLUTA
 		dw _waitifmulti,2*60	;cpgnu? (visa poeng lite lengre)
 		DW _MATRIXLGT,0
 		clearit
 		DW _CHANGE_PLAYER
 		CLEARIT
-		dw _wait,32000	;BRŽCKS!
+		dw _wait,32000	;BRÄCKS!
 		DW 0
 SORRYNOBONUSTEXT DB '  SORRY ',94,' NO BONUS  ',0
 SHOW_TURBO_TEXT	DB ' GRIM REAPER TOTAL',0
 
-shoot_again_onTS LABEL BYTE	;Turn on shoot again . . . 
+shoot_again_onTS LABEL BYTE	;Turn on shoot again . . .
 		CLEARIT
 		DW _WAITJINGLE,?
 		DW _FLASHON,SHOOT_AGAIN_SPEED
@@ -1979,7 +1979,7 @@ shoot_again_onTS LABEL BYTE	;Turn on shoot again . . .
 		DW 0
 
 
-out_of_ballsTS	LABEL WORD		;Žr Stewarts fortfarande borta kanske?
+out_of_ballsTS	LABEL WORD		;Är Stewarts fortfarande borta kanske?
 		CLEARIT
 		dw _matrixlgt,1
 		dw _knacket,?
@@ -1990,7 +1990,7 @@ out_of_ballsTS	LABEL WORD		;Žr Stewarts fortfarande borta kanske?
 
 check_xxballTS LABEL WORD
 		DW _check_Xxballs	;KOLLA SPELAREN N'S XXBALL.
-					;OM XXBALL: G™R NEWBALL
+					;OM XXBALL: GÖR NEWBALL
 					;OM EJ XXBALL: HOPPA TILL AFTER_XXBALLSTS
 		;KOMMER EJ HIT!
 
@@ -2034,14 +2034,14 @@ UrbanOverTS	LABEL WORD
 GAME_OVER_TEXT	DB '     GAME  OVER',0
 ;TUBORG!
 
-;********************** SLUT P BALL LOST *******************
+;********************** SLUT PÅ BALL LOST *******************
 ASSUME	DS:DATA
 showithi	macro
 		DW _PRINT13,ALLTIME_TEXT,SW*2/4*2+16/4/2
 		dw _wait,40
 
 		CLEARIT
-		
+
 		DW _FLASHOFF,1
 		DW _MATRIXLGT,0
 		DW _PRINT13,hi_1,SW*2/4*2
@@ -2104,9 +2104,9 @@ ShowInfoTS	LABEL WORD
 		dw _print5,ballstext,sw*2*10/4+16*1/4
 
 		DW 0
-				
+
 ShowHighsTS	LABEL WORD
-;TEXTER	
+;TEXTER
 		CLEARIT
 		DW _FLASHON,1
 		DW _PRINT13,PF_TEXT,SW*2/4*2+4+2
@@ -2126,7 +2126,7 @@ ShowHighsTS	LABEL WORD
 		DW _SCROLL,SCROLL_TEXT1
 ;VISA HIGHSCORE
 		showithi
-;DI UPP  NED!
+;DI UPP Å NED!
 		CLEARIT
 ;		dw _rullgardin_NED,DIGITAL_TEXT,16
 ;		dw _rullgardin_upp,DIGITAL_TEXT,-13
@@ -2140,8 +2140,8 @@ ShowHighsTS	LABEL WORD
 		CLEARIT
 		DW _JMP,ShowHighsTS
 		dw 0
-			
-			
+
+
 ShowPlayersTS	label word
 		clearit
 		dw _print5,playerstext,sw*2*2/4+16*1/4
@@ -2151,12 +2151,12 @@ ShowPlayersTS	label word
 first_no_of_playersTS LABEL WORD
 		clearit
 		dw _print5,playerstext,sw*2*2/4+16*1/4
-		DW _PRINT13,NOLLA,SW*2*2/4+16*19/4		
+		DW _PRINT13,NOLLA,SW*2*2/4+16*19/4
 no_of_playersTS	label word
 		dw _print5,no_of_players_text,sw*2*10/4+16*1/4
 		DW _WAIT_GAME_ON,?
 		dw 0
-		
+
 
 
 
@@ -2166,7 +2166,7 @@ BonusHeldTS		label word
 		DW _WAIT,30
 		clearit
 		dw 0
-				
+
 BonusHeld_text	db ' B O N U S  H E L D ',0
 LIT_XBALL_TEXT	DB ' GET THE EXTRA BALL ',0
 
@@ -2187,11 +2187,11 @@ slutsiffra	db '0',0
 startext	db '*',0
 last_pos	dw 0
 
-;***********************************************************		
+;***********************************************************
 
 GETTING_SICK_TEXT DB '   DOWN THE DRAIN',0
 
-PARTY_ON_TEXT DB ' KUK-AMIGA! ',0	;N„men Gabriel hur du skriver!!!
+PARTY_ON_TEXT DB ' KUK-AMIGA! ',0	;Nämen Gabriel hur du skriver!!!
 ZEROQ		DB '0'+7,0
 SHOOT_AGAIN_TEXT DB 'SHOOT AGAIN PLAYER  ',0
 
@@ -2201,14 +2201,14 @@ show_bonus_TEXT	DB 'BONUS',0
 BONUS_X_TEXT 	DB 'BONUS*X*??',0
 show_totalbonus_TEXT DB 'TOTAL*BONUS',0
 
-		
+
 fld_TEXT	DB '  FRONTLINE DESIGN',0
 
 PF_TEXT		DB 'PINBALL FANTASIES',0
 TRS_TEXT	DB ' THE REAL SIMULATOR',0
 PL_TEXT		DB "STONES N BONES",0
 SCROLL_TEXT1	DB 21 DUP (' '),'ADD PLAYERS WITH F1 TO F8 OR ENTER',21 DUP (' ')
-		DB 'WINNERS DO NOT USE DRUGS',21 DUP (' '),255		
+		DB 'WINNERS DO NOT USE DRUGS',21 DUP (' '),255
 ALLTIME_TEXT	DB 'ALL TIME HIGHSCORES',0
 SCROLL_TEXT2	DB 21 DUP (' '),'FLIP WITH LEFT AND RIGHT ALT SHIFT OR CTRL KEYS',21 DUP (' ')
 		DB 'PUSH TABLE WITH SPACE',21 DUP (' ')
@@ -2226,7 +2226,7 @@ INFO_TEXT	DB 21 DUP (' ')
 		db ''
 		DB 21 DUP (1),255
 
-playerstext	db 'PLAYER 8',0		;8=1 (L™S EKVATIONEN!)
+playerstext	db 'PLAYER 8',0		;8=1 (LÖS EKVATIONEN!)
 BALLSTEXT	DB 'BALL*8***',0	;8=1
 
 hajjskar	db 'HIGHSCORE PL X ',92,'   ',93,0
@@ -2509,7 +2509,7 @@ WHEN_NEW_GAME_RESET_TABLE:
 	MOV	XBALLS,0
 	MOV	XxballE,FALSE
 	MOV	FROM_DEMO_MODE,TRUE
-	;cleara slutsiffrorna (di alla!) (F”r knacket allts†!!!)
+	;cleara slutsiffrorna (di alla!) (För knacket alltså!!!)
 	push	es
 	move	es,ds
 	MOV	di,offset last_text
@@ -2623,7 +2623,7 @@ RESET_VARS:
 	MOV	LOCKVAULTFLASHING,FALSE
 	MOV	LOCKWELLFLASHING,FALSE
 	MOV	HOLDMULTICOUNTER,FALSE
-;HŽR VAR DEN! ;	mov	paRTYFLASh,false
+;HÄR VAR DEN! ;	mov	paRTYFLASh,false
 	MOV	DEMONFLASHING,FALSE
 	MOV	FIX_TELEPORT_BUG,FALSE		;OVERRIDE-VARIABEL!
 	MOV	GHOST_INH_SB,FALSE
@@ -2678,7 +2678,7 @@ NOTHIRES16:
 	LIGHTOFF 38
 
 	MOV	CURRENT_PRIORITY,0
-	EFFECT	LOSTBALL	
+	EFFECT	LOSTBALL
 	MOV	LASTLOOPVAL,0
 	RETN
 
@@ -2688,7 +2688,7 @@ SOUNDRINNER:
 	SUICIDE
 
 _FLORPA:
-	MOV	CS:LB6CNT,0			;RESET F™RDR™JNINGS-RŽKNAREN
+	MOV	CS:LB6CNT,0			;RESET FÖRDRÖJNINGS-RÄKNAREN
 	MOV	ADDORPEK,OFFSET ADDOR		;STARTA MED SISTA NUFFRAN
 	MOV	BONUSPEK,OFFSET BONUSSIFFRORNA+11
 
@@ -2709,7 +2709,7 @@ _NEXTp_5:
 	RETN
 PLIPPA_SCORE:
 	mov	si,offset siffrorna
-	mov	bx,336*2/4+(320-12*16)/4	;h”ger justerad!
+	mov	bx,336*2/4+(320-12*16)/4	;höger justerad!
 	MOVE	ES,CS
 	CALL	DWORD PTR ES:PEKOR
 	MOV	SI,0
@@ -2730,16 +2730,16 @@ DO_IT_AGAIN_AND_DO_IT_NOW:
 	MOV	AL,[BX]
 	OR	AL,AL				;IS DIGIT ZERO?
 	JZ	DIGIT_IS_ZERO
-	DEC	BYTE PTR [BX]			;RŽKNA NED BONUSEN
+	DEC	BYTE PTR [BX]			;RÄKNA NED BONUSEN
 	JNZ	NO_WAITS_TODAY
-	
+
 	IFZEROBCD BONUSSIFFRORNA
 	JNC	NO_WAITS_TODAY
 
 	MOV	CS:LB6CNT,-10 ;CPW!
 NO_WAITS_TODAY:
 
-	MOV	SI,ADDORPEK			;RŽKNA UPP POŽNGEN
+	MOV	SI,ADDORPEK			;RÄKNA UPP POÄNGEN
 	MOV	DI,OFFSET SIFFRORNA
 	CALL	ADDSCOREBCD
 
@@ -2749,7 +2749,7 @@ NO_WAITS_TODAY:
 
 DIGIT_IS_ZERO:
 	;FLER SIFFROR?
-	INC	ADDORPEK			;NEXT DIGIT IN POŽNGEN
+	INC	ADDORPEK			;NEXT DIGIT IN POÄNGEN
 	CMP	ADDORPEK,OFFSET ADDOR+12
 	JE	NO_MORE_NUFFROR
 	DEC	BONUSPEK			;NEXT DIGIT IN BONUS
@@ -2758,7 +2758,7 @@ DIGIT_IS_ZERO:
 STEP_DONE:
 	;SHOW BONUSSIFFRORNA & SIFFRORNA
 	MOV	SI_siffror,OFFSET BONUSSIFFRORNA
-	MOV	DI_siffror,7*2*SW/4-16*4/4	;10 RADER NED, 8 (12-4) TECKEN IN P RADEN!!
+	MOV	DI_siffror,7*2*SW/4-16*4/4	;10 RADER NED, 8 (12-4) TECKEN IN PÅ RADEN!!
 	MOV	TABORT_DIOVRE_FNT,0
 	MOV	PRINTTASK,OFFSET PRINT8_task
 	CALL	PLIPPA_SCORE
@@ -2814,8 +2814,8 @@ spintsel_in_high:
 no_sad_jingle:
 	mov	highscore,false
 	mov	si,0
-	retn				;f„rdig!
-	
+	retn				;färdig!
+
 check_list:
 	push	cx
 	mov	cx,12
@@ -2833,10 +2833,10 @@ not_beaten:
 beaten:
 	pop	cx
 	mov	cs:hi_pos,cx
-;play the happy highscore jingle . . . 
+;play the happy highscore jingle . . .
 ;But only the first time!!
 	cmp	first_high,true
-	je	noplay_of_this	
+	je	noplay_of_this
 	mov	first_high,true
 	mov	current_priority,0
 	mov	jinglejumpcnt,1
@@ -2849,7 +2849,7 @@ noplay_of_this:
 
 poppera:
 	pop	cx
-	add	di,12+3+1		;12 nuffror, 3 bokst„ver
+	add	di,12+3+1		;12 nuffror, 3 bokstäver
 	loop	check_list
 
 done_hi_check:
@@ -2858,26 +2858,26 @@ done_hi_check:
 	jne	dont_getit
 ;*****************
 ;Print 'highscore pl x (   )' and install key-reader TS
-	
+
 	mov	al,cs:playerQ
 	mov	hajjskar[13],al
 	add	hajjskar[13],'7'
-	
+
 	mov	dotrut,offset get_it_from_keyboard
 
 	mov	hojd_1,13
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*13*2/4
 	mov	font_adr,offset font13
 	MOV	AX,offset hajjskar
 	MOVE	DI,sw*2*2/4
 	call	PRINT_TEXT
-	
+
 ;*****************
 	mov	si,1
 	retn
-	
+
 dont_getit:
 	retn
 
@@ -2886,7 +2886,7 @@ get_it_from_keyboard:
 	push	es
 	move	es,ds
 	mov	cx,cs:hi_pos
-	
+
 	mov	si,offset hi_score_list+(12+3+1)*3-1
 	mov	di,offset hi_score_list+(12+3+1)*4-1
 	dec	cx
@@ -2895,7 +2895,7 @@ get_it_from_keyboard:
 	mov	ax,12+3+1
 	mul	cx
 	mov	cx,ax
-		
+
 	std
 	rep	movsb
 
@@ -2911,10 +2911,10 @@ pos4J:	sub	di,(12+3+1)-1
 	mov	cx,12
 	rep	movsb		;mov in new hiscore
 	pop	es
-;di pekar d„r namnet ska petas in!!
+;di pekar där namnet ska petas in!!
 	mov	cs:nof_chars_to_read,3
 	mov	cs:place_hi,di
-	mov	scan_code,-1		;l„s ev. tidigare tangenttryck!
+	mov	scan_code,-1		;läs ev. tidigare tangenttryck!
 	mov	dotrut,offset read_keyboardet
 	mov	si,1
 	retn
@@ -2942,7 +2942,7 @@ read_keyboardet:
 	mov	di,offset hajjskar+16
 	add	di,ax
 	pop	ax
-	stosb		;skriv te sk„rm texten . . 
+	stosb		;skriv te skärm texten . .
 	dec	cs:nof_chars_to_read
 	jnz	kvar_svar
 	mov	sisa,60		;cpw!
@@ -2950,27 +2950,27 @@ read_keyboardet:
 	pop	es
 
 	mov	hojd_1,13
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*13*2/4
 	mov	font_adr,offset font13
 	MOV	AX,offset hajjskar
 	MOVE	DI,sw*2*2/4
 	call	PRINT_TEXT
-	
+
 	;cleara namnet!
 	push	es
 	move	es,ds
 	mov	al,' '
 	mov	cx,3
 	mov	di,offset hajjskar+16
-	rep stosb		;skriv te sk„rm texten . . 
+	rep stosb		;skriv te skärm texten . .
 	pop	es
-	jmp	dont_write_play	
+	jmp	dont_write_play
 kvar_svar:
 	pop	es
 	mov	hojd_1,13
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*13*2/4
 	mov	font_adr,offset font13
@@ -2985,14 +2985,14 @@ feltecken_du:
 	pop	es
 	mov	si,sisa
 	retn
-	
+
 wait_a_little:
 	dec	si
 	cmp	si,30	;cpw!
 	jne	dont_blame_me
 	push	si
 	mov	hojd_1,13
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*13*2/4
 	mov	font_adr,offset font13
@@ -3014,17 +3014,17 @@ _loop_:
 	mov	bx,[bx]
 	MOV	NEXT_A,BX
 	jmp	[bx]
-	
+
 looper	dw ?
-_setloop:	
+_setloop:
 NOJUMPER_tomorrow:
 ;reinstall loop val
 	mov	ax,[bx+2]
-	mov	cs:looper,ax	
+	mov	cs:looper,ax
 
 	MOV	SISA,1
 	mov	dotrut,offset WAITRUT
-	jmp	print_end	
+	jmp	print_end
 
 
 
@@ -3038,10 +3038,10 @@ _INIT_SCORE:
 	MOV	AL,PLAYERS
 	MOV	CS:SHOWER,AL
 	inc	CS:SHOWER
-	
+
 	MOV	SISA,1
 	mov	dotrut,offset WAITRUT
-	jmp	normal_end	
+	jmp	normal_end
 _SHOW_SCORE:
 	INC	PLAYERSTEXT[7]
 	INC	PLAY_TEXT[8]
@@ -3055,7 +3055,7 @@ _SHOW_SCORE:
 
 	cmp	CS:SHOWER,1
 	je	normal_end
-	
+
 	add	bx,2
 	mov	bx,[bx]
 	MOV	NEXT_A,BX
@@ -3064,11 +3064,11 @@ _SHOW_SCORE:
 NOJUMPER:
 	MOV	SISA,1
 	mov	dotrut,offset WAITRUT
-	jmp	normal_end	
+	jmp	normal_end
 
 ShowIt:
 	mov	hojd_1,5
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*5*2/4
 	mov	font_adr,offset font5
@@ -3081,7 +3081,7 @@ ShowIt:
 	mov	bx,cs:player_adr
 	LEA	SI,PLAYER_AREA[BX].P_SIFFRORNA
 
-	mov	bx,336*2/4+(320-12*16)/4	;h”ger justerad!
+	mov	bx,336*2/4+(320-12*16)/4	;höger justerad!
 	MOVE	ES,CS
 	CALL	DWORD PTR ES:PEKOR
 	MOV	SI,0
@@ -3128,8 +3128,8 @@ _TURNOFFOFFROADMODE:
 _knacket:
 	mov	dotrut,offset knackrut1
 	mov	sisa,1
-	MOV	PLAYER,1		;F™R CHECK_XXBALL
-	jmp	normal_end	
+	MOV	PLAYER,1		;FÖR CHECK_XXBALL
+	jmp	normal_end
 
 
 
@@ -3137,12 +3137,12 @@ knackrut1:
 	PLAYJINGLE_PENETRATE S_endfig
 	MOV	LASTJINGLE,emptyjingle	;TYST EFTER FULLGJORD PENETRERING
 	mov	dotrut,offset knackrut2
-;g”r text me sista nuffrerna!!
+;gör text me sista nuffrerna!!
 	mov	cl,players
 	nil	ch
 	mov	di,offset last_text
 	mov	ah,' '
-	mov	bx,10	;n„st sista!
+	mov	bx,10	;näst sista!
 	LEA	SI,PLAYER_AREA[BX].P_SIFFRORNA
 	push	es
 	move	es,data
@@ -3152,14 +3152,14 @@ make_last:
 	add	si,size player_struc
 	add	al,'7'
 	stosw
-	mov	word ptr offset [flashlast+bx],ax	;kopiera texten f”r senare blink
+	mov	word ptr offset [flashlast+bx],ax	;kopiera texten för senare blink
 
 	add	bx,2
 	loop	make_last
 
 	pop	es
 	mov	hojd_1,5
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*5*2/4
 	mov	font_adr,offset font5
@@ -3172,9 +3172,9 @@ make_last:
 	mov	dx,0
 	mov	cx,10
 	div	cx
-	;resten i de„ks e mellan n†ll † ti†
-	mov	last_pos,dx	
-	
+	;resten i deäks e mellan nåll å tiå
+	mov	last_pos,dx
+
 	mov	cs:knackptr,offset knacktab_LO
 	mov	si,nof_banks_LO
 	CMP	HI_RES,TRUE
@@ -3185,7 +3185,7 @@ NOTHIRES38:
 	mov	bx,cs:knackptr
 	move	cs:knacktiden,[bx]
 	mov	sisa,SI
-	
+
 	retn
 knackptr	dw ?
 knacktiden	dw ?
@@ -3196,9 +3196,9 @@ knackrut2:
 	mov	ax,last_pos
 	;ax=linje adress, ett steg=32 pixel=> 1 steg= 8 adr.(mcgab)
 	;(1 char=8*2 pix, 1 steg=2 char)
-	shl	ax,3	
+	shl	ax,3
 	mov	hojd_1,5
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*5*2/4
 	mov	font_adr,offset font5
@@ -3207,7 +3207,7 @@ knackrut2:
 	MOV	AX,offset startext
 	call	PRINT_TEXT
 	mov	si,1
-	
+
 	dec	cs:knacktiden
 	jnz	over_iii
 	mov	bx,cs:knackptr
@@ -3226,9 +3226,9 @@ OVER_III:
 	add	ax,'7'
 	mov	slutsiffra[0],al
 	sub	ax,'7'
-	shl	ax,3	
+	shl	ax,3
 	mov	hojd_1,5
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*5*2/4
 	mov	font_adr,offset font5
@@ -3240,7 +3240,7 @@ OVER_III:
 ;	dec	si
 	cmp	si,0
 	jne	retta_nuda
-;kolla om siffrorna st„mmer f”r n†en . . .
+;kolla om siffrorna stämmer för nåen . . .
 	mov	cl,players
 	nil	ch
 	mov	si,offset last_text
@@ -3248,7 +3248,7 @@ OVER_III:
 	add	bx,'7'
 
 	mov	di,offset flashlast
-	
+
 	move	es,data
 	mov	cs:alla_glada,false
 READ_NUFFROR:
@@ -3265,11 +3265,11 @@ gladgnu_tu:
 	loop	READ_NUFFROR
 ture_sventton_kravdes_har:
 	cmp	cs:alla_glada,true
-	je	gladgnu	
+	je	gladgnu
 	mov	si,0
 	jmp	retta_nuda	;-(  ingen glad  )-:
 
-;Om javisst, spela glad gnu † flasha!
+;Om javisst, spela glad gnu å flasha!
 gladgnu:
 	MOV	MATRIX_SPEED,3
 	MOV	MATRIX_CNT,3
@@ -3277,7 +3277,7 @@ gladgnu:
 	MOV	MATRIX_IS_FLASHING,TRUE
 
 	mov	hojd_1,5
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*5*2/4
 	mov	font_adr,offset font5
@@ -3297,37 +3297,37 @@ retta_nuda:
 
 
 
-_CHECK_XXBALLS:		;OBS! TV INGNGAR TILL DENNA RUTIN
+_CHECK_XXBALLS:		;OBS! TVÅ INGÅNGAR TILL DENNA RUTIN
 			;INPUT: LAST_TEXT, LAST_POS, PLAYER, PLAYERS
 			;OUTPUT: FT_PEKARE, PLAYER
 TESTNEXTPL:
 	PUSH	BX
-	
+
 	MOV	BL,PLAYER
 	NIL	BH
 
 	SHL	BX,1
-	ADD	BX,OFFSET LAST_TEXT-2	;bx pekar p† spelare n's slutsiffra
-	
+	ADD	BX,OFFSET LAST_TEXT-2	;bx pekar på spelare n's slutsiffra
+
 	MOV	AL,[BX]
 	MOV	WORD PTR [BX],'XX'	;DESTROY HIM MY ROBOTS!
 	NIL	AH
 	SUB	AL,'7'
 	POP	BX
-	
-	
-	CMP	LAST_POS,AX
-	JE	THIS_ONE		;HAN SKA F XXBALL!!! CP?
 
-	INC	PLAYER			;INGEN XXBALL F™R HONOM!
+
+	CMP	LAST_POS,AX
+	JE	THIS_ONE		;HAN SKA FÅ XXBALL!!! CP?
+
+	INC	PLAYER			;INGEN XXBALL FÖR HONOM!
 	MOV	AL,PLAYER
 	CMP	AL,PLAYERS
 	JNA	TESTNEXTPL
 
-	MOV	BX,OFFSET after_xxballsTS	;X AVSLUT
+	MOV	BX,OFFSET after_xxballsTS	;ÅXÅ AVSLUT
 	MOV	NEXT_A,BX
 	JMP	[BX]
-	
+
 THIS_ONE:
 
 	MOV	AL,PLAYER
@@ -3342,10 +3342,10 @@ THIS_ONE:
 ;*********************************
 
 _KOLLA_XXBALL:			;VID EJ XXBALLE: DUMRET
-				;VID XXBALLE: NŽSTA SPELARE ELLER AVSLUTA
+				;VID XXBALLE: NÄSTA SPELARE ELLER AVSLUTA
 				;(FIXAR EV XBALL)
 	CMP	XXBALLE,FALSE
-	JE	HU_	
+	JE	HU_
 	PUSH	BX
 	CALL	VARS_2_P_STRUC			;STORE TABLE AND SCORE!
 	POP	BX
@@ -3423,7 +3423,7 @@ PLAYER_CHANGED:
 	ADDTASK	NEW_BALL_TASK			;TO GAME FROM GAME
 	POP	BX
 
-HU_:	ADD	BX,2		;TASKSYTEM, HOPPA TILL NŽSTA/AVSLUT
+HU_:	ADD	BX,2		;TASKSYTEM, HOPPA TILL NÄSTA/AVSLUT
 	CMP	WORD PTR [BX],0
 	JNE	_NEXTp_7
 	MOV	BX,0
@@ -3433,7 +3433,7 @@ _NEXTp_7:
 	MOV	NEXT_A,BX
 	JMP	[BX]
 
-LET_HIM_SHOOT_AGAIN:		;2 INGNGAR!
+LET_HIM_SHOOT_AGAIN:		;2 INGÅNGAR!
 	DEC	XBALLS
 	MOV	BX,OFFSET shoot_again_onTS
 	MOV	NODOTCOUNT,0
@@ -3470,7 +3470,7 @@ zeroscore:
 	rep stosw
 	pop	es
 	retn
-	
+
 TO_DEMO_FROM_GAME:
 	MOV	PLAYERS_CP,TRUE
 	CALL	GO_DEMO_MODE			;TO DEMO FROM GAME
@@ -3498,7 +3498,7 @@ NEW_BALL_TASK:
 	CALL	NEW_BALL
 	RETN	;PGA NEWBALL
 
-NEW_BALL PROC NEAR	;ENDA SŽTTET ATT F UT EN BOLL P BANAN!
+NEW_BALL PROC NEAR	;ENDA SÄTTET ATT FÅ UT EN BOLL PÅ BANAN!
 	MOV	LOOSING,FALSE
 	MOV	BALL_DOWN,FALSE
 	MOV	I_UTSKJUT,TRUE
@@ -3619,7 +3619,7 @@ NOTTHEKICKBACK:
 	MOVE	NEXTJUMP,PLAYER_AREA[BX].P_NEXTJUMP
 	MOVE	CYCLONECOUNTER,PLAYER_AREA[BX].P_CYCLONECOUNTER
 	MOVEBCD	CYCLONECOUNTERBCD,PLAYER_AREA[BX].P_CYCLONECOUNTERBCD
-	
+
 	MOV	CL,PLAYER_AREA[BX].P_GHOSTCOUNTER
 	MOV	GHOSTCOUNTER,CL
 	OR	CL,CL
@@ -3971,7 +3971,7 @@ PARTYOFFAREA:		;REAL GAME ON
 	MOV	CURRENT_PRIORITY,0
 	PLAYJINGLE S_MAIN
 	MOV	LASTJINGLE,1
-	MOV	I_UTSKJUT,FALSE		;TILLTER INACTIVE-SLINGAN (DOTMATRIX)
+	MOV	I_UTSKJUT,FALSE		;TILLÅTER INACTIVE-SLINGAN (DOTMATRIX)
 	RETN
 
 ;*********************************** GAME ON **********************************
@@ -3993,7 +3993,7 @@ BYGEL15:				;IN TO TOWER
 
 
 ;***************************** BYGEL16 *******************************
-BYGEL16:				;UPP TILL BUMPEROMRDET
+BYGEL16:				;UPP TILL BUMPEROMRÅDET
 	PUT_GATE_NEG_LOW GATE2
 	CALL	ADDTURBO	;CP! EGENTLIGEN SKALL DENNA LIGGA I BUMPEROMR.
 	RETN
@@ -4002,7 +4002,7 @@ OPENBUMPERS:
 	PUT_GATE_NEG_LOW GATE2
 	RETN
 
-CLOSEBUMPERS:		;FR EJ CALLAS P MANUELLT!!!
+CLOSEBUMPERS:		;FÅR EJ CALLAS PÅ MANUELLT!!!
 	PUT_GATE_POS_LOW GATE2
 	CMP	SULP_FLASHING,TRUE
 	JNE	NOTSFL
@@ -4254,7 +4254,7 @@ NCK:	CLC
 
 ;***************************** THE TOWER *******************************
 
-GropA:					;TOWER SUG-HL
+GropA:					;TOWER SUG-HÅL
 	SETBALLPOS TOWERX,TOWERY,0,0,TRUE
 	MOV	HOLDSTILL,TRUE
 	MOV	IN_TOWER,TRUE
@@ -4420,8 +4420,8 @@ NOT_T_5M:
 	EFFECT	TMILLION
 	ADD	REMAL,AL
 	MOV	INH_EFF,TRUE
-	jmp	notthmode2		;ska de va s† h„r? (annars f†r man
-					; b†de million och tower bonus (2M))
+	jmp	notthmode2		;ska de va så här? (annars får man
+					; både million och tower bonus (2M))
 NOT_T_MILLION:
 
 	EFFECT	SCORETOWER				;TOWER BONUS ONLY!
@@ -4517,7 +4517,7 @@ _TOWEREND:
 	POP	BX
 	JMP	NORMAL_END
 
-TOWERENDT:		;TERSTŽLLAREN (ALLTS INTE DEN TERSTŽLLAREN!)
+TOWERENDT:		;ÅTERSTÄLLAREN (ALLTSÅ INTE DEN ÅTERSTÄLLAREN!)
 	WAITSYNCS 10
 	MOV	INHIBIT_COUNT_DOWN,FALSE
 	CMP	WAS_SPECIAL,TRUE
@@ -4565,7 +4565,7 @@ NOBALLINTHEWELL:
 	MOV	SI,OFFSET WELLVALUE
 	MOV	DI,OFFSET SIFFRORNA
 	CALL	ADDSCOREBCD
-	
+
 	CMP	LOCKWELLFLASHING,TRUE			;LOCK ENABLED?
 	JNE	NOTWLOCKFLASHING
 	MOV	HOLDMULTICOUNTER,TRUE
@@ -4582,7 +4582,7 @@ NOBALLINTHEWELL:
 	ENDFLASH 25				;LOCK (THE WELL)
 	LIGHTON 25
 NOTWLOCKFLASHING:
-	
+
 	EFFECT	SCOREWELL
 	ADD	REMAL,AL
 
@@ -4627,7 +4627,7 @@ _WELLEND:
 	MOV	DOTRUT,OFFSET WAITRUT
 	POP	BX
 	JMP	NORMAL_END
- 
+
 WELLENDT_TILT:
 WELLENDT:
 	WAITSYNCS 10 ;CP!
@@ -4645,28 +4645,28 @@ GROPB_T:
 
 
 
-Bygel19:				;VŽ DRAIN ™VRE
+Bygel19:				;VÄ DRAIN ÖVRE
 	RETN
 
 
-Bygel3:					;VŽ FLIPPER-RŽNNA
+Bygel3:					;VÄ FLIPPER-RÄNNA
 	SOUNDEFFECT SBYGEL2,0
 	ADDSCORE BCD10070
 	ADDBONUS BCD1080
 	RETN
 
-Bygel4:					;H™ FLIPPER-RŽNNA
+Bygel4:					;HÖ FLIPPER-RÄNNA
 	SOUNDEFFECT SBYGEL2,0
 	ADDSCORE BCD10070
 	ADDBONUS BCD1080
 	RETN
 
-Bygel1:					;VŽ DRAIN NEDRE
+Bygel1:					;VÄ DRAIN NEDRE
 	SOUNDEFFECT SBYGEL1,0
 	ADDSCORE BCD50010
 	RETN
 
-Bygel2:					;H™ DRAIN
+Bygel2:					;HÖ DRAIN
 	SOUNDEFFECT SBYGEL1,0
 	ADDSCORE BCD50030
 	RETN
@@ -4688,13 +4688,13 @@ NOT_THE_KICKBACK:
 	CMP	TILTFLAG,TRUE				;TILT?
 	JNE	NOT_TILT_GC
 	ADDTASK	VAULTENDT
-	RETN						;RETN	
+	RETN						;RETN
 NOT_TILT_GC:
 
 	CMP	LIGHTSTATUS[15],FALSE			;BALL LOCKED IN VAULT?
 	JE	NOTLOCKEDINVAULT
 	ADDTASK	VAULTENDT
-	RETN						;RETN	
+	RETN						;RETN
 NOTLOCKEDINVAULT:
 
 	MOV	IN_VAULT,TRUE
@@ -4719,7 +4719,7 @@ NOTVFLASHING:
 	CMP	GHOST_FLASHING,TRUE			;GHOST FLASHING?
 	JNE	NO_GHOST
 	MOV	GHOST_FLASHING,FALSE			;GET THE GHOST!
-	ENDFLASH 16		;"GHOST" TRIANGLEOLIKHETEN F™R SP™KMŽNGDEN
+	ENDFLASH 16		;"GHOST" TRIANGLEOLIKHETEN FÖR SPÖKMÄNGDEN
 	LIGHTOFF 16
 	MOV	BL,GHOSTCOUNTER
 	MOV	AL,SIZE GHOST_STRUC
@@ -4758,7 +4758,7 @@ EFFISDONE:
 	CALL	AX
 	POP	BX
 	INC	GHOSTCOUNTER
-	CMP	GHOSTCOUNTER,8		;TOTALT 8 SP™KEN!
+	CMP	GHOSTCOUNTER,8		;TOTALT 8 SPÖKEN!
 	JB	NOT_LAST_GHOST
 	MOV	GHOSTCOUNTER,0
 	CALL	DOLIGHTS
@@ -4907,7 +4907,7 @@ NOUTSKJUT:
 	MOV	DOTRUT,OFFSET WAITRUT
 	POP	BX
 	JMP	NORMAL_END
- 
+
 VAULTENDT:
 VAULTENDT_TILT:
 	WAITSYNCS 10 ;CP?
@@ -4925,7 +4925,7 @@ VAULTENDTT:
 	JE	GATE_OK
 	PUT_GATE_POS_LOW GATE5
 GATE_OK:
-	MOV	HIGH_VAULT,FALSE	;H™GSPŽNNING!
+	MOV	HIGH_VAULT,FALSE	;HÖGSPÄNNING!
 	SUICIDE
 
 _TILTED:
@@ -4949,7 +4949,7 @@ IM_SHOT:
 	MOV	DOTRUT,OFFSET WAITRUT
 	POP	BX
 	JMP	NORMAL_END
- 
+
 
 Close4:					;Close Tower
 	RETN
@@ -5145,18 +5145,18 @@ AGAIN_MILE:
 	ADDTASK THESECONDTIME
 NOT2XSF:
 	Cmp	CycloneCounter,1
-	je	Again_Mile		;Om 1 ”ke till 2 . . . 
+	je	Again_Mile		;Om 1 öke till 2 . . .
 
 	mov	ax,CycloneCounter
 	mov	cx,nextjump
 	sub	cx,ax
-	jz	Do_Jump		;G”r effekten
+	jz	Do_Jump		;Gör effekten
 	cmp	cx,10
-;	jnb	No_jump		;Den „r inte n„sta . . . 
-	
+;	jnb	No_jump		;Den är inte nästa . . .
+
 ;***************************** lites the jump
-	mov	ax,nextjump		;V„rdet . . .
-	mov	bx,offset jUMP_aT_text	;vilken text † stoppa in v„rdet i
+	mov	ax,nextjump		;Värdet . . .
+	mov	bx,offset jUMP_aT_text	;vilken text å stoppa in värdet i
 	CMP	CYCLONECOUNTER,10
 	JNA	NOTTHE5M
 	MOV	BX,OFFSET JUMP_AT_TEXT2
@@ -5197,7 +5197,7 @@ THESECONDTIME:			;ONLY IF 2X SCREAMS!
 	SUICIDE
 
 ;*****************************
-;Input: Ax= NextR„knare  Bx=offset till texten
+;Input: Ax= NextRäknare  Bx=offset till texten
 Put_In_Text:
 	PUSH	BX
 	mov	di,2
@@ -5301,22 +5301,22 @@ TILT_B10:
 	RETN
 
 
-Open6:					;GRID-RAMP B™J1 LEFT
+Open6:					;GRID-RAMP BÖJ1 LEFT
 	PUT_GATE_NEG_HIGH GATE4B
 	RETN
 
 
-Close6:					;GRID-RAMP B™J1 RIGHT
+Close6:					;GRID-RAMP BÖJ1 RIGHT
 	PUT_GATE_POS_HIGH GATE4B
 	RETN
 
 
-Open7:					;GRID-RAMP B™J2 LEFT
+Open7:					;GRID-RAMP BÖJ2 LEFT
 	PUT_GATE_NEG_HIGH GATE4C
 	RETN
 
 
-Close7:					;GRID-RAMP B™J2 RIGHT
+Close7:					;GRID-RAMP BÖJ2 RIGHT
 	PUT_GATE_POS_HIGH GATE4C
 	RETN
 
@@ -5470,10 +5470,10 @@ GONRUT:
 	MOV	SI,0
 	RETN
 INTE_SATT_IGANG:
-	MOV	SI,34		;INTE 0 = INTE IGNG !!
+	MOV	SI,34		;INTE 0 = INTE IGÅNG !!
 	RETN
 
-	
+
 _JBCDZ:
 	IFZEROBCD [BX+2]
 	JC	OVERIT_
@@ -5499,16 +5499,16 @@ _JBONUSX1:
 	JMP	[BX]
 QJBX1:	MOV	SISA,1
 	MOV	DOTRUT,OFFSET WAITRUT
-	JMP	NORMAL_END	
+	JMP	NORMAL_END
 
 _Jmp:
 	add	bx,2
 	mov	bx,[bx]
 	MOV	NEXT_A,BX
 	JMP	[BX]
-	
 
-_CALC_HAPPY:	
+
+_CALC_HAPPY:
 	MOV	DOTRUT,OFFSET WAITRUT
 	MOV	SISA,1
 	PUSHA
@@ -5534,7 +5534,7 @@ _CALC_CYCLO:
 	MOV	CX,12/2 ;(12/6=6!!!)
 	REP	STOSW
 	POP	ES
-	
+
 	MOV	DOTRUT,OFFSET WAITRUT
 	MOV	SISA,1
 	MOV	CX,CYCLONECOUNTER
@@ -5545,7 +5545,7 @@ URBANLOOP:
 	CALL	ADDSCOREBCD
 	POP	BX CX
 	LOOP	URBANLOOP
-	
+
 	MOV	SI,OFFSET CYCLONESCOREBCD	;CYCLONES -> TOTAL BONUS
 	MOV	DI,OFFSET BONUSSIFFRORNA
 	CALL	ADDSCOREBCD
@@ -5559,8 +5559,8 @@ _NEXTp_3gg:
 	RETN
 
 READ_SPECIAL_MODE_COUNTER PROC NEAR
-;[SEC_ASC] PEKAR P MSD, (0='*')	[SEC_ASC+1] PEKAR P LSD
-;LŽS AV BARA!
+;[SEC_ASC] PEKAR PÅ MSD, (0='*')	[SEC_ASC+1] PEKAR PÅ LSD
+;LÄS AV BARA!
 	MOVE	DS,DATA
 	cmp	[sec_asc],'*'
 	jne	no_end
@@ -5670,7 +5670,7 @@ _SHOOT_AGAIN_ONN:
 
 _PARTYON:		;BX NOT USED!
 	MOV	PARTYFLASH,TRUE
-	MOVE	SISA,1		;HUR M†NGA
+	MOVE	SISA,1		;HUR MÅNGA
 	MOV	DOTRUT,OFFSET PARTYRUT
 	JMP	NORMAL_END
 
@@ -5703,7 +5703,7 @@ KILLHIMNOW2:
 	SUICIDE
 STILLTRUE2:
 	RETN
-	
+
 
 _BONUS_X_CALCS:		;FN: MULTIPLIES THE BONUS
 			;INPUT: BONUS_X, BONUSSIFFRORNA
@@ -5722,7 +5722,7 @@ DO_IT_AGAIN:
 	CALL	ADDSCOREBCD
 	POP	CX
 	LOOP	DO_IT_AGAIN
-NO_X_BONUS:	
+NO_X_BONUS:
 	MOV	BONUS_X_TEXT[8],1+'7'
 	MOV	BONUS_X_TEXT[9],0+'7'
 	MOV	AL,BONUS_X
@@ -5740,7 +5740,7 @@ ITS10:
 
 
 
-_CALC_MEGA:	
+_CALC_MEGA:
 	MOV	DOTRUT,OFFSET WAITRUT
 	MOV	SISA,1
 	MOV	SI,OFFSET TM_TOTAL 	;ML_TOT -> TOTAL BONUS
@@ -5765,7 +5765,7 @@ SetWBPL macro   BPLnr
                 endm
 ;-)
 _tower:
-	MOVE	cs:stannalinne,[BX+2]	;HUR M†NGA
+	MOVE	cs:stannalinne,[BX+2]	;HUR MÅNGA
 	mov	cs:linne,152
 	MOV	DOTRUT,OFFSET towerrut
 ;galopp
@@ -5775,7 +5775,7 @@ linne	dw ?
 stannalinne dw ?
 
 towerrut:
-	dec	cs:linne	;mindre nattlinne=mer † se!!
+	dec	cs:linne	;mindre nattlinne=mer å se!!
 	mov	cx,cs:linne
 	call	showtower
 	mov	ax,cs:stannalinne
@@ -5786,7 +5786,7 @@ towerrut:
 stopit:
 	mov	si,0
 	retn
-	
+
 showtower:
 ;cx: startlinje!
 	move	es,0a000h
@@ -5829,9 +5829,9 @@ gulan:
 	mov	al,matrixhi
 	stosb
 overit_ehrm:
-;och n„sta . . . 
+;och nästa . . .
 	test	dl,bh
-	je	gulan2	
+	je	gulan2
 svartan2:
 	mov	al,matrixlo
 	stosb
@@ -5843,9 +5843,9 @@ overit_ehrm2:
 	loop	put_bits
 	pop	cx
 	add	di,sw/4+(sw-320)/4
-	loop	put_kll		
+	loop	put_kll
 	pop	di si cx
-	shr	bx,2	
+	shr	bx,2
 	loop	two
 	move	ds,data
 retn
@@ -5856,7 +5856,7 @@ _DOBEATEN:
 	INC	XBALLS
 	JMP	NORMAL_END
 
-	
+
 CODE	ENDS
 
 

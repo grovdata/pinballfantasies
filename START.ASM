@@ -177,9 +177,9 @@ in_hyperspace db false
 s_p	dw ?
 s_s	dw ?
 scan	db ?
-	
+
 enough_mem:
-;install keyints . . . 
+;install keyints . . .
 
 	move	es,0
 
@@ -188,7 +188,7 @@ enough_mem:
 	move	int9_ip,es:[9*4]
 	move	int9_cs,es:[9*4+2]
 	mov	es:[9*4],offset keyint
-	move	es:[9*4+2],cs	
+	move	es:[9*4+2],cs
 
 	move	int16h_ip,es:[keyhandler*4]
 	move	int16h_cs,es:[keyhandler*4+2]
@@ -202,11 +202,11 @@ enough_mem:
 	MOVE	ES:[24H*4+2],CS
 
 	POPF
-	move	es,DATA	
+	move	es,DATA
 
 
 ONCE_AGAIN:
-;Intro and chooser . . . 
+;Intro and chooser . . .
 	move	ds,DATA
 	move	es,DATA
 	pusha
@@ -220,14 +220,14 @@ ONCE_AGAIN:
 	move	ds,DATA
 	mov dx,offset introname
 	jc file_not_found
-	
+
 	;Check if any errors was detected in prog.(eg. Mod not found, out of mem)
 	mov	ax,4d00h
 	int	21h
 	cmp	ax,0
 	jne	PrintGameErrors
-	
-	mov	cs:first_time,false	
+
+	mov	cs:first_time,false
 
 ;******************* cp cp cp! ta bort i riktiga!
 
@@ -235,7 +235,7 @@ ONCE_AGAIN:
 ;	int	10h
 ;*******************
 
-;Ladda bana . . . 
+;Ladda bana . . .
 	cmp	bannumber,0
 	je	quit		;esc pressed!!!!
 	move	ds,DATA
@@ -262,7 +262,7 @@ ONCE_AGAIN:
 	add dx,offset banor-namelen
 	popf
 	jc file_not_found
-;********** ska de vara h„r???
+;********** ska de vara här???
 	;Check if any errors was detected in prog.(eg. Mod not found, out of mem)
 	mov	ax,4d00h
 	int	21h
@@ -292,21 +292,21 @@ comment\
 	MOV	AX,900H
 ;	INT	21H
 ;	mov	ax,900h
-;     	int	21h	
+;     	int	21h
 	jmp	quit
 unknownerror:
 	mov	dx,offset unknowntxt
 	MOV	AX,900H
 	INT	21H
 ;	mov	ax,900h
-;     	int	21h	
+;     	int	21h
 	jmp	quit
-	
+
 ;drv_not_found:
 	pusha
 	mov	dx,offset error2
 	mov	ax,900h
-       	int	21h	
+       	int	21h
 
 	mov	cx,13
 	mov	al,0
@@ -318,7 +318,7 @@ unknownerror:
 	stosb
 	popa
 ;	mov	dx,offset drv
-	jmp	yo	
+	jmp	yo
 \
 file_not_found:
 	pusha
@@ -330,7 +330,7 @@ yo:
 	INT	21H
 	mov	dx,offset notfound
 	mov	ax,900h
-       	int	21h	
+       	int	21h
 	jmp	quit
 
 Equit:
@@ -345,7 +345,7 @@ quit:
 	MOVE	ES:[24H*4],INT24H_ADR
 	MOVE	ES:[24H*4+2],INT24H_SEG
 	POPF
-quitta:	
+quitta:
 	mov	ax,4c00h
 	int	21h
 
@@ -406,15 +406,15 @@ INTE_JAG_HELLER_OXO_KANSKE:
 	pop	ax
 	mov	ah,0
 	mov	al,cs:scan
-	mov	cs:scan,0	
+	mov	cs:scan,0
 	iret
 inte_jag_heller:
 	pop	ax
 	mov	ah,0
-	mov	al,cs:scan	;nja, n†got minskad funktion . . 
-	mov	cs:scan,0	
+	mov	al,cs:scan	;nja, något minskad funktion . .
+	mov	cs:scan,0
 	iret
-	
+
 KEYINT:	;int 9
 	PUSHA
         PUSH DS

@@ -17,36 +17,36 @@ PUBLIC TT,NN
 COMMENT\***********************************************************************
 ALLA:
 skydd - SLUMPEN!
-testa pÜ flera datorer
+testa p√• flera datorer
 cheats
 
 GABRIEL:
-LJUD FôR OFTA VID STONEBONE
+LJUD F√ñR OFTA VID STONEBONE
 CHECKSUMMA SKYDDET
-*Kolla minneskrav jÑttenoga med stîrsta SDRen
-*spela en massa pÜ magnus dator Ü din farsas notebook (m extern skÑrm)
+*Kolla minneskrav j√§ttenoga med st√∂rsta SDRen
+*spela en massa p√• magnus dator √• din farsas notebook (m extern sk√§rm)
 
 JOHAN:
-FELHANTERINGEN CP! (èTMINSTONE OUT OF MEM)
-NYA FLD-LOGGAN! (FRONT.LBM Pè DIN DATOR)
-TONINGEN SKA INTE SLUTA Pè BAJSBRUNT UTAN Pè SVART!
-*Kolla minneskrav jÑttenoga med stîrsta SDRen
-spela en massa pÜ TFT notebook + gotlandsdatorn
+FELHANTERINGEN CP! (√ÖTMINSTONE OUT OF MEM)
+NYA FLD-LOGGAN! (FRONT.LBM P√Ö DIN DATOR)
+TONINGEN SKA INTE SLUTA P√Ö BAJSBRUNT UTAN P√Ö SVART!
+*Kolla minneskrav j√§ttenoga med st√∂rsta SDRen
+spela en massa p√• TFT notebook + gotlandsdatorn
 
 DANIEL:
 SB16
 JOHANS SYNDROM
-PAS 16 (lÜna Steins)
+PAS 16 (l√•na Steins)
 
-?HéNGDE VID UPPSTART AV BILLION (STEWART)
+?H√ÑNGDE VID UPPSTART AV BILLION (STEWART)
 ?BALL STUCK AFTER PAUSE
 ?386SX16 FICK MEDIUM (INTERNAL)
 ??SCANDICS SYNDROM
 
-(MUSIC ON/OFF BORDE STôDJA SUPERLéGEN (DVS ANDRA MAINSLINGOR éN S_MAIN)
-(anvÑnd nya clears!!)
+(MUSIC ON/OFF BORDE ST√ñDJA SUPERL√ÑGEN (DVS ANDRA MAINSLINGOR √ÑN S_MAIN)
+(anv√§nd nya clears!!)
 SPELTESTA BILLION
-adlib och thing knÑpper till vid play sdr-laddning endast i introN?
+adlib och thing kn√§pper till vid play sdr-laddning endast i introN?
 
 ******************************************************************************\
 
@@ -62,7 +62,7 @@ yst=450
 NOOFWAITSYNCS=0
 NO_OF_PLAYERS=8 ;NOTE: F1-F8
 inactivetime=12	;(secs)
-TA_TID=15	;SYNCS EN KEY éR GILTIG EFTER DEN BLIVIT TRYCKT
+TA_TID=15	;SYNCS EN KEY √ÑR GILTIG EFTER DEN BLIVIT TRYCKT
 SLIME_FACTOR_DEFAULT=11 ;5=OUT OF SCREEN 55=HARD
 AWAYFROMMIDDLE=20
 MOUSETOTAL=2
@@ -78,8 +78,8 @@ INCLUDE C:\source\MACROS1.ASM
 INCLUDE C:\source\MACROS3.ASM
 INCLUDE FANTASIE.MAC
 
-SKALA56 MACRO SKALVAR 
-MOV	AX,5		
+SKALA56 MACRO SKALVAR
+MOV	AX,5
 IMUL	SKALVAR
 MOV	CX,6
 IDIV	CX
@@ -115,7 +115,7 @@ RotCentX	DW    1
 RotCentY	DW    1
 PowerZonE	DW    1       ;Quadrants for power calculations
 FlipSize	DW    1       ;Offset to next flipper
-FlipVinkelHast	DW    1       ;Speed ∞/200:th second
+FlipVinkelHast	DW    1       ;Speed ¬∞/200:th second
 FlipVinkel	DW    1       ;Angel from zero
 FlipFrame	DW    1       ;Frame to use
 FlipFrames	DW    1       ;Last frame
@@ -134,7 +134,7 @@ FLIPDIFS	DW	?
 FlipData	Dw    1       ;Data for flippers
 ENDS
 ;****************************************************************
-FLIPPERL EQU 2	;OBS! MèSTA VARA 2 FôR ATT DET SKA BLI RéTT SHIFTKEYS
+FLIPPERL EQU 2	;OBS! M√ÖSTA VARA 2 F√ñR ATT DET SKA BLI R√ÑTT SHIFTKEYS
 FLIPPERR EQU 1
 
 springh=17
@@ -201,13 +201,13 @@ public INSIDE_RASTINT,holdstill,ballhigh,hitvalue,materialbit,bumperwashit,ball_
 public moveflipmask
 
 DATA	SEGMENT PARA PUBLIC 'DATA'
-extrn MINUSHAST:word	;lÑgg dessa externer i datasegmentet
+extrn MINUSHAST:word	;l√§gg dessa externer i datasegmentet
 extrn pluSHAST:word
-extrn bumperpower:word	
-extrn kickerpower:word	
-extrn kickminhast:word	
-extrn TILTHASTFW:word	
-extrn TILTHASTRV:word	
+extrn bumperpower:word
+extrn kickerpower:word
+extrn kickminhast:word
+extrn TILTHASTFW:word
+extrn TILTHASTRV:word
 
 SOUNDCFG	DB "SOUND.CFG",0
 DRV		DB "c:\Masm\DS20\RESIPLAY\resiplay.exe",15 DUP(0)
@@ -241,7 +241,7 @@ plastic 	dw    10000,10000/Kvot,400,-500,38,0,0,0      ;Plastic
 bumperwashit	db false
 ball_down	db false
 hitpointer	dw ?
-GFXMASK21_OFFSET dw FIRSTMASK_GFXADR 
+GFXMASK21_OFFSET dw FIRSTMASK_GFXADR
 GFXMASK23_OFFSET dw ?
 gFXMASK13_OFFSET dw ?
 springpos	db 0
@@ -254,7 +254,7 @@ SLIME_FACTOR	DW SLIME_FACTOR_DEFAULT ;5=OUT OF SCREEN 55=HARD
 ;**********************************************
 ADJUST	EQU 55
 ;*******************************
-	    dw adjust*2 dup(0)	;hîr
+	    dw adjust*2 dup(0)	;h√∂r
 adjusttable dw	adjust*24 dup(0) ; ihop
 ;***********************************
 hitvalue		db 0,0
@@ -342,7 +342,7 @@ ADDORPEK		DW ?
 BONUSPEK		DW ?
 LOOSING			DB ?
 ALLOWFLIP		DB ?
-first_time_you_fool	db true		;Jaaaa det rÑcker sÜ hÑr! (ANVéNDS éVEN VID ESC I CHUTEN)
+first_time_you_fool	db true		;Jaaaa det r√§cker s√• h√§r! (ANV√ÑNDS √ÑVEN VID ESC I CHUTEN)
 if demover
 MINUTE_5_COUNTER	DW 0
 fiveminutes		db false
@@ -368,7 +368,7 @@ VISAKEYS		DB ?
 VISAPOANG		DW 0
 STUDSSCOREN		DW 0
 INHIBIT_COUNT_DOWN	DB ?		;(PENETRATION OF SPECIAL MODE)
-EOTS			DB ?		;UPP TILL VARJE BANA ATT ANVéNDA
+EOTS			DB ?		;UPP TILL VARJE BANA ATT ANV√ÑNDA
 DOT_READY		DB ?
 LAGERARBETAREN		DW ?
 LILLE_LAGERARBETAREN	DB ?
@@ -434,8 +434,8 @@ first_high	db false	;cp?
 HIGHSCORE	DB false	;CP?
 no_demomusic	db false	;cp?
 DEMOMODE	DB TRUE
-F1F8_CODE	DB ?	
-OLD_F1F8_CODE	DB ?	
+F1F8_CODE	DB ?
+OLD_F1F8_CODE	DB ?
 PLAYERS		DB 0
 PLAYERS_CP	DB FALSE
 CARMEN		DW ?
@@ -443,7 +443,7 @@ PLAYER		DB ?
 ORGPLAYER	DB ?
 extrn	sin:word,material:word
 ;fonter
-TOM_BRUN DB 13 DUP(0)	 	;FôR è RôJJA MED ASSè!
+TOM_BRUN DB 13 DUP(0)	 	;F√ñR √Ö R√ñJJA MED ASS√Ö!
 extrn	font5,font8,font11,font13
 densomsparhanhar db ?
 TILTDISABLED	DB FALSE
@@ -585,7 +585,7 @@ NewplayerTS	label word
 		dw _print5,playerstext,sw*2*2/4+16*1/4
 		dw _print5,no_of_players_text,sw*2*10/4+16*1/4
 		dw 0
-;quitting frÜgan
+;quitting fr√•gan
 quit_fragenTS	LABEL WORD
 		CLEARIT
 		dw _flashoff,?
@@ -593,10 +593,10 @@ quit_fragenTS	LABEL WORD
 		dw _WAIT_YN,?
 		dw _jmp,showhighsTS
 
-HALL_DIG_BORTATS dw _wait,1 
+HALL_DIG_BORTATS dw _wait,1
 		DW _LOCK,1
 		dw 0
-		
+
 quit_TEXT	DB 'REALLY QUIT ','Z'+2,'Y OR N','Z'+3,0
 quitgam_TEXT	DB ' END GAME  ','Z'+2,'Y OR N','Z'+3,0
 
@@ -610,12 +610,12 @@ CODE	SEGMENT PARA PUBLIC 'CODE'
 	OLDMARG	DB 0
 
 FANTASIES PROC FAR
-	MOV	BP,DS	
+	MOV	BP,DS
 	MOV	AH,4AH
 	MOV	BX,LASTSEG
 	SUB	BX,BP
 	ADD	BX,1024/16
-	INT	21H		;HéR FôRSVINNER BAN-GRAFIKEN
+	INT	21H		;H√ÑR F√ñRSVINNER BAN-GRAFIKEN
 	MOV	AX,DATA
 	MOV	DS,AX
 IF STAND_ALONE
@@ -637,7 +637,7 @@ else
 ITS_LOW_RES:
 endif
 
-;HéR DANIEL!!!
+;H√ÑR DANIEL!!!
 	CMP	TOGGLAREN.S_ANGLE,0
 	JZ	NORMAL_ANGLE
 	CALL	TABLE_ANGLE
@@ -665,10 +665,10 @@ CF11:	CALL	F11
 KLAR:
 
 if debug
-	debugclear	
+	debugclear
 endif
 IF DEBUG
-	debugmess 0,0,"Pinball Fantasies PC by FrontLine Design"	
+	debugmess 0,0,"Pinball Fantasies PC by FrontLine Design"
 ENDIF
 	cli	;CP!?
 IF DEBUG
@@ -686,7 +686,7 @@ ENDIF
 	CALL	INIT_GFX
 IF DEMOVER
 ELSE
-	CALL	INIT_HIGHS	
+	CALL	INIT_HIGHS
 ENDIF
 	MOVE	DS,DATA
 
@@ -696,7 +696,7 @@ CHECK1_START:
 	CALL	RECALC_LIGHTS
 	CALL	RECALCFLASHLIST
 
-	CALL	MASKS2GFX	;INUTI LIGGER INIT_FLIPPERS (AV NèN ANLEDNING)
+	CALL	MASKS2GFX	;INUTI LIGGER INIT_FLIPPERS (AV N√ÖN ANLEDNING)
 ;FATALT_HOPP:
 	CALL	INIT_SPRING
 	CALL	INIT_KEY
@@ -738,8 +738,8 @@ else
 	CALL	demo_MUSIC	;cp! demo mode
 endif
 	call	setscreenstart
-	CALL	INIT_INTS	
-	
+	CALL	INIT_INTS
+
 	call	slack_lights_i_pelle
 
 	CMP	TOGGLAREN.S_MODE,0
@@ -747,22 +747,22 @@ endif
 	CALL	COLOR_2_BW
 	call	pelle_2_bw
 DONOTCONV:
-	
-	
+
+
 ;	XOR	BX,BX
 ;TONA:	ADD	BX,1
 	mov	bx,256
 	CALL	SETPAL
 ;	cmp	bx,256
 ;	jb	tona
-		
+
 	MOV	AX,4
 	MOV	BX,2
 	mov	cx,0	;0=use configurated rate
 	INT	66H		;PLAY MODULE
 	IF_ERROR 1,OUTOFMEMORY
 	IF_ERROR 2,INIT_ERR
-	
+
 
 
 	mov	uppstartad,true
@@ -777,7 +777,7 @@ IF DEBUG
 	DEBUGVAL 0,22,BX,"Free memory after all: "
 ENDIF
 	jmp main
-TABLE_ANGLE Proc Near 
+TABLE_ANGLE Proc Near
 ;for (c=0;c<11;c++) ramptable[c]-=4;
 
 	mov	bx,offset ramptable
@@ -792,7 +792,7 @@ luta:	sub	word ptr [bx+2],3
 	retn
 TABLE_ANGLE EndP
 
-init_ballspeed proc near ;ersÑtt den gamla med denna
+init_ballspeed proc near ;ers√§tt den gamla med denna
 cmp	hi_res,true
 je	no_adde_malmberg
 
@@ -808,15 +808,15 @@ add	bx,16
 loop	hemul
 
 skala56 MINUSHASt
-skala56 PLUSHAST	
-skala56 bumperpower	
-skala56 kickerpower	
-skala56 kickminhast	
-skala56 TILTHASTFW	
-skala56 TILTHASTRV	
+skala56 PLUSHAST
+skala56 bumperpower
+skala56 kickerpower
+skala56 kickminhast
+skala56 TILTHASTFW
+skala56 TILTHASTRV
 
 no_adde_malmberg:
-retn	
+retn
 init_ballspeed endp
 ;**********
 already_quitting db false
@@ -862,7 +862,7 @@ kaka_pasa:
 	JE	FEELP
 	cmp	scan_code,1
 	je	kaka_calamares	;Esc pressed!! Y or N ????
-judas:				;LÜt han lîpa!!
+judas:				;L√•t han l√∂pa!!
 	mov	calamares_delay,30
 	mov	scan_code,-1
 ;	DEBUGMESS 20,6,"ut ur den!!!!!!!"
@@ -881,18 +881,18 @@ NOPAUSE:
 	RETN
 
 lat_den_sta:
-;=============== DETTA éR EN CP-LôSNING FôR ATT Fè TYST ======================
+;=============== DETTA √ÑR EN CP-L√ñSNING F√ñR ATT F√Ö TYST ======================
 	MOVE	DS,DATA
 	MOV	HOLDSTILL,TRUE
 	CALL	RESTORE_AFTER_PAUSE
 	mov	pauseflag,false
-	
+
 ;MOV INTERRUPTS_ON,TRUE
 ;MOV CS:QUITTING,TRUE
 ;MOV SI,0 ;?
 ;RETN
-	
-	
+
+
 	xor	muzik_off,true
 ;CP?	jz	its_off_not
 
@@ -914,7 +914,7 @@ its_off_not:
 ;	IF_ERROR 1,OUTOFMEMORY
 ;	IF_ERROR 2,INIT_ERR
 	JMP	QUIT	;CP!?
-	
+
 	MOV	CS:QUITTING,TRUE
 	mov	si,1
 	retn
@@ -934,7 +934,7 @@ keck_agan:
 	xlat
 	cmp	al,'Y'		;y or anything!
 	je	quitteras
-	jmp	judas	;lÜt han gÜ!!
+	jmp	judas	;l√•t han g√•!!
 quitteras:
 	jmp	lat_den_sta
 ;	jmp	judas
@@ -966,7 +966,7 @@ checkgamequit:
 	mov	bx,offset showhighsTS
 	call	do_matrix
 	retn
-	
+
 ;checkgamequit:
 	CMP	ADDPLAYERS,TRUE
 	JE	NO_END_GAME
@@ -983,12 +983,12 @@ do_kks_again:
 NO_END_GAME:
 	ADDTASK	END_GAMEN	;VID FLERA SPEL:POLYGAMI?
 	RETN
-	
+
 ALLADIN:
 kecks_agan:
 	cmp	scan_code,-1
 	je	RETSTICKA	;kecks_agan ;wait for keypress!
-	MOV	CS:NEGERN,60	;Sè MAN HINNER STéDA TILLS FARBROR STEWI KOMMER
+	MOV	CS:NEGERN,60	;S√Ö MAN HINNER ST√ÑDA TILLS FARBROR STEWI KOMMER
 	mov	bx,offset alfa_keys
 	mov	al,scan_code
 	xlatb
@@ -1006,7 +1006,7 @@ CP_WAIT_FOR_MATRIX:
 ;	DEC	CS:NEGERN
 ;	JZ	JOBBA_DIG
 	cmp	dotrut,offset nodot
-	je	jobba_dig		;stÑdat Ü klart!!
+	je	jobba_dig		;st√§dat √• klart!!
 	RETN
 JOBBA_DIG:
 	MOV	CS:KEYBOARD_ENABLED,TRUE
@@ -1016,7 +1016,7 @@ end_gamen:
 	SETBALLPOS 300,570,0,0,FALSE
 	addtask to_demolation_derby
 	MOV	first_time_you_fool,true
-	MOV	CS:NEGERN,6	;Sè bollen hinner slÑckas
+	MOV	CS:NEGERN,6	;S√Ö bollen hinner sl√§ckas
 	suicide
 to_demolation_derby:
 	DEC	CS:NEGERN
@@ -1079,7 +1079,7 @@ TILTLOGIC:
 	je	tiltdone
 	CMP	TILTFLAG,TRUE		;redan 'tilt tilt tilt'
 	JE	tiltDONE
-	CMP	BALL_DOWN,TRUE		;Redan dîtt
+	CMP	BALL_DOWN,TRUE		;Redan d√∂tt
 	JE	TILTDONE
 	CMP	cs:TILTKEY2,TRUE
 	JE	TILTDONE		;REDAN BANKAT!!
@@ -1087,26 +1087,26 @@ TILTLOGIC:
 
 ;	mov	bx,tiltcounter
 ;	debugval 0,12,bx,'tiltcounter='
-	
+
 	mov	cs:tiltkey2,true
 
-	CMP	TILTCOUNTER,120		;Tvè ska gè
+	CMP	TILTCOUNTER,120		;Tv√Ö ska g√Ö
 	JA	DOTIL
 	CMP	TILTCOUNTER,60
 	JBE	TILTDONE
 	CALL	HE_ALMOST_TILTED	;Varningsjingle
 	JMP	tiltDONE
-DOTIL:	
-	MOV	TILTFLAG,TRUE		;LÜt han fÜ 'tilt tilt tilt'
+DOTIL:
+	MOV	TILTFLAG,TRUE		;L√•t han f√• 'tilt tilt tilt'
 	CALL	HE_TILTED
 	JMP	TILTDONE
-	
+
 TILTDONE:
 	mov	scan_code,-1
 	popa
 RETTMIGGA:
 	RETN
-	
+
 music_toggle:
 	xor	muzik_off,true
 	jnz	its_off
@@ -1125,7 +1125,7 @@ NOSPRINGTUNE:
 	jnl	mdone
 	mov	jinglejumpcnt,1
 	jmp	mdone
-its_off:				;NEJ! STéNG AV!
+its_off:				;NEJ! ST√ÑNG AV!
 	mov	al,emptyjingle
 	mov	byte ptr s_spring,al
 	mov	byte ptr s_main,al
@@ -1155,7 +1155,7 @@ checkcheat:
 	mov	bx,cheatpekare
 	mov	[bx+offset cheatinput],al
 	inc	cheatpekare
-	cmp	cheatpekare,12		;av sÑkerhetsskÑl, ska aldrig hÑnda!!
+	cmp	cheatpekare,12		;av s√§kerhetssk√§l, ska aldrig h√§nda!!
 	jbe	eatit
 	mov	cheatpekare,0
 	mov	cx,12
@@ -1165,17 +1165,17 @@ checkcheat:
 ;	debugmess 0,2,'overflow'
 	retn
 eatit:
-;check it	
+;check it
 coulditbe:
 	mov	si,offset cheats
 	mov	dont_know_yet,false
-	
-checkit:	
+
+checkit:
 	mov	di,offset cheatinput
 	lodsw
 	cmp	ax,255
-	je	endofcheats	;inga cheats stÑmde!!
-	mov	bx,ax		;fîr att kunna kalla pÜ bx om det stÑmde!!
+	je	endofcheats	;inga cheats st√§mde!!
+	mov	bx,ax		;f√∂r att kunna kalla p√• bx om det st√§mde!!
 	mov	dx,0
 nexttest:
 	lodsb
@@ -1229,7 +1229,7 @@ if debug
 	NIL	BH
 	debugval 0,19,bx,"LASTJINGLE: "
 	cmp	dotrut,offset nodot
-	je	ledignuju	
+	je	ledignuju
 	debugmess 0,2,'DOT BUSY'
 	jmp	ulurkur
 	ledignuju:
@@ -1240,7 +1240,7 @@ endif
 
 
 	cmp	cs:keyboard_enabled,false
-	je	no_command_keys		;DÜ tangentbordet Ñr upptaget . . 
+	je	no_command_keys		;D√• tangentbordet √§r upptaget . .
 
 	;SKALL ALLTID FUNKA:
 	IFSCAN	67,F9
@@ -1257,7 +1257,7 @@ NF12:
 ;******** if demomode ******
 	cmp	demomode,true
 	jne	no_demomode
-	;Tangenter: f-keys + quit + cheats (om nÜn orkar!) JOHAN èRKADE
+	;Tangenter: f-keys + quit + cheats (om n√•n orkar!) JOHAN √ÖRKADE
 	call	checkstartkeys
 	call	checkcheat
 	ifscan	1,checkquit
@@ -1274,7 +1274,7 @@ else
 	jne	no_chute
 	ifscan	1,checkgamequit
 	cmp	cs:keyboard_enabled,false
-	je	no_command_keys		;DÜ tangentbordet Ñr upptaget . . 
+	je	no_command_keys		;D√• tangentbordet √§r upptaget . .
 	call	checkstartkeys
 endif
 no_chute:
@@ -1315,11 +1315,11 @@ IF DEBUG
 	cmp	ballhigh,true
 	je	notl
 	debugmess 0,7,"Lower level"
-notl:	
+notl:
 	cmp	ballhigh,true
 	jne	noth
 	debugmess 0,7,"Upper level"
-noth:	
+noth:
 	mov	cx,word ptr hitvalue
 	debugval 0,8,cx,"Material="
 	debugval 0,9,rotation,"rotation="
@@ -1327,7 +1327,7 @@ noth:
 	MOV	CH,0
 ;	debugval 0,13,cx,"CURRENT PRIORITY: "
 ;	debugbcd 30,9,JACKVALUE,"JACKPOT="
-;	debugbcd 0,9,player_area.p_siffrorna,"player_area PoÑng="
+;	debugbcd 0,9,player_area.p_siffrorna,"player_area Po√§ng="
 ;	debugbcd 0,10,player_area.p_bonussiffrorna,"player_area Bonus="
 	debugVAL 0,11,NO_OF_ACTIVE_TASKS,"No of active tasks="
 ;*******
@@ -1352,7 +1352,7 @@ noth:
 	mov	oldy,bp
 	debugmess si,bp,"O"
 ENDIF
-	
+
 	CMP	CS:QUITTING,TRUE
 	JE	QUIT
 ;	mov	time_left,true
@@ -1360,7 +1360,7 @@ ENDIF
 	MOV	AX,8
 	PUSHF
 	CALL	DWORD PTR ES:[66H*4]	;CREATE MUSIC
-	JMP	MAIN	
+	JMP	MAIN
 QUITTING DB FALSE
 
 F9:	MOV	SLIME_FACTOR,9
@@ -1386,11 +1386,11 @@ JUST_ONE_TIME_RESET:
 	mov	rulltext,0
 	mov	rull_pos,0
 	mov	upp_add,0
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	rull_pos,0
 	MOV	ALLOWFLIP,FALSE
-if demover	
+if demover
 	MOV	F1F8_CODE,3bh ;CP! automatic 1 player in demo version
 else
 	MOV	F1F8_CODE,0 ;CP! not automatic 1 player in game version
@@ -1400,7 +1400,7 @@ endif
 	MOV	NODOTCOUNT,NOT_PLAYING-2
 	MOV	FJANTTEXT,FALSE
 	MOV	CENT,FALSE
-	
+
 	CALL	RESETFLASHLIST
 	CALL	RESET_TASK_LIST
 	CALL	RESET_WAITLIST
@@ -1438,9 +1438,9 @@ WHEN_NEW_BALL_RESET:
 	JE	NO_UPDAT_PLEASE
 	MOV	MATRIX_IS_FLASHING,FALSE
 	call	kill_flashor
-;Fîr att inte senaste spelarens score skall synas!!
+;F√∂r att inte senaste spelarens score skall synas!!
 	CMP	VISAKEYS,TRUE
-	JNE	NONEWPL	
+	JNE	NONEWPL
 	MOV	VISAKEYS,FALSE
 ;	updat_score
 ;	mov	bx,offset newplayerTS
@@ -1481,7 +1481,7 @@ else
 	MOV	PLAYERSTEXT[7],AL
 endif
 ;cpskydd	MOV	MAKE_BAD,true		;gnu urban
-	;************** CHECKSUMMA 1 AVKéNNING ***************
+	;************** CHECKSUMMA 1 AVK√ÑNNING ***************
 	MOV	SI,OFFSET CHECK1_START
 	MOV	CX,OFFSET CHECK1_END
 	SUB	CX,SI
@@ -1580,7 +1580,7 @@ OUTOFMEMORY:
 	INT	21H
 levin	db false
 ERRQUIT:
-QUIT:	
+QUIT:
 IF STAND_ALONE
 ELSE
 	mov	interrupts_on,false
@@ -1603,7 +1603,7 @@ goga_dada:
 	pop	si
 	or	si,si
 	jg	gosp
-	
+
 ENDIF
 	MOV	AX,0
 	INT	66H		;DISINST SOUND
@@ -1623,7 +1623,7 @@ IF DEBUG
 	debugmess 0,1,"Thanx for playing!"
 ENDIF
 	MOV	AX,4C00H
-	INT	21H	
+	INT	21H
 
 
 jcall dw 0
@@ -1655,9 +1655,9 @@ ENDIF
 JINGLELOOP:
 	MOV	JINGLEJUMPCNT,0
 	jmp	check_m_off
-	RETF	
+	RETF
 JINGLEREADY:
-	
+
 	MOV	AL,LASTPRIORITY
 	MOV	CURRENT_PRIORITY,AL
 ;	MOV	AL,LASTLOOPVAL
@@ -1672,7 +1672,7 @@ check_m_off:
 	je	goretf
 	cmp	al,lastmainpos
 	ja	goretf
-	mov	al,emptyjingle	
+	mov	al,emptyjingle
 goretf:	RETF
 ENDP
 
@@ -1706,8 +1706,8 @@ FLYT:	MOVSB
 	CALL	INIT_FLIPPERS		;CP!?
 	POP	ES
 	POPA
-	
-	
+
+
 	MOVA	DS,MASK2_3
 	MOV	DX,3C4H
 	MOV	AL,2
@@ -1761,7 +1761,7 @@ BITPL4:	PUSH	CX
 	DEC	SI
 	XOR	SI,11B
         MOV	CX,575
-FLYT4:	
+FLYT4:
 REPT 4
 	MOVSB
 	ADD	SI,3
@@ -1793,7 +1793,7 @@ makeadjust:
 	MOV	DI,0
 	MOV	CX,SPLH*BPL
 	MOV	AL,0
-	REP	STOSB		;RENSA GRAFIKMINNET VID ARB. OMRèDET
+	REP	STOSB		;RENSA GRAFIKMINNET VID ARB. OMR√ÖDET
 
 if create_flip_data
 	call	init_the_flips
@@ -1819,8 +1819,8 @@ FAN=SIZE FLIPSTRUC
 	SKALA56 [BX+FAN*2].FLIPAXUP
 	SKALA56 [BX+(FAN)*2].FLIPAXDOWN
 	SKALA56 [BX+(FAN)*2].FLIPMAXHASTUP
-	SKALA56 [BX+(FAN)*2].FLIPMAXHASTDOWN	;df ...slutar hÑr
-nosk56:	
+	SKALA56 [BX+(FAN)*2].FLIPMAXHASTDOWN	;df ...slutar h√§r
+nosk56:
 	add	[bx+size flipstruc].fliptab,8
 	add	[bx+size flipstruc].fliptoppek,8
 	add	[bx+size flipstruc].flippek,8
@@ -1832,7 +1832,7 @@ nosk56:
 	add	[bx+size flipstruc].flippek,8*2
 	add	[bx+size flipstruc].flipmaxpek,8*2
 	pop	bx
-	
+
 MASKAR:	CMP	[BX].TYP,0
 	JZ	INGA_FLER_MASKAR
 	mov	[bx].lastframe,-1	;force blit
@@ -1890,13 +1890,13 @@ INIT_FLEPS:
 	MOVA	FLIPSTORLEK,[BX].FLIPSIZE
 	MOVA	CS:MAXDIFFAR,[BX].FLIPDIFS
 	CALL	INIT_FLIPPER
-	
+
 	POP	BX
 	CALL	ORMASKFLIP
 	CALL	MOVEFLIPMASK
 	ADD	BX,SIZE FLIPSTRUC
 	JMP	INIT_FLEPS
-	
+
 FLEPS_INITED:
 	assume	ds:dataflip
 L_len=offset rightfliptab-offset leftfliptab
@@ -1939,7 +1939,7 @@ skriv_gfx:
 	mov	ah,4
 	sub	ah,cl
 	mov	al,4
-	out	dx,ax	;vÑlj lÑs plan
+	out	dx,ax	;v√§lj l√§s plan
 	writefile bx,bp,si
 	loop	skriv_gfx
 	mova	ds,data
@@ -1993,7 +1993,7 @@ endif
 	POP	DS
 dont_doit:
 	RETN
-ORMASKFLIP:		
+ORMASKFLIP:
 	MOVE	ES,[BX].FLIPDATA
 	MOV	SI,[BX].LEFTX
 	MOV	DI,[BX].TOPY
@@ -2019,12 +2019,12 @@ if create_flip_data
 else
 	mov	di,0
 endif
-	
+
 ORFLIPS:
 	PUSH	SI
 	PUSH	CX
 	MOV	CX,DX
-ORFLIP:	
+ORFLIP:
 	PUSH	SI
 	PUSH	CX
 	MOV	CX,BP
@@ -2081,7 +2081,7 @@ RITAFLIPPRAR:
 	ADD	DI,BUFR
 	PUSH	DI
 	CALL	COPYFLIPBGR
-	POP	DI	
+	POP	DI
 	PUSH	DI
 	MOV	AX,FLIPXPOS
 	AND	AX,11B
@@ -2100,7 +2100,7 @@ CORC:
 	TEST	SHIFTKEYS,11B
 	JZ	NOSI
 	MOVA	[BX].FLIPTOPPEK,FLIPPTR
-NOSI:	
+NOSI:
 	CALL	CMPFLIPBOX
 	POP	BP
 	XOR	BUFR,40 ;60*BPL
@@ -2109,16 +2109,16 @@ NOSI:
 	OR	BP,BP
 	JNZ	RITAFLIPPRAR
 
-	mov	bx,flippekare	
+	mov	bx,flippekare
 	CALL	SORTFLIPPERDATA
-	
+
 	MOV	BP,0
 	MOV	DI,FLIPADR	;(FLIPY+SPLH)*BPL+FLIPX/4
 	MOV	AX,FLIPXPOS
 	AND	AX,11B
 	CALL	PUTFLIPPER
 	RETN
-NESTAFRAME:	
+NESTAFRAME:
 	MOV	BX,FLIPPEKARE
 	INC	[BX].FLIPFRAME
 	TEST	SHIFTKEYS,11B
@@ -2148,7 +2148,7 @@ sortflip:
 	ASSUME	DS:DATAFLIP	;*****************************************
 SORTDATA:
 	PUSH	CX SI bx
-	
+
 	ADD	SI,9*2
 	MOV	DI,OFFSET TEMPTAB
 	dec	cx
@@ -2165,7 +2165,7 @@ sorti:	push	cx si
 	MOV	AX,DS:[SI+bx]
 	cmp	ax,-1
 	je	didfind
-	
+
 	mov	cx,bp
 findit:	ADD	SI,CS:MAXDIFFAR
 	CALL	FINDWORD
@@ -2173,12 +2173,12 @@ findit:	ADD	SI,CS:MAXDIFFAR
 	loop	findit
 	stosw
 	pop	si
-	mov	word ptr ds:[si+bx],-1	;markera att denna redan Ñr lagrad
+	mov	word ptr ds:[si+bx],-1	;markera att denna redan √§r lagrad
 	mov	ax,[si+bx+2]
 	stosw
 
 	jmp	short orvar
-	
+
 DIDFIND:
 	pop	si
 orvar:	pop	cx
@@ -2197,7 +2197,7 @@ orvar:	pop	cx
 deunika:
 	push	si		;flytta in de som var helt unika sist
 	mov	cx,[si-9*2]
-desista:lodsw		
+desista:lodsw
 	cmp	ax,-1
 	je	nostor
 	stosw
@@ -2206,13 +2206,13 @@ desista:lodsw
 nostor:	add	si,2
 	loop	desista
 	pop	si
-	
+
 	mov	cx,[si-9*2]
 	mov	di,si
 	mov	si,offset temptab
 	shl	cx,1
-	rep movsw		;lÑgg in den sorterade listan i orginalet
-	
+	rep movsw		;l√§gg in den sorterade listan i orginalet
+
 	POP	bx SI CX
 	ADD	SI,CS:MAXDIFFAR
 	LOOP	SORTDATA
@@ -2227,7 +2227,7 @@ leta:	cmp	ds:[si],ax
 	je	foudit
 	add	si,4
 	loop	leta
-	popa	
+	popa
 	stc
 	RETN
 foudit:	popa
@@ -2298,7 +2298,7 @@ MOVE	ES:[9*4+2],CS:OLD9+2
 NO_UBBE_KUKEN:
 ENDIF
 no_alfa_key:
-	
+
 	CMP	CS:E0,TRUE
 	JE	DOE0
 	CMP	AL,0E0H
@@ -2342,13 +2342,13 @@ DSSKR:	TEST	shiftkeys,1
 	cmp	allowflip,false
 	je	keydone
 	soundeffect sflippupp,0
-	JMP	KEYDONE		
+	JMP	KEYDONE
 NOTRSDN:
 	CMP	AL,36H+80H
 	JE	DSSKR2
 	JMP	SHORT NOTRSUP
 DSSKR2:	AND	SHIFTKEYS,0FEH
-	JMP	KEYDONE		
+	JMP	KEYDONE
 NOTRSUP:
 
 	CMP	AL,2AH+80H
@@ -2373,7 +2373,7 @@ NOTSPC:
 	JNE	NOTSPCU
 	MOV	TILTKEY,FALSE
 	MOV	cs:TILTKEY2,FALSE
-	
+
 	JMP	KEYDONE
 NOTSPCU:
 COMMENT\
@@ -2439,7 +2439,7 @@ E0	DB FALSE
 DOE0:	MOV	CS:E0,FALSE
 	CMP	DEMOMODE,TRUE
 	JE	DOE0_DEMO
-	
+
 	CMP	AL,49H
 	JNE	NOT_PGUP
 ;	AND	SHIFTKEYS,11111011B
@@ -2549,7 +2549,7 @@ NOTHIRES3:
 	JNL	BXOK1
 IF GLAPP_SIZE
 	MOV	BX,-GLAPP_SIZE
-ELSE	
+ELSE
 	MOV	BX,0
 ENDIF
 	JMP	SHORT BXOK2
@@ -2571,7 +2571,7 @@ NOTHIRES5:
 
 BXOK2:	CMP	SCREENFORCE,-1
 	JE	NOSCREENFORCE
-	
+
 	MOV	BX,SCREENFORCE		;THIS IS THE POWERFUL SCREEN FORCE
 	ADD	BX,SPLH
 	PUSH	BX
@@ -2595,7 +2595,7 @@ NOSCREENFORCE:
 	mov	bx,screenforce2
 nosf:
 	ADD	BX,SPLH
-	PUSH	BX	
+	PUSH	BX
 	mov	ax,bx
 	mov	bx,rasterpos
 	sar	bx,4
@@ -2603,7 +2603,7 @@ nosf:
 
 IF GLAPP_SIZE
 	PUSHF		;df
-	POP CX		
+	POP CX
 	CMP	SCREENFORCE2,-1	;INGET GLAPP OM SCREENFORCE!!!!!!!!!!!
 	JNE	GLAPP_DONE
 	PUSH CX
@@ -2622,14 +2622,14 @@ GLAPP_DONE:
 	IMUL	BX
 	MOV	BX,AX
 	SAR	AX,2
-	
+
 	add	rasterpos,ax
 	POP	BX
 	MOV	AX,RASTERPOS
 	SAR	AX,4
 	SUB	BX,AX
 	JNS	GAP_POS
-	
+
 	PUSH	BP
 	MOV	BP,MAXGAPU_LO
 	CMP	HI_RES,TRUE
@@ -2698,11 +2698,11 @@ DNDB:
 	CMP	PUTITBETWEEN,TRUE
 	JNE	DNDLF
 	CALL	DOFLIPPER
-DNDLF:	
+DNDLF:
 	CMP	PUTF3BETWEEN,TRUE
 	JNE	DNDLF2
 	CALL	DOFLIPPER3
-DNDLF2:	
+DNDLF2:
 
 IF MARGIT
 	SETMARG	1
@@ -2751,7 +2751,7 @@ VBLANKOK:
 	MOV	TIME_LEFT,FALSE
 NO_MUSIC_CRISIS:
 
-	cmp	calamares_delay,0	;tryck inte pÜ pause fîr tÑtt inpÜ!!
+	cmp	calamares_delay,0	;tryck inte p√• pause f√∂r t√§tt inp√•!!
 	je	docaldecc
 	dec	calamares_delay
 docaldecc:
@@ -2775,7 +2775,7 @@ docaldecc:
 	JE	RETAF
 	CMP	AL,TRUE
 	JE	RETAF
-	
+
 	SAVEGFXREGS
 	MOV	PUTF3BETWEEN,FALSE
 	MOV	FORCELATEF3,FALSE
@@ -2801,7 +2801,7 @@ F3_IS_LOW:
 	CALL	DOFLIPPER3
 HIGH_F3_DONE:
 KEEP_COOL:
-	
+
 	MOV	AX,START_RASTER
 	PUSH	BP
 	MOV	BP,MIDDLE_RASTER_LO
@@ -2881,19 +2881,19 @@ DO_THE_REST:
 	CALL	UPDATE_COUNTERS
 
 	CALL	DO_ELECTRONICS
-	CALL	SPRINGTASK	
+	CALL	SPRINGTASK
 IF MARGIT
 SETMARG 14
 ENDIF
-	
+
 	cmp	time_left,false
-	je	skip_matrix		;no time left! Skip it!!	
+	je	skip_matrix		;no time left! Skip it!!
 ;	mov	time_left,false		;ok, time was left last time!
 	MOV	AL,CS:INSIDE_MATRIX
 	MOV	CS:INSIDE_MATRIX,TRUE
 	CMP	AL,TRUE
 	JE	SKIP_MATRIX
-	CALL	DO_THE_DOTMATRIX	;updatera dÜ matrixen!
+	CALL	DO_THE_DOTMATRIX	;updatera d√• matrixen!
 	MOV	CS:INSIDE_MATRIX,FALSE
 skip_matrix:
 	CALL	DOLIGHTS
@@ -2935,17 +2935,17 @@ laddanasta:
 	MOVE	DS,DATA
 	MOV	SISA,SI
 	CMP	SI,0
-	JNE	NOTFREEYET	;JOBBAR Pè EN EFFEKT!
+	JNE	NOTFREEYET	;JOBBAR P√Ö EN EFFEKT!
 	MOV	DOTRUT,OFFSET CS:NODOT
 	MOV	BX,NEXT_A
 	CMP	BX,0
 	JE	ts_slut	;NOMOREANIMS
-	CALL	DO_SPEC_MATRIX	;ANIMATION SLUT, LADDA NéSTA?
+	CALL	DO_SPEC_MATRIX	;ANIMATION SLUT, LADDA N√ÑSTA?
 	jmp	nomoreanims
 ts_slut:
 ;	mov	behovs_provad,true
 	CALL	KILL_FLASHOR		;cp!!??
-	;dîda flashor
+	;d√∂da flashor
 
 NOMOREANIMS:
 	MOV	DOT_READY,TRUE
@@ -2978,11 +2978,11 @@ _SCROLL:
 _NUMBER:
 	MOVE	SISA,[BX+2]
 	MOV	DOTRUT,OFFSET SIFFRORRUT
-	JMP	NORMAL_END		
+	JMP	NORMAL_END
 
 _FLASHON:		;BX NOT USED!
 	MOV	AX,[BX+2]	;AX=FLASHSPEED
-	MOVE	SISA,1		;HUR MÜNGA
+	MOVE	SISA,1		;HUR M√ÖNGA
 	MOV	DOTRUT,OFFSET WAITRUT
 	MOV	MATRIX_SPEED,AX
 	MOV	MATRIX_CNT,AX
@@ -3092,7 +3092,7 @@ _print5_number:
 _SOUND_EFFECT:
 	move	sisa,1
 	mov	dotrut,offset waitrut
-	
+
 	MOV	AX,[BX+2]
 	MOV	CX,[BX+4]
 	PUSH	BX
@@ -3106,11 +3106,11 @@ _lastjingle:
 	mov	ax,[bx+2]
 	mov	lastjingle,al
 	mov	si,77	;urko!
-	jmp	normal_end	
+	jmp	normal_end
 _JINGLE:
 	move	sisa,1
 	mov	dotrut,offset waitrut
-	
+
 	MOV	SI,[BX+2]
 	mov	current_priority,0
 	mov	jinglejumpcnt,1
@@ -3140,7 +3140,7 @@ MEGA_RESET:
 	call	reset_numberbuf
 	move	val_to_print,[bx+6]
 	mov	sync_left,1
-	
+
 	mov	[sec_asc],'A'-10+0
 	mov	[sec_asc+1],'A'-10+1
 	mov	al,[bx+2]
@@ -3158,7 +3158,7 @@ _countdown2:
 	call	reset_numberbuf
 	mov	sync_left,1
 	jmp	three_end
-	
+
 countdown:
 	CMP	INHIBIT_COUNT_DOWN,TRUE
 	JE	INH_CD
@@ -3172,27 +3172,27 @@ countdown:
 	je	uninstall_count
 over_it_again:
 
-	
+
 	dec	[sec_asc+1]
 	cmp	[sec_asc+1],'A'-10-1
 	jnz	ingen_fara
 	add	[sec_asc+1],10
 	dec	[sec_asc]
-	
+
 ingen_fara:
 	CMP	[SEC_ASC],'A'-10
 	JNE	NOT_ZERO
 	MOV	[SEC_ASC],'*'
 NOT_ZERO:
 
-;[SEC_ASC] PEKAR Pè MSD, (0='*')	[SEC_ASC+1] PEKAR Pè LSD
-;LéS AV BARA!
+;[SEC_ASC] PEKAR P√Ö MSD, (0='*')	[SEC_ASC+1] PEKAR P√Ö LSD
+;L√ÑS AV BARA!
 	PUSHA	;CP!
 	CALL	READ_SPECIAL_MODE_COUNTER
 	POPA
 
 	mov	hojd_1,11
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*11*2/4
 	mov	font_adr,offset font11
@@ -3211,9 +3211,9 @@ INH_CD:
 	mov	si,1
 	retn
 uninstall_count:
-	
+
 ;	mov	specialmode,false
-	mov	sisa,0	
+	mov	sisa,0
 	mov	si,0
 	retn
 _rullgardin_upp:
@@ -3231,7 +3231,7 @@ _rullgardin_ned:
 	jmp	print_end
 
 rullgardin_upp:
-;rull_pos startvÑrde mÜste vara satt till 16!!!
+;rull_pos startv√§rde m√•ste vara satt till 16!!!
 	dec	rull_pos
 
 	cmp	rull_pos,16-14
@@ -3245,7 +3245,7 @@ rullgardin_upp:
 	mov	clear_box_bredd,320/4
 	mov	clear_box_hojd,1
 	call	clear_box2
-	
+
 noradering_upp:
 
 	mov	hojd_1,13
@@ -3260,7 +3260,7 @@ noradering_upp:
 	retn
 
 rullgardin_ned:
-;rull_pos startvÑrde mÜste vara satt till -13!!!
+;rull_pos startv√§rde m√•ste vara satt till -13!!!
 	inc	rull_pos
 
 	cmp	rull_pos,1
@@ -3274,7 +3274,7 @@ rullgardin_ned:
 	mov	clear_box_bredd,320/4
 	mov	clear_box_hojd,1
        	call	clear_box2
-	
+
 noradering_ned:
 	mov	hojd_1,13
 	mov	hojd_add,bredd_1/4-sw*13*2/4
@@ -3297,38 +3297,38 @@ putfont:
 	cmp	ax,0
 	jge	kapa_ej_overkant
 
-;Kapa i îverkant!
+;Kapa i √∂verkant!
 
-	neg	ax			;gîr ax positiv!
+	neg	ax			;g√∂r ax positiv!
 	mov	tabort_diovre,ax
-	mov	tabort_diovre_fnt,ax	;sÜ mycket som skall kapas!
-	mov	di,sw*2/4		;îversta rastern
+	mov	tabort_diovre_fnt,ax	;s√• mycket som skall kapas!
+	mov	di,sw*2/4		;√∂versta rastern
 	jmp	print_it
-	
+
 kapa_ej_overkant:
-	
+
 	cmp	ax,16-13	;matrixhojd-fonthojd
 	jle	kapa_ej_nederkant
 ;	neg	ax		;-pos
 ;	add	ax,16		;=> ax=16-pos
-	add	ax,13-16	
-	mov	tabort_diovre,ax		;sÜ mycket som ska kapas!
-	mov	tabort_diovre_fnt,0		;men inget i îvekant
+	add	ax,13-16
+	mov	tabort_diovre,ax		;s√• mycket som ska kapas!
+	mov	tabort_diovre_fnt,0		;men inget i √∂vekant
 	mov	ax,rull_pos
 	inc	ax
 	mov	bx,sw/4*2		;di=rull_pos*sw*2/4
 	mul	bx
 	mov	di,ax
 	jmp	print_it
-	
+
 kapa_ej_nederkant:
-	mov	tabort_diovre,0			;sÑtt ut hela!
+	mov	tabort_diovre,0			;s√§tt ut hela!
 	mov	tabort_diovre_fnt,0
 ;	mov	ax,rull_pos
 	mov	bx,sw/4*2		;di=rull_pos*sw*2/4
 	mul	bx
 	mov	di,ax
-	add	di,sw/4*2	
+	add	di,sw/4*2
 print_it:
 	CMP	TABORT_DIOVRE,13
 	JAE	SKIPIT_PRINT
@@ -3391,7 +3391,7 @@ EJ_BYTE_AV_BYTE:
 	RETN
 PP_DO_LINE ENDP
 
-PP_DO_BITPLANE PROC NEAR		;INPUT: RéTT BITPLAN SATT
+PP_DO_BITPLANE PROC NEAR		;INPUT: R√ÑTT BITPLAN SATT
 	MOV	CX,16
 	MOV	SI,SW*4/4/2
 PP_NEXT_LINE:
@@ -3435,7 +3435,7 @@ print_it_klux:
 	MOV	HOJD_1,13
 	MOV	HOJD_ADD,BREDD_1/4-SW*13*2/4
 	MOV	FONT_ADR,OFFSET FONT13
-	MOV	TABORT_DIOVRE,0	
+	MOV	TABORT_DIOVRE,0
 	MOV	TABORT_DIOVRE_FNT,0
 	MOV	AX,AX_PRINT
 	MOV	DI,DI_PRINT
@@ -3463,7 +3463,7 @@ EJ_BYTE_AV_BYTE2:
 	RETN
 PP_DO_LINE2 ENDP
 
-PP_DO_BITPLANE2 PROC NEAR		;INPUT: RéTT BITPLAN SATT
+PP_DO_BITPLANE2 PROC NEAR		;INPUT: R√ÑTT BITPLAN SATT
 	MOV	CX,16
 	MOV	DI,SW*4/4/2
 PP_NEXT_LINE2:
@@ -3497,7 +3497,7 @@ _print13:
 	MOV	HOJD_1,13
 	MOV	HOJD_ADD,BREDD_1/4-SW*13*2/4
 	MOV	FONT_ADR,OFFSET FONT13
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	MOVE	AX_PRINT,[BX+2]
 	MOVE	DI_PRINT,[BX+4]
@@ -3507,7 +3507,7 @@ _print11:
 	move	sisa,1
 	mov	dotrut,offset waitrut
 	mov	hojd_1,11
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*11*2/4
 	mov	font_adr,offset font11
@@ -3519,7 +3519,7 @@ _print8:
 	move	sisa,1
 	mov	dotrut,offset waitrut
 	mov	hojd_1,8
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*8*2/4
 	mov	font_adr,offset font8
@@ -3531,7 +3531,7 @@ _print5:
 	move	sisa,1
 	mov	dotrut,offset waitrut
 	mov	hojd_1,5
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*5*2/4
 	mov	font_adr,offset font5
@@ -3548,7 +3548,7 @@ print_END:
 _NEXTp_:
 	MOV	NEXT_A,BX
 	RETN
-;******************************		
+;******************************
 three_end:
 	ADD	BX,6+2
 	CMP	WORD PTR [BX],0
@@ -3614,25 +3614,25 @@ MATRIXOFF_:
 
 
 _FLASHOFF:
-	MOVE	SISA,1		;HUR MÜNGA
+	MOVE	SISA,1		;HUR M√ÖNGA
 	MOV	DOTRUT,OFFSET WAITRUT
 	CALL	KILL_FLASHOR
 	JMP	NORMAL_END
 
 _MATRIXLGT:
-	MOVE	SISA,1		;HUR MÜNGA
+	MOVE	SISA,1		;HUR M√ÖNGA
 	MOV	DOTRUT,OFFSET WAITRUT
 	CMP	WORD PTR [BX+2],0
 	JE	OFF_WITH_IT
 	CALL	MATRIXON_
-	JMP	BORT_LELLE_VAN	
+	JMP	BORT_LELLE_VAN
 OFF_WITH_IT:
 	CALL	MATRIXOFF_
 BORT_LELLE_VAN:
 	JMP	NORMAL_END
 
 _SETDECCOR:
-	MOVE	SISA,1		;HUR MÜNGA
+	MOVE	SISA,1		;HUR M√ÖNGA
 	MOV	DOTRUT,OFFSET WAITRUT
 	MOVE	DECCOR,DS:[BX+2]
 	JMP	NORMAL_END
@@ -3656,13 +3656,13 @@ KILL_FLASHOR PROC NEAR
 KILL_FLASHOR ENDP
 
 _WAIT:
-	MOVE	SISA,[BX+2]	;HUR MÜNGA
+	MOVE	SISA,[BX+2]	;HUR M√ÖNGA
 	MOV	DOTRUT,OFFSET WAITRUT
 ;galopp
 	JMP	NORMAL_END
 
 _WAITifmulti:
-	MOVE	SISA,[BX+2]	;HUR MÜNGA
+	MOVE	SISA,[BX+2]	;HUR M√ÖNGA
 	cmp	players,1
 	jne	dowwe
 	mov	sisa,2 ;cpgnu? venta inte om ej multiplayer
@@ -3670,16 +3670,16 @@ dowwe:	MOV	DOTRUT,OFFSET WAITRUT
 ;galopp
 	JMP	NORMAL_END
 _LOCK:
-	MOVE	SISA,[BX+2]	;HUR MÜNGA
+	MOVE	SISA,[BX+2]	;HUR M√ÖNGA
 	MOV	DOTRUT,OFFSET LOCKRUT
 ;galopp
 	JMP	NORMAL_END
 LOCKRUT:
 	MOV	SI,1
-	RETN	
-	
+	RETN
+
 _WAIT_YN:
-	MOVE	SISA,[BX+2]	;HUR MÜNGA
+	MOVE	SISA,[BX+2]	;HUR M√ÖNGA
 	MOV	DOTRUT,OFFSET WAITRUT_YN
 ;galopp
 	JMP	NORMAL_END
@@ -3775,9 +3775,9 @@ rclear4:
 	mov	si,1
 	retn
 
-	
+
 _FADE:
-	MOVE	SISA,[BX+2]	;HUR MÜNGA
+	MOVE	SISA,[BX+2]	;HUR M√ÖNGA
 	MOV	DOTRUT,OFFSET FADERUT
 	PUSHA
 	PUSH	ES
@@ -3787,7 +3787,7 @@ _FADE:
 	POPA
 ;galopp
 	JMP	NORMAL_END
-FADING DB FALSE	
+FADING DB FALSE
 READPAL:
 	MOV	DX,3C7H
 	MOV	AL,0
@@ -3841,7 +3841,7 @@ _WAITJINGLE2:
 
 WAITRUT:
 	DEC	SI
-	RETN	
+	RETN
 
 
 WAITRUT_YN:
@@ -3864,14 +3864,14 @@ NOKVTTER:
 	mov	cs:already_quitting,false
 	mov	cs:keyboard_enabled,true
 	MOV	SI,0
-	RETN	
+	RETN
 feltecken_du2:
 	MOV	SI,1
-	RETN	
+	RETN
 
 PARTYRUT:
 ;	DEC	SI
-	RETN	
+	RETN
 
 WAITJINGLE:
 	mov	si,TRUE
@@ -3880,8 +3880,8 @@ WAITJINGLE:
 	MOV	SI,0
 	RETN
 
-WAITJINGLE2:		;WAITJINGLE2 HAR EN SPECIALARE FôR NOSOUND
-			;OBS! DECCOR MèSTE VARA SATT INNAN DENNA RUT ANVéNDS.
+WAITJINGLE2:		;WAITJINGLE2 HAR EN SPECIALARE F√ñR NOSOUND
+			;OBS! DECCOR M√ÖSTE VARA SATT INNAN DENNA RUT ANV√ÑNDS.
 	mov	si,TRUE
 	PUSH	ES
 	PUSHA
@@ -3910,7 +3910,7 @@ PEKORB	DW SCORE
 	DW CODE2
 SIFFRORRUT:
 	PUSHA
-	MOV	BX,SW*2/4-16*2/4	;TJA, VADè CENTRERAD??
+	MOV	BX,SW*2/4-16*2/4	;TJA, VAD√Ö CENTRERAD??
 	MOVE	ES,CS
 	CALL	DWORD PTR ES:PEKORB
 	POPA
@@ -3926,7 +3926,7 @@ NORMAL_END:
 _NEXT_:
 	MOV	NEXT_A,BX
 	RETN
-;******************************		
+;******************************
 PEKOR	DW SCORE
 	DW CODE2
 NODOT:
@@ -3942,15 +3942,15 @@ NODOT:
 	JE	CHEATED
 	CMP	DEMOMODE,TRUE
 	JE	SHOW_HI_2
-	
+
 ;	CMP	NODOTCOUNT,0
-;	JNE	ONLY_SCORE	
+;	JNE	ONLY_SCORE
 
 	CMP	I_UTSKJUT,TRUE
 	JE	ONLY_SCORE
 	cmp	behovs_provad,true
 	jne	only_score
-	mov	behovs_provad,false	;skriv ut bara fîrsta gÜngen!
+	mov	behovs_provad,false	;skriv ut bara f√∂rsta g√•ngen!
 	MOV	BX,OFFSET showplayersTS
 	CALL	DO_SPEC_MATRIX
 	JMP	ONLY_SCORE
@@ -3988,12 +3988,12 @@ ONLY_SCORE:
 	INC	NODOTCOUNT
 
 	mov	si,offset siffrorna
-	mov	bx,SW*2/4+(320-12*16)/4	;hîger justerad!
+	mov	bx,SW*2/4+(320-12*16)/4	;h√∂ger justerad!
 	MOVE	ES,CS
 	CALL	DWORD PTR ES:PEKOR
 i_show_naaathing:
 	MOV	SI,0
-	RETN	;DUMRET FôR DOTS
+	RETN	;DUMRET F√ñR DOTS
 
 CHECKHIGHSCORE:
 	pusha
@@ -4026,7 +4026,7 @@ Hbeaten:
 	mov	behovs_provad,true
 	popa
 	RETN
-	
+
 
 ;******
 _beaten_matrix:
@@ -4057,19 +4057,19 @@ bHbeaten:
 	mov	bx,offset beaten_bh_ts
 	JMP	[BX]
 
-	
+
 print_siffror5__:
-	;print_numbers input e si=offset till bcd:n, di=pos Ü skriva ut
+	;print_numbers input e si=offset till bcd:n, di=pos √• skriva ut
 	mov	si,si_siffror
 	mov	di,di_siffror
 	mov	hojd_1,5
 	mov	hojd_add,bredd_1/4-sw*5*2/4
 	mov	font_adr,offset font5
 	call	print_number
-	
-	
-print_siffror5:		;DETTA éR HéRMED EN TASKRUTIN!!!
-	;print_numbers input e si=offset till bcd:n, di=pos Ü skriva ut
+
+
+print_siffror5:		;DETTA √ÑR H√ÑRMED EN TASKRUTIN!!!
+	;print_numbers input e si=offset till bcd:n, di=pos √• skriva ut
 	mov	si,si_siffror
 	mov	di,di_siffror
 	mov	hojd_1,5
@@ -4079,21 +4079,21 @@ print_siffror5:		;DETTA éR HéRMED EN TASKRUTIN!!!
 	SUICIDE
 
 print_siffror8:			;CP!
-	;print_numbers input e si=offset till bcd:n, di=pos Ü skriva ut
+	;print_numbers input e si=offset till bcd:n, di=pos √• skriva ut
 	mov	hojd_1,8
 	mov	hojd_add,bredd_1/4-sw*8*2/4
 	mov	font_adr,offset font8
 	call	print_number
 retn
 print_siffror11:
-	;print_numbers input e si=offset till bcd:n, di=pos Ü skriva ut
+	;print_numbers input e si=offset till bcd:n, di=pos √• skriva ut
 	mov	hojd_1,11
 	mov	hojd_add,bredd_1/4-sw*11*2/4
 	mov	font_adr,offset font11
 	call	print_number
 retn
 print_siffror13:
-	;print_numbers input e si=offset till bcd:n, di=pos Ü skriva ut
+	;print_numbers input e si=offset till bcd:n, di=pos √• skriva ut
 	mov	hojd_1,13
 	mov	hojd_add,bredd_1/4-sw*13*2/4
 	mov	font_adr,offset font13
@@ -4111,7 +4111,7 @@ ENDIF
 	SET_ES	0A000H
 	MOV	DX,3C4H
 	MOV	AX,0F02H
-	OUT	DX,AX		;;ALLA BITPLAN Pè
+	OUT	DX,AX		;;ALLA BITPLAN P√Ö
 
 	MOV	DX,3CEH
 	MOV	AX,4105H
@@ -4127,12 +4127,12 @@ ENDIF
 	SHR	AX,2
 	ADD	DI,AX
 
-	
+
 	MOV	AX,[BX].FLIPFRAME
 	MOV	CX,AX
 	SUB	CX,[BX].LASTGFXFRAME
 	XCHG	[BX].LASTGFXFRAME,AX
-	JE	NOMOVE	;;OM 0: INGET JAG KAN GôRA
+	JE	NOMOVE	;;OM 0: INGET JAG KAN G√ñRA
 	JA	WAYUP
 	NEG	CX
 	MOV	DX,[BX].FLIPDIFS
@@ -4142,7 +4142,7 @@ ENDIF
 	JMP	DANIM
 reknare dw 0
 maxreknare dw 0
-WAYUP:	
+WAYUP:
 	MOV	DX,[BX].FLIPDIFS
 	MUL	DX
 	ADD	AX,[BX].FLIPTAB
@@ -4162,7 +4162,7 @@ DELTA_ANIMERA:
 	MOV	BX,[BX].FLIPPEK
 ;	debugclear
 ;	debugval 10,10,bx,"="
-;	jmp	quit		
+;	jmp	quit
 	MOVA	DS,DATAFLIP
 	mov	si,cx
 	dec	si
@@ -4218,7 +4218,7 @@ ENDIF
 	MOV	BX,OFFSET FLIPLINFO
 	CALL	FLIPPRA
 	ADD	BX,(SIZE FLIPSTRUC)
-	CALL	FLIPPRA			
+	CALL	FLIPPRA
 IF MARGIT
 	SETMARG	0
 ENDIF
@@ -4230,7 +4230,7 @@ ENDIF
 	MOV	BX,OFFSET FLIPLINFO+(SIZE FLIPSTRUC)*2
 	cmp	byte ptr [bx],0
 	jz	no_upper_flip
-	CALL	FLIPPRA			
+	CALL	FLIPPRA
 no_upper_flip:
 IF MARGIT
 	SETMARG	0
@@ -4245,7 +4245,7 @@ LATE_RASTER_INTERRUPT:
 	JNZ	RETTEF
 	CMP	INTERRUPTS_ON,TRUE
 	JE	LRINTOK
-RETTEF:	
+RETTEF:
 	MOV	AX,12345 ;MEDDELA TILL MUSIKRUTINEN ATT KRISER KLARAR JAG
 	RETF					;RET
 LRINTOK:
@@ -4261,17 +4261,17 @@ NO_MUSIC_CRISIS3:
 
 	CMP	INSIDE_RASTINT,FALSE
 	JNE	RETTEF
-	
+
 	CMP	CS:LAST_WAS_VB,TRUE
 	JNE	RETTEF
-	
+
 	CALL	SETSCREENSTART
 	CMP	INSIDE_BALLHANDLER,FALSE
 	JNE	RETTEF
 
 	MOV	INSIDE_RASTINT,TRUE
 	SAVEGFXREGS
-	CALL	KOLLAKULAN	;GîR TVÜ BERÑKNINGAR
+	CALL	KOLLAKULAN	;G√∂R TV√• BER√§KNINGAR
 	CMP	LATEGFX,TRUE
 	JNE	NOLGFX
 	MOV	PUTITBETWEEN,FALSE
@@ -4279,7 +4279,7 @@ NO_MUSIC_CRISIS3:
 NOLGFX:	CMP	FORCELATEF3,TRUE
 	JNE	NOFF3
 	CALL	DOFLIPPER3
-NOFF3:	
+NOFF3:
 
 	MOV	AL,F1F8_CODE		;TAR HAND OM F1F8_CODE I GAMEMODE
 	OR	AL,AL
@@ -4388,7 +4388,7 @@ RESETFLASHLIST PROC NEAR
 RESETFLASHLIST ENDP
 
 
-FLASHTHELIGHTS PROC NEAR	;OBS! éNDRAR ENDAST PALETTEN, EJ STATUS!!!
+FLASHTHELIGHTS PROC NEAR	;OBS! √ÑNDRAR ENDAST PALETTEN, EJ STATUS!!!
 	MOV	BX,OFFSET REALFLASHLIST
 NEXTFLASHER:
 	CMP	[BX].LNUM,0
@@ -4474,16 +4474,16 @@ SLAGAIN:PUSH	AX
 	JBE	SLAGAIN
 	RETN
 SLACK_LIGHTS ENDP
-SLACK_THIS_LIGHT PROC NEAR	;FN: SLéCKER RGBPOST. KOLLAR ATT DET GICK BRA!
-				;INPUT: SI PEKAR Pè RGB-POSTEN
-				;OUTPUT: SI PEKAR Pè NéSTA RGB-POST
+SLACK_THIS_LIGHT PROC NEAR	;FN: SL√ÑCKER RGBPOST. KOLLAR ATT DET GICK BRA!
+				;INPUT: SI PEKAR P√Ö RGB-POSTEN
+				;OUTPUT: SI PEKAR P√Ö N√ÑSTA RGB-POST
 	PUSH	AX BX CX DX BP
 	MOV	BL,INTERRUPTS_ON
 	MOV	INTERRUPTS_ON,FALSE
 	MOV	BP,SI
 TRY_IT_AGAIN2:
 	MOV	INT_WAS_HERE2,FALSE
-	;GôR POSTEN [SI] FAST SLACK!
+	;G√ñR POSTEN [SI] FAST SLACK!
 	MOV	DX,3C8H
 	LODSB			;AL=START COL
 	OUT	DX,AL
@@ -4504,11 +4504,11 @@ ITS_REALLY_OK2:
 	POP	BP DX CX BX AX
 	RETN
 SLACK_THIS_LIGHT ENDP
-SLACK_THIS_LIGHT_i_pelle PROC NEAR	;FN: SLéCKER RGBPOST. KOLLAR ATT DET GICK BRA!
-				;INPUT: SI PEKAR Pè RGB-POSTEN
-				;OUTPUT: SI PEKAR Pè NéSTA RGB-POST
+SLACK_THIS_LIGHT_i_pelle PROC NEAR	;FN: SL√ÑCKER RGBPOST. KOLLAR ATT DET GICK BRA!
+				;INPUT: SI PEKAR P√Ö RGB-POSTEN
+				;OUTPUT: SI PEKAR P√Ö N√ÑSTA RGB-POST
 	PUSH	AX BX CX DX BP
-	;GôR POSTEN [SI] FAST SLACK!
+	;G√ñR POSTEN [SI] FAST SLACK!
 	LODSB			;AL=START COL
 	mov	ah,3
 	mul	ah
@@ -4568,16 +4568,16 @@ DONT_BOTHER:
 	RETN
 DOLIGHTS ENDP
 
-DO_THIS_LIGHT PROC NEAR		;FN: UTFôR RGBPOST. KOLLAR ATT DET GICK BRA!
-				;INPUT: SI PEKAR Pè RGB-POSTEN
-				;OUTPUT: SI PEKAR Pè NéSTA RGB-POST
+DO_THIS_LIGHT PROC NEAR		;FN: UTF√ñR RGBPOST. KOLLAR ATT DET GICK BRA!
+				;INPUT: SI PEKAR P√Ö RGB-POSTEN
+				;OUTPUT: SI PEKAR P√Ö N√ÑSTA RGB-POST
 	PUSH	AX BX CX DX BP
 	MOV	BL,INTERRUPTS_ON
 	MOV	INTERRUPTS_ON,FALSE
 	MOV	BP,SI
 TRY_IT_AGAIN:
 	MOV	INT_WAS_HERE,FALSE
-	;GôR POSTEN [SI]!
+	;G√ñR POSTEN [SI]!
 	MOV	DX,3C8H
 	LODSB			;AL=START COL
 	OUT	DX,AL
@@ -4598,7 +4598,7 @@ DO_THIS_LIGHT ENDP
 
 
 
-DO_ELECTRONICS PROC NEAR	;EXEKVERAS VARJE UTRéKNING, EJ VARJE SYNC
+DO_ELECTRONICS PROC NEAR	;EXEKVERAS VARJE UTR√ÑKNING, EJ VARJE SYNC
 	PUSHA
 	PUSH	ES
 if demover
@@ -4637,7 +4637,7 @@ DO_PHYSICS PROC NEAR
 	JZ	NOTI
 	DEC	TILTCOUNTER
 NOTI:	CALL	CHECK_BUMPERS
-	CALL	CHECK_RAMPS	
+	CALL	CHECK_RAMPS
 	CALL	CHECK_LEVELS
 	CMP	BALL_DOWN,TRUE
 	JNE	DONT_LOOSE_BALL
@@ -4657,7 +4657,7 @@ CHECK_RAMPS PROC NEAR
 	MOV	CX,40
 	MUL	CX
 	ADD	SI,AX
-	
+
 	DEC	SI
 	MOV	CX,3
 FINDRAMP:
@@ -4666,7 +4666,7 @@ FINDRAMP:
 	CMP	BALLHIGH,TRUE
 	Je	GotLo
 	CALL	GET_LO_RAMP_BYTE
-GOTLO:	POP	CX SI 
+GOTLO:	POP	CX SI
 	INC	SI
 	OR	AL,AL
 	JZ	GETRAMP
@@ -4704,11 +4704,11 @@ get_hi_ramp_byte:
 	SET_ES	0A000H
 	SHR	SI,2
 	ADD	SI,GFXMASK23_OFFSET
-	MOV	BL,ES:[SI]	
+	MOV	BL,ES:[SI]
 	AND	BX,15
 	pop si
 	RETN
-GET_LO_RAMP_BYTE:	
+GET_LO_RAMP_BYTE:
 	push si
 	SET_ES	MASK1_1
 	MOV	AL,ES:[SI]
@@ -4757,7 +4757,7 @@ CHECK_BUMPERS PROC NEAR
 	CALL	BUMPER_WAS_HIT_PROC
 NOBUMPA:
 	RETN
-ENDP	
+ENDP
 
 
 
@@ -4787,7 +4787,7 @@ DONXTTASK:
 	PUSH	CX
 	PUSH	BX
 	MOV	SAVESOURCE,BX
-	CALL	[BX]				;MèSTE VARA [BX]!
+	CALL	[BX]				;M√ÖSTE VARA [BX]!
 	POP	BX
 	POP	CX
 	ADD	BX,2
@@ -4824,7 +4824,7 @@ JUMP_2_JUMP_2:
 	OR	AX,AX
 	JZ	NO_EFF_IT_IS_STAR_WARS
 	MOV	BX,AX
-	CALL	DO_MATRIX			;KALLA Pè JOHAN!
+	CALL	DO_MATRIX			;KALLA P√Ö JOHAN!
 	MOV	AL,1
 	RETN
 NO_EFF_IT_IS_STAR_WARS:
@@ -4841,7 +4841,7 @@ DOEFFECT PROC NEAR	;INPUT: SI=OFFSET EFFECT STRUCTURE
 	LODSW					;OFFSET JINGLE STRUC
 	OR	AX,AX
 	JZ	NOJINGLE
-	CMP	AL,BYTE PTR S_LOSTBALL	;CP!? (ANNARS HôRS INTE LOSTBALL!)
+	CMP	AL,BYTE PTR S_LOSTBALL	;CP!? (ANNARS H√ñRS INTE LOSTBALL!)
 	JE	DOEFF
 	CMP	INH_EFF,TRUE
 	JE	NOEFF1
@@ -4854,10 +4854,10 @@ NOEFF1:
 JUMP_2_JUMP:
 	PUSHF
 
-;Gabriel! HÑr Ñr hur man addar pÜ en score!!
-;detta Ñr upp till dig att rîja upp!	
-;(si pekar pÜ effektscoren!!)
-;JAHAPP, MEN DET éR JU REDAN GJORT!
+;Gabriel! H√§r √§r hur man addar p√• en score!!
+;detta √§r upp till dig att r√∂ja upp!
+;(si pekar p√• effektscoren!!)
+;JAHAPP, MEN DET √ÑR JU REDAN GJORT!
 
 	UPDAT_INFOBAR
 
@@ -4884,7 +4884,7 @@ JUMP_2_JUMP:
 	CMP	SPECIALMODE,TRUE
 	JE	NOEFF2
 	MOV	BX,AX
-	CALL	DO_MATRIX			;KALLA Pè JOHAN!
+	CALL	DO_MATRIX			;KALLA P√Ö JOHAN!
 	MOV	AL,1
 	RETN
 NOEFF2:
@@ -4918,10 +4918,10 @@ DOPLAYJINGLE PROC NEAR	;INPUT: SI=OFFSET JINGLE STRUCTURE
 	PUSH	BX
 	INT	66H			;AL=FORCE POSITION, BX=THE POSITION
 	POP	BX			;ret: AL=OLD POSITION
-	
+
 	pop	dx			; utifall att jinglehandlern har gjort
 	mov	jinglejumpcnt,dl	; sitt under tiden.....
-	
+
 	MOV	JINGLE_READY_ANIM,FALSE
 	MOV	JINGLE_READY_LOGIC,FALSE
 IF DEBUG
@@ -4989,7 +4989,7 @@ CHECK_TARGETS PROC NEAR
 ITSAHIT:
 	MOV	CX,EXAHITX
 	MOV	DX,EXAHITY
-	ADD	DX,SCREENPOSY	;CP!?	DET SKA NOG VA Sè HéR
+	ADD	DX,SCREENPOSY	;CP!?	DET SKA NOG VA S√Ö H√ÑR
 	MOV	EXAHITX,0
 	MOV	EXAHITY,0
 	MOV	SI,OFFSET ZONLISTA_L
@@ -5028,7 +5028,7 @@ CHECK_LEVELS PROC NEAR
 	ADD	CX,BALLH/2
 	MOV	DX,SC_Y
 	ADD	DX,BALLH/2
-	ADD	DX,SCREENPOSY	;CP!?	DET SKA NOG VA Sè HéR
+	ADD	DX,SCREENPOSY	;CP!?	DET SKA NOG VA S√Ö H√ÑR
 	MOV	SI,OFFSET LEVEL1LISTA
 	CMP	BALLHIGH,TRUE
 	JE	BALLHGH2
@@ -5066,7 +5066,7 @@ CHECK_AREAS PROC NEAR
 	ADD	CX,BALLH/2
 	MOV	DX,SC_Y
 	ADD	DX,BALLH/2
-	ADD	DX,SCREENPOSY	;CP!?	DET SKA NOG VA Sè HéR
+	ADD	DX,SCREENPOSY	;CP!?	DET SKA NOG VA S√Ö H√ÑR
 	MOV	SI,OFFSET AREALISTA_U
 	CMP	BALLHIGH,TRUE
 	JE	BALLHGH
@@ -5132,7 +5132,7 @@ SPRINGSTEEN:	;BRUCE!
 	JB	MOVED_UP
 	JNA	DIDNT_MOVE
 
-	CMP	SPRINGPOS,(SPRINGH-1)*2	
+	CMP	SPRINGPOS,(SPRINGH-1)*2
 	JAE	_4GETIT
 	INC	SPRINGPOS
 	JMP	SPRINGPOS_CALCED
@@ -5182,7 +5182,7 @@ kukenkarl:
 BADDAREN:
 	mova	rotation,slump_countern
 	and	rotation,15	;cp!?
-DOUP2:	
+DOUP2:
 	MOV	AL,SPRINGPOS
 	XOR	AH,AH
 	SHL	AX,6
@@ -5349,11 +5349,11 @@ VBLANK_INT_DEMO:
 
 	CALL	FLASH
 	CALL	MATRIX_BLINKOR
-	
+
 IF MARGIT
 SETMARG 14
 ENDIF
-	
+
 	cmp	time_left,false
 	je	skip_matrixD		;no time left! Skip it!!
 ;	mov	time_left,false		;ok, time was left last time!
@@ -5362,7 +5362,7 @@ ENDIF
 	MOV	CS:INSIDE_MATRIX,TRUE
 	CMP	AL,TRUE
 	JE	SKIP_MATRIXD
-	CALL	DO_THE_DOTMATRIX	;updatera dÜ matrixen!
+	CALL	DO_THE_DOTMATRIX	;updatera d√• matrixen!
 	MOV	CS:INSIDE_MATRIX,FALSE
 skip_matrixD:
 	CALL	DOLIGHTS
@@ -5377,13 +5377,13 @@ ENDIF
 	RESTOREGFXREGS
 	MOV	AX,12345 ;MEDDELA TILL MUSIKRUTINEN ATT KRISER KLARAR JAG
 	RETF
-	
+
 
 LATE_RASTER_INTERRUPT_DEMO:
 	MOVE	DS,DATA
 	CMP	INTERRUPTS_ON,TRUE
 	JE	LRINTOKD
-	MOV	AX,0 ;MEDDELA TILL MUSIKRUTINEN ATT KRISER FèR HAN KLARA
+	MOV	AX,0 ;MEDDELA TILL MUSIKRUTINEN ATT KRISER F√ÖR HAN KLARA
 	RETF					;RET
 LRINTOKD:
 	SAVEGFXREGS
@@ -5422,13 +5422,13 @@ NOT_TOP:
 
 	CALL	WHEN_NEW_GAME_RESET
 	CALL	WHEN_NEW_GAME_RESET_TABLE
-	
+
 	CALL	GAME_MUSIC
 
 	CALL	NEW_BALL
 
 	MOV	ADDPLAYERS,FALSE
-	ADDTASK	ALLOW_ADDPL	;TILLÜT INGA NYA ADDS FîRNS OM 30 SYNCAR
+	ADDTASK	ALLOW_ADDPL	;TILL√•T INGA NYA ADDS F√∂RNS OM 30 SYNCAR
 
 NOF1F8:
 	RESTOREGFXREGS
@@ -5556,7 +5556,7 @@ endif
 	MOV	BX,OFFSET PARMS
 	MOV	DX,OFFSET DRV
 	INT	21H		;LOAD DRIVER
-	
+
 	MOV	AL,19
 	MOV	DX,OFFSET JINGLE_HANDLER
 	MOVE	ES,CS
@@ -5568,9 +5568,9 @@ endif
 	IF_ERROR 1,outofmemory
 	IF_ERROR 3,cantfindmod
 	IF_ERROR 4,errorloadingmod
-	
-	SLACKDRIVELED	
-	CLC	
+
+	SLACKDRIVELED
+	CLC
 	RETN
 NOSOUNDCFG:
 	MOV	AX,3
@@ -5730,7 +5730,7 @@ set_360x350:
 		mov	dx,3D5h
 		mov	al,05DH ;0DFh
 		out	dx,al			; port 3D5h, CGA/EGA indxd data
-		
+
 		mov	dx,3D4h
 		mov	al,13h
 		out	dx,al			; port 3D4h, CGA/EGA reg index
@@ -5738,7 +5738,7 @@ set_360x350:
 		mov	dx,3D5h
 		mov	al,BPL/2 ;2Dh			; '-'
 		out	dx,al			; port 3D5h, CGA/EGA indxd data
-		
+
 		mov	dx,3D4h
 		mov	al,14h
 		out	dx,al			; port 3D4h, CGA/EGA reg index
@@ -5781,15 +5781,15 @@ set_360x350:
 		mov	al,0A5H ;0ACh
 		out	dx,al			; port 3D5h, CGA/EGA indxd data
 
-		
+
 		retn
 
 INIT_GFX PROC NEAR
 	CALL	SET_MCGAB
 	CALL	SET240
-IF HZ50	
+IF HZ50
 	call	set50hz
-ENDIF	
+ENDIF
 
 	MOVE	DS,DATA
 	CMP	HI_RES,TRUE
@@ -5802,17 +5802,17 @@ IF RES600
 ELSE
 	CALL	SETSPLIT
 ENDIF
-	
-	mov	bx,0	
-	call	setpal	;slÑck skÑrmen SLéCK
-	
+
+	mov	bx,0
+	call	setpal	;sl√§ck sk√§rmen SL√ÑCK
+
 	SET_ES	0A000H
 	MOV	AX,STAGE1_1
 	MOV	ES,AX
 	MOV	AX,0		;xpos
 	MOV	BX,0+SPLH	;ypos
 	MOV	CX,SW
-	MOV	BP,10b		;bp=0: sÑtt inte paletten
+	MOV	BP,10b		;bp=0: s√§tt inte paletten
 	MOV	DX,0		;es:dx=adress till bild
 	CALL	UNPKLBM
 	MOV	AX,STAGE1_2
@@ -5820,7 +5820,7 @@ ENDIF
 	MOV	AX,0		;xpos
 	MOV	BX,144+SPLH		;ypos
 	MOV	CX,SW
-	MOV	BP,10b		;bp=0: sÑtt inte paletten
+	MOV	BP,10b		;bp=0: s√§tt inte paletten
 	MOV	DX,0		;es:dx=adress till bild
 	CALL	UNPKLBM
 	MOV	AX,STAGE1_3
@@ -5828,7 +5828,7 @@ ENDIF
 	MOV	AX,0		;xpos
 	MOV	BX,288+SPLH		;ypos
 	MOV	CX,SW
-	MOV	BP,10b		;bp=0: sÑtt inte paletten
+	MOV	BP,10b		;bp=0: s√§tt inte paletten
 	MOV	DX,0		;es:dx=adress till bild
 	CALL	UNPKLBM
 	MOV	AX,STAGE1_4
@@ -5837,22 +5837,22 @@ ENDIF
 	MOV	BX,432+SPLH		;ypos
 	MOV	CX,SW
 IFDEF HALFBRIGHT
-	MOV	BP,110b		;bp=111: sÑtt paletten, HALFBRIGHT
+	MOV	BP,110b		;bp=111: s√§tt paletten, HALFBRIGHT
 ELSE
-	MOV	BP,10b		;bp=11: sÑtt paletten, NO HALFBRIGHT
+	MOV	BP,10b		;bp=11: s√§tt paletten, NO HALFBRIGHT
 ENDIF
 
 	MOV	DX,0		;es:dx=adress till bild
 	CALL	UNPKLBM
-	
+
 	mov	si,dx
 	mova	ds,stage1_4
-	mov	di,offset CS:PALLE ;temporÑr lagringsplats
+	mov	di,offset CS:PALLE ;tempor√§r lagringsplats
 	mova	es,CS
 	mov	cx,768
 	rep	movsb
 	mova	ds,data
-		
+
 COMMENT\
 	MOV	AX,1000H
 	MOV	BL,10H
@@ -5860,7 +5860,7 @@ COMMENT\
 	INT	10H
  \
 	RETN
-	
+
 INIT_SPRING:
 	CALL	PUTSPRINGINGFX
 	mov	dx,3c4h
@@ -5912,7 +5912,7 @@ putspring proc near
 	imul	bl
 	add	si,ax
 goforit:
-		
+
 	push	ds
 	mov	ax,0a000h
 	mov	es,ax
@@ -5924,7 +5924,7 @@ goforit:
 	mov	dx,3c4h
 	mov	ax,0f02h
 	out	dx,ax
-	
+
 	cmp	realpos,0
 	jz	noclear
 	sub	di,bpl
@@ -5933,11 +5933,11 @@ goforit:
 	mov	ax,0302h
 	out	dx,ax
 	XOR	AL,AL
-	mov	es:[di+2],al			
+	mov	es:[di+2],al
 	mov	ax,0f02h
 	out	dx,ax
 	add	di,bpl
-noclear:	
+noclear:
 	MOV	DX,3CEH
 	mov	Ax,4105h
 	out	dx,ax
@@ -5945,7 +5945,7 @@ noclear:
 	sub	cl,realpos
 	mov	ax,es
 	mov	ds,ax
-	
+
 	push	cx di SI
 ritaspring:
 	movsb
@@ -5963,11 +5963,11 @@ ritaspring2:
 	movsb
 	add	di,bpl-1
 	loop	ritaspring2
-	
+
 	mov	dx,3ceh
 	mov	ax,4005h
 	out	dx,ax
-	
+
 	pop	ds
 	retn
 putspring endp
@@ -6029,7 +6029,7 @@ NOTHIRES12:
 	and al,1
 	shL al,4
 	mov ah,al
-	
+
 	mov al,07
 	out dx,al
 	inc dx
@@ -6051,7 +6051,7 @@ NOTHIRES12:
 	mov ah,al
 	mov al,09
 	out dx,ax
-					;All 10 bits set	
+					;All 10 bits set
 	ret
 
 SETSPLIT ENDP
@@ -6059,7 +6059,7 @@ BIOSDATA DB 64 DUP(0)
 SET_MCGAB PROC NEAR
 	SET_ES	CS
 	MOV	AX,13H
-IF	HIRES	
+IF	HIRES
 FINDMODE:
 	PUSH	AX
 	INT	10H
@@ -6072,11 +6072,11 @@ FINDMODE:
 	JNE	NOTTHISMODE
 IF	RES600
 	CMP	BYTE PTR BIOSDATA[2AH],5	;600 LINJER
-ELSE		
+ELSE
 	CMP	BYTE PTR BIOSDATA[2AH],3	;480 LINJER
-ENDIF	
+ENDIF
 	JE	MODEFOUND
-NOTTHISMODE:	
+NOTTHISMODE:
 	INC	AX
 	JMP	FINDMODE
 MODEFOUND:
@@ -6126,7 +6126,7 @@ ENDIF
 	MOV	DX,3D4H			;MODE CONTROL (STANDARD ADRESSING MODE)
 	MOV	AL,17H
 	MOV	AH,11100011B
-	OUT	DX,AX	
+	OUT	DX,AX
 NO_1417:
 if hires
 ELSE
@@ -6134,9 +6134,9 @@ ELSE
 	IN	AL,DX
 	MOV	DX,3C2H
 	OR	AL,11000000B
-	OUT	DX,AL			;sÑtt 240-linjers skÑrmhîjd
+	OUT	DX,AL			;s√§tt 240-linjers sk√§rmh√∂jd
 endif
-	
+
 	RETN
 SET_MCGAB ENDP
 SET240	PROC NEAR
@@ -6149,12 +6149,12 @@ SET240	PROC NEAR
                 out    dx,al
                 dec    dx
                 cld
-IF RES600		
+IF RES600
                 mov    si,offset xparabl
                 mov    cx,1
 ELSE
 		MOV	SI,OFFSET XPARABL2
-		MOV	CX,10		
+		MOV	CX,10
 ENDIF
 xvploop:
                 mov    ax,cs:[si]
@@ -6174,7 +6174,7 @@ IF HIRES
 ENDIF
 
 		RETN
-		
+
 xparabl  db 14h,00h
 
 xparabl2  db 06h,0Dh ,07h,03eh ,09h,40H+80H,10h,0EAh ,11h,0ch ,12h,0dfh ,14h,00h
@@ -6199,7 +6199,7 @@ READFLIPPIX PROC NEAR	;AX=X ;BX=Y ;CX=FLIP NO ;ES=SEGPTR TO FLIPS
 	MOV	DL,128
 	JCXZ	NOROR
 	SHR	DL,CL		;DL=BITMASK IN BYTE
-NOROR:	
+NOROR:
 	XOR	AL,AL
 	TEST	BYTE PTR ES:[SI],DL
 	JZ	NOTB0
@@ -6207,7 +6207,7 @@ NOROR:
 NOTB0:
 	PUSH	SI
 	ADD	SI,FLIPLINESIZE
-	TEST	BYTE PTR ES:[SI],DL	
+	TEST	BYTE PTR ES:[SI],DL
 	POP	SI
 	JZ	NOTB1
 	OR	AL,10B
@@ -6223,7 +6223,7 @@ NOTB2:
 	RETN
 ENDP
 
-PUTFLIPPIX PROC NEAR	;DI=SKéRM OFFSET ;AX,BX=X,Y ;DL=COLOR
+PUTFLIPPIX PROC NEAR	;DI=SK√ÑRM OFFSET ;AX,BX=X,Y ;DL=COLOR
 	PUSH	ES
 	MOV	CX,AX
 	MOV	AL,BPL
@@ -6235,7 +6235,7 @@ PUTFLIPPIX PROC NEAR	;DI=SKéRM OFFSET ;AX,BX=X,Y ;DL=COLOR
 	AND	CX,11B
 	MOV	AH,1
 	JZ	NOSHL
-	SHL	AH,CL	
+	SHL	AH,CL
 NOSHL:	MOV	AL,2
 	MOV	CL,DL
 	MOV	DX,3C4H
@@ -6245,7 +6245,7 @@ NOSHL:	MOV	AL,2
 	POP	ES
 	RETN
 ENDP
-COPYFLIPBGR PROC NEAR	;SI=ADR TO SèS ;DI=ADR TO DEST
+COPYFLIPBGR PROC NEAR	;SI=ADR TO S√ÖS ;DI=ADR TO DEST
 	PUSH	ES DS
 	SET_ES	0A000H
 	SET_DS	ES
@@ -6286,24 +6286,24 @@ CMPFLIPBOX PROC NEAR	;DI=ADR TO NEW FLIPPER BOX ;BP=OFFSET FROM NEW TO OLD
 	MOV	CX,53
 CMPR:	PUSH	CX
 	MOV	CX,16
-CHECK4:	
+CHECK4:
 	OUT	DX,AX
 	MOV	BL,ES:[DI+BP]
 	CMP	BL,ES:[DI]
 	JE	LIKA
 	SUB	DI,CS:ORGDI
-	MOV	DS:[SI+2*9],DI	;2*9 éR FôR DE WORD SOM TALAR OM 
-	ADD	DI,CS:ORGDI	;HUR MYCKET SOM BEHôVS FôR ETT Sè STORT HOPP
+	MOV	DS:[SI+2*9],DI	;2*9 √ÑR F√ñR DE WORD SOM TALAR OM
+	ADD	DI,CS:ORGDI	;HUR MYCKET SOM BEH√ñVS F√ñR ETT S√Ö STORT HOPP
 	INC	CS:DIFCNT
 	PUSH	DI
 	CALL	LOOK4BLOCK
-	JC	COULDNTFIND	
+	JC	COULDNTFIND
 	MOV	DS:[SI+2*9+2],DI
 	ADD	SI,4
 	POP	DI
 	JMP	SHORT NEXT4
 COULDNTFIND:
-	MOV	BL,ES:[DI]	;LADDA LèSKRETSARNA MED DET MAN VILL HA
+	MOV	BL,ES:[DI]	;LADDA L√ÖSKRETSARNA MED DET MAN VILL HA
 	MOV	DI,CS:DIFPTR
 	MOV	DS:[SI+2*9+2],DI
 	ADD	SI,4
@@ -6353,36 +6353,36 @@ LOOK4BLOCK:
 	move	ds,data
 	MOV	SI,GFXADR_FOR_FLIP_ANIM_DATA
 	move	ds,dataflip
-	
-	
+
+
 NEXTBLOCK:
 	XOR	AH,AH
 	OUT	DX,AX
 	CMP	BYTE PTR ES:[SI],BL
 	JNE	NOTTHISBLOCK
 	INC	AH
-	OUT	DX,AX	
+	OUT	DX,AX
 	CMP	BYTE PTR ES:[SI],BH
 	JNE	NOTTHISBLOCK
 	INC	AH
-	OUT	DX,AX	
+	OUT	DX,AX
 	CMP	BYTE PTR ES:[SI],CL
 	JNE	NOTTHISBLOCK
 	INC	AH
-	OUT	DX,AX	
+	OUT	DX,AX
 	CMP	BYTE PTR ES:[SI],CH
 	JNE	NOTTHISBLOCK
 THISBLOCK:	;!
 	MOV	DI,SI
-	CLC	
+	CLC
 UNIQUE:	POP	SI CX BX AX
-	RETN		
+	RETN
 NOTTHISBLOCK:
 	INC	SI
 	CMP	SI,CS:DIFPTR
 	JB	NEXTBLOCK
 	STC
-	JMP	UNIQUE	
+	JMP	UNIQUE
 DIFCNT	DW	?
 DIFPTR	DW	GFXADR_FOR_FLIP_ANIM_DATA
 ORGDI	DW	?
@@ -6391,14 +6391,14 @@ DELTANIM PROC NEAR ;BX=ADR TO ADR-LISTA ;SI=ADR TO GFXDELTA ;DI=ADR FOR OUTPUT
 	MOV	AX,DI
 DODELTA:
 	MOV	DI,[BX]
-	ADD	DI,AX		;CP! KAN GôRAS INNAN
+	ADD	DI,AX		;CP! KAN G√ñRAS INNAN
 	MOV	SI,[BX+2]
 	DB	26H		;ES:
 	MOVSB
 	ADD	BX,4
 	LOOP	DODELTA
 	RETN
-ENDP	
+ENDP
 INIT_SIN:
 	MOV	SI,OFFSET SIN
 	MOV	CX,2048+2048/4
@@ -6407,7 +6407,7 @@ XCHGSIN:LODSB
 	LODSB
 	MOV	DS:[SI-2],AX
 	LOOP	XCHGSIN
-	RETN	
+	RETN
 BREDDA_MASK:
 	PUSH	DS
 	ASSUME	DS:HIDDEN1
@@ -6424,7 +6424,7 @@ BREDDA_MASK:
 	ASSUME	DS:DATA
 	POP	DS
 	RETN
-BREDDA:	
+BREDDA:
 	MOV	CX,576
 LINE1:	PUSH	CX
 	MOV	CX,40
@@ -6481,7 +6481,7 @@ NEXT_COL:
 	INC	BX
 	POP	CX
 	LOOP	NEXT_COL
-\	
+\
 ;*** THAT WAS THE PALETTE. NOW LET'S CONVERT THE RGB DATA ***
 
 	MOVE	ES,DS
@@ -6512,7 +6512,7 @@ CONV_NEXT_RGB_BLOCK:
 	STOSB
 	POP	CX
 	LOOP	CONV_NEXT_RGB_BLOCK
-	
+
 	POP	CX
 	LOOP	CONV_NEXT_POST
 

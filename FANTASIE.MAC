@@ -72,11 +72,11 @@ updat_score macro
 	mov	di,offset oldbuf
 	mov	cx,12/2
 	rep	stosw
-	mov	es:lastcommas,0	;komman kommer att komma s„ttas ut :-)
+	mov	es:lastcommas,0	;komman kommer att komma sÃ¤ttas ut :-)
 	pop	es
 endm
 
-startanim macro offerten ;anim som ska animeras, om upptaget s„tts intflag
+startanim macro offerten ;anim som ska animeras, om upptaget sÃ¤tts intflag
 local	noanimallowed
 local	nointerrupt
 	mov	si,sisa
@@ -95,11 +95,11 @@ nointerrupt:
 	assume	ds:data
 	mov	dotrut,offset animation_routine
 	mov	sisa,si
-	
+
 noanimallowed:
 endm
 
-startscroll macro offerten ;text som ska skrollas, om upptaget h„nder inget
+startscroll macro offerten ;text som ska skrollas, om upptaget hÃ¤nder inget
 local	noscrollallowed
 local	nointerrupt
 
@@ -326,7 +326,7 @@ PLAYJINGLE MACRO JINGSTRUC
 ENDM
 PLAYJINGLE_PENETRATE MACRO JINGSTRUC
 	MOV	JINGLEJUMPCNT,1
-	
+
 	MOV	SI,OFFSET JINGSTRUC
 	CALL	DOPLAYJINGLE
 ENDM
@@ -354,13 +354,13 @@ SETBALLPOS MACRO XP,YP,XS,YS,PP
 	MOV	Y_HAST,YS
 	MOV	X_HAST,XS
 ;	MOV	ROTATION,0 ;cp!? blir fler variationer utan (drop zone bl a)
-ENDM	
+ENDM
 
 SETBALLSPEED MACRO XS,YS
 	MOV	Y_HAST,YS
 	MOV	X_HAST,XS
 	MOV	ROTATION,0
-ENDM	
+ENDM
 
 SOUNDEFFECT MACRO EFFECT,volume
 	mov	bh,volume

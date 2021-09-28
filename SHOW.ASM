@@ -9,7 +9,7 @@ INCLUDELIB CLEAR
 flipgfxfilesize=220
 FIRSTMASK_GFXADR=BPL*(SPLH+BANH)
 GFXADR_FOR_FLIP_ANIM_DATA=FIRSTMASK_GFXADR+BPL*40
-springsourceadr=GFXADR_FOR_FLIP_ANIM_DATA-3*23	;3*23 éR FôR FJéDERNS GFX
+springsourceadr=GFXADR_FOR_FLIP_ANIM_DATA-3*23	;3*23 √ÑR F√ñR FJ√ÑDERNS GFX
 springdestadr=(splh+556)*bpl+304/4
 DATAFLIP SEGMENT PARA PUBLIC 'DATA'
 MAXDIFS1=114+5
@@ -20,8 +20,8 @@ if create_flip_data
 LEFTFLIPTAB	DW 42*(2*MAXDIFS1) DUP (1)
 RIGHTFLIPTAB	DW 42*(2*MAXDIFS2) DUP (1)
 LEFTFLIP2TAB	DW 26*(2*MAXDIFS3) DUP (1)
-TEMPTAB		DW 2*MAXDIFS DUP (1)	
-else	
+TEMPTAB		DW 2*MAXDIFS DUP (1)
+else
 	extrn	leftfliptab,rightfliptab,leftflip2tab
 endif
 DATAFLIP ENDS
@@ -68,7 +68,7 @@ MATRIXhi=114
 MATRIXCOLS=matrixhi*256+matrixlo
 PARTY_ON_SPEED=3	;?
 SHOOT_AGAIN_SPEED=3	;?
-BIT2COL			DB 0,0,0,0,6,1,41,0	;flipper fÑrgerna
+BIT2COL			DB 0,0,0,0,6,1,41,0	;flipper f√§rgerna
 
 ;******************** GAME TIMING ********************
 LM_TIME=10*60
@@ -105,7 +105,7 @@ SPINcounter	dw ?
 SPINlight	db 0
 rm		db 0,0,0,0,0,0,0,0,0,0,0,0
 Tjufemtusen	db 0,0,0,0,0,0,0,2,5,0,0,0
-SPINscores	db 0,0,0,'*'-'A'+10,'*'-'A'+10,'*'-'A'+10,'*'-'A'+10,2,5,0,0,0 ;rensar tvÜ fîrsta
+SPINscores	db 0,0,0,'*'-'A'+10,'*'-'A'+10,'*'-'A'+10,'*'-'A'+10,2,5,0,0,0 ;rensar tv√• f√∂rsta
 _50K		db 0,0,0,0,0,0,0,5,0,0,0,0
 _100K		db 0,0,0,0,0,0,1,0,0,0,0,0
 _250K		db 0,0,0,0,0,0,2,5,0,0,0,0
@@ -215,12 +215,12 @@ ENDS
 SHOOTTHEBALL	DW	SJINGLE12
 		DB	0,0,0, 0,0,0, 0,0,0, 0,0,0	;CP?
 		DB	0,0,0, 0,0,0, 0,0,0, 0,0,0	;CP?
-		DW	SHOOTTHEBALLTS		
+		DW	SHOOTTHEBALLTS
 
 BILLION		DW	SJINGLE1
 		DB	0,0,1, 0,0,0, 0,0,0, 0,0,0	;CP?
 		DB	0,0,0, 0,0,5, 0,0,0, 0,0,0	;CP?
-		DW	BILLIONTS		
+		DW	BILLIONTS
 
 
 ;BygelSetA		Dc.L	0,SBygel1,0,$50000,0,0,0
@@ -326,7 +326,7 @@ youwinPLANE	dw sjingle7
 		db 0,0,0, 0,1,0, 0,0,0, 0,0,0
 		db 0,0,0, 0,0,0, 5,0,0, 0,0,0
 		DW youwinPLANETS
-		
+
 moneymania 	dw sjingle9
 		db 0,0,0, 0,0,0, 0,0,0, 0,0,0
 		db 0,0,0, 0,0,0, 0,0,0, 0,0,0
@@ -341,8 +341,8 @@ JACKPOT 	dw sjingle14
 JACKVALUE	db 0,0,0, 0,0,0, 0,0,0, 0,0,0
 		db 0,0,0, 0,0,0, 0,0,0, 0,0,0
 		DW jackpotTS
-		
-JACKINIT	DB 0,0,0, 0,1,0, 0,0,0, 0,0,0		
+
+JACKINIT	DB 0,0,0, 0,1,0, 0,0,0, 0,0,0
 
 S_JACKPOT 	dw sjingle15
 		db 0,0,0, 0,5,0, 0,0,0, 0,0,0
@@ -369,15 +369,15 @@ SKILLSHOt_XB	DW sjingle6
 		db 0,0,0, 0,0,0, 0,0,0, 0,0,0
 		db 0,0,0, 0,0,0, 0,0,0, 0,0,0
 		DW skillshotXBTS
-		
+
 cashpot		DW sjingle5
-		;dd 0,0				;cp! fel poÑng&bonus
+		;dd 0,0				;cp! fel po√§ng&bonus
 CASHPOTVAL	db 0,0,0, 0,0,0, 5,0,7, 5,0,0
 		db 0,0,0, 0,0,0, 0,0,0, 5,1,0
 		DW cashpotTS
 
 cashpot5	DW sjingle18
-		;dd 0,0				;cp! fel poÑng&bonus
+		;dd 0,0				;cp! fel po√§ng&bonus
 CASHPOT5VAL	db 0,0,0, 0,0,0, 0,0,0, 0,0,0
 		db 0,0,0, 0,0,0, 0,0,0, 5,1,0
 		DW cashpot5TS
@@ -399,13 +399,13 @@ dollartouch	DW 0
 		db 0,0,0, 0,0,0, 0,0,7, 5,0,0
 		db 0,0,0, 0,0,0, 0,0,0, 5,1,0
 		DW 0
-		
+
 dollartouch2	DW sjingle20
 		db 0,0,0, 0,0,0, 0,0,7, 5,0,0
 		db 0,0,0, 0,0,0, 0,0,0, 5,1,0
 		DW 0
-		
-LOOPMILLION	DW SJINGLE17	
+
+LOOPMILLION	DW SJINGLE17
 		db 0,0,0, 0,0,1, 0,0,0, 0,0,0
 		db 0,0,0, 0,0,0, 0,7,5, 0,0,0
 		DW millionTS	;CP!
@@ -446,13 +446,13 @@ PLANELIT	DW SJINGLE21
 		db 0,0,0, 0,0,0, 0,5,0, 0,0,0
 		DW PLANElitTS
 
-LOSTBALL	DW S_LOSTBALL	
+LOSTBALL	DW S_LOSTBALL
 ;		DD 0,0
 		db 0,0,0, 0,0,0, 0,0,0, 0,0,0
 		db 0,0,0, 0,0,0, 0,0,0, 0,0,0
 		DW ball_lostTS
 if demover
-MINUTE5		DW S_GAMEOVER2	
+MINUTE5		DW S_GAMEOVER2
 ;		DD 0,0
 		db 0,0,0, 0,0,0, 0,0,0, 0,0,0
 		db 0,0,0, 0,0,0, 0,0,0, 0,0,0
@@ -600,9 +600,9 @@ AreaLista_L LABEL WORD
 			DW    300,400,320,450 ;Spring invalid?
 			DW    Open1
 			DW    102,23,122,45
-			DW    Bygel11		;lÑngst upp i loopen
+			DW    Bygel11		;l√§ngst upp i loopen
 			DW    190,25,210,45
-			DW    Bygel12		;till hîger i loopen
+			DW    Bygel12		;till h√∂ger i loopen
 			DW    103,233,122,254
 			DW    GropA
 			DW    1,520,20,555 ;CP! SKA VA X1=0
@@ -663,7 +663,7 @@ AREALISTA_U_T		LABEL WORD
 			DW	0
 
 
-LEVEL1LISTA	LABEL	WORD	;AREOR SOM ANGER HOPP TILL LEVEL 1 FRèN LEVEL 2
+LEVEL1LISTA	LABEL	WORD	;AREOR SOM ANGER HOPP TILL LEVEL 1 FRÔøΩN LEVEL 2
 	DW    100,70,125,98
 	DW    250,70,270,100
 	DW    255,85,277,120
@@ -676,7 +676,7 @@ LEVEL1LISTA	LABEL	WORD	;AREOR SOM ANGER HOPP TILL LEVEL 1 FRèN LEVEL 2
 	DW    0,525,25,555
 	DW    -1
 
-LEVEL2LISTA	LABEL	WORD	;AREOR SOM ANGER HOPP TILL LEVEL 2 FRèN LEVEL 1
+LEVEL2LISTA	LABEL	WORD	;AREOR SOM ANGER HOPP TILL LEVEL 2 FRÔøΩN LEVEL 1
 		DW    125,70,150,100
 		DW    190,75,230,100
 		DW    200,80,240,100
@@ -695,12 +695,12 @@ FLASHLIST	LABEL WORD
 
 		T2=12
 		DW 0,0,T2,T2,6		;lock
-		
+
 		T1=6			;DOLLAR SIGNS
 		T2=T1*2
 		DW 0,0,T2,T2,2
 		DW 0,T2,T2,T2,3
-		
+
 		T1=6			;SPIN DOCTORS
 		T2=T1*8
 		DW 0,T1*0,T2,T2,19
@@ -711,7 +711,7 @@ FLASHLIST	LABEL WORD
 		DW 0,T1*5,T2,T2,24
 		DW 0,T1*6,T2,T2,25
 		DW 0,T1*7,T2,T2,26
-		
+
 		T1=12
 		T2=T1
 		DW 0,0,T2,T2,33
@@ -732,44 +732,44 @@ LON1	DB 254	;skill
 	DB 2
 	DB 64,0,0
 	DB 95,0,0
-	
+
 LON2	DB 251	;$1
 	DB 3
 	DB 14,70,64
 	DB 8,64,58
 	DB 14,83,77
-	
+
 LON3	DB 248	;$2
 	DB 3
 	DB 14,70,64
 	DB 8,64,58
 	DB 14,83,77
-	
+
 LON4	DB 245	;loop mil
 	DB 3
 	DB 77,39,0
 	DB 83,52,8
 	DB 89,70,33
-	
+
 LON5	DB 243	;50M
 	DB 2
 	DB 58,0,0
 	DB 95,0,0
-	
+
 LON6	DB 240	;lock
 	DB 3
 	DB 70,70,70
 	DB 83,83,83
 	DB 95,95,95
-	
-LON7	DB 235	;îvre bricka
+
+LON7	DB 235	;√∂vre bricka
 	DB 5
 	DB 14,33,52
 	DB 8,39,64
 	DB 27,52,77
 	DB 45,64,77
 	DB 70,70,70
-	
+
 LON8	DB 230	;nedre bricka
 	DB 5
 	DB 14,33,52
@@ -793,18 +793,18 @@ LON10	DB 220		;bricka
 	DB 27,52,77
 	DB 45,64,77
 	DB 70,70,70
-	
+
 LON11	DB 218		;xb
 	DB 2
 	DB 58,0,0
 	DB 95,0,0
-	
+
 LON12	DB 215		;Cx5
 	DB 3
 	DB 58,58,58
 	DB 70,70,70
 	DB 95,95,95
-	
+
 LON13	DB 213		;tv
 	DB 2
 	DB 8,39,64
@@ -814,19 +814,19 @@ LON14	DB 211		;trip
 	DB 2
 	DB 45,45,45
 	DB 70,39,89
-	
+
 LON15	DB 209		;car
 	DB 2
 	DB 8,39,64
 	DB 39,64,95
-	
+
 LON16	DB 207		;jp
 	DB 2
 	DB 58,0,0
 	DB 95,0,0
-	
+
 LON17	DB 204		;col. prize
-	DB 3	
+	DB 3
 	DB 58,58,58
 	DB 70,70,70
 	DB 95,95,95
@@ -836,7 +836,7 @@ LON18	DB 201		;spin wheel
 	DB 14,33,52
 	DB 8,39,64
 	DB 27,52,77
-	
+
 LON19	DB 199		;spinindikator
 	DB 2
 	DB 0,58,27
@@ -876,37 +876,37 @@ LON26	DB 185
 	DB 2
 	DB 0,58,27
 	DB 0,95,0
-	
+
 LON27	DB 183		;1 billion
 	DB 2
 	DB 58,0,0
 	DB 95,0,0
-	
+
 LON28	DB 181		;boat
 	DB 2
 	DB 8,39,64
 	DB 39,64,95
-	
+
 LON29	DB 179		;house
 	DB 2
 	DB 45,45,45
 	DB 70,39,89
-	
+
 LON30	DB 177		;plane
 	DB 2
 	DB 8,39,64
 	DB 39,64,95
-	
+
 LON31	DB 175		;mo' money
 	DB 2
 	DB 58,0,0
 	DB 95,0,0
-	
+
 LON32	DB 173		;money mania
 	DB 2
 	DB 58,0,0
 	DB 95,0,0
-	
+
 LON33	DB 170		;x2
 	DB 3
 	DB 58,58,58
@@ -930,7 +930,7 @@ LON36	DB 161		;x6
 	DB 83,52,8
 	DB 89,70,33
 	DB 89,95,45
-	
+
 LON37	DB 158		;x8
 	DB 3
 	DB 83,52,8
@@ -1021,7 +1021,7 @@ assume	ds:data
 endm
 
 ;*********************************************************
-;******* OBS!!! KOM IHèG ATT ASSUMERA ANIMATIONER TILL DATA2 OCH 
+;******* OBS!!! KOM IHÔøΩG ATT ASSUMERA ANIMATIONER TILL DATA2 OCH
 ;******* SCROLLAR TILL DATA !!!!!
 ASSUME	DS:DATA2
 
@@ -1056,7 +1056,7 @@ BeatenTS	LABEL WORD	;I SPELET
 
 
 ;*****************************************
-party_onTS	LABEL BYTE	;Turn on party on . . . 
+party_onTS	LABEL BYTE	;Turn on party on . . .
 		CLEARIT
 		DW _FLASHON,PARTY_ON_SPEED
 		DW _PARTYONN,1
@@ -1064,7 +1064,7 @@ party_onTS	LABEL BYTE	;Turn on party on . . .
 		DW _PARTYON,1
 		DW 0
 
-party_offTS	LABEL WORD	;Turn it off	
+party_offTS	LABEL WORD	;Turn it off
 		CLEARIT
 		DW _PARTYOFF,1
 		DW _FLASHOFF,1
@@ -1092,35 +1092,35 @@ SHOOTTHEBALLTS	LABEL WORD
 TVlitTS	label word
 	clearit
 	dw	_scroll,TVlitTEXT
-	dw	0	
+	dw	0
 TVlitTEXT db 21 dup(1),'THE TV IS LIT',21 DUP(1),255
 TRIPlitTS label word
 	clearit
 	dw	_scroll,TRIPlitTEXT
-	dw	0	
+	dw	0
 TRIPlitTEXT db 21 dup(1),'YOU CAN ACTUALLY WIN A TRIP',21 DUP(1),255
 
 CARlitTS label word
 	clearit
 	dw	_scroll,CARlitTEXT
-	dw	0	
+	dw	0
 CARlitTEXT db 21 dup(1),'HOW ABOUT A BRAND NEW CAR',21 DUP(1),255
 
 BOATlitTS label word
 	clearit
 	dw	_scroll,BOATlitTEXT
-	dw	0	
+	dw	0
 boatLitTEXT db 21 dup(1),'PLAY WELL AND WIN A BOAT',21 DUP(1),255
 HOUSElitTS label word
 	clearit
 	dw	_scroll,HOUSElitTEXT
-	dw	0	
+	dw	0
 HOUSElitTEXT db 21 dup(1),'THE HOUSE CAN BE YOURS',21 DUP(1),255
 
 PLANElitTS label word
 	clearit
 	dw	_scroll,PLANElitTEXT
-	dw	0	
+	dw	0
 PLANElitTEXT db 21 dup(1),'YOU CAN WIN A PRIVATE JET',21 DUP(1),255
 
 RMTEXT DB '  RAISING MILLIONS',0
@@ -1338,7 +1338,7 @@ Turbo2TS	dw _animation,_clear
 		DW _ANIMATION,_CLEAR
 		DW _SCROLL,ALLloopTEXT
 		dw _jmp,initurboTS
-		
+
 turboTS		dw _animation,_clear
 		DW _ANIMATION,_moneyM
 		DW _ANIMATION,_CLEAR
@@ -1354,7 +1354,7 @@ TurboMode_endingTS Label Word
 		DW _LIGHTFLASH,32
 		assume	ds:data2
 		dw _wait,60		;CPW!
-		
+
 		dw _animation,_clear
 		DW _FLASHON,1
 		assume	ds:data
@@ -1387,7 +1387,7 @@ COMMENT\
 Price4ATS		String	3,16,16,"_PLAY_WELL_AND_WIN_A_BOAT_"
 Price5ATS		String	3,16,16,"_THE_HOUSE_CAN_BE_YOURS_"
 Price6ATS		String	3,16,16,"_YOU_CAN_WIN_THE_PRIVATE_JET_"
-Price4TS		String	3,16,16,"_A_NICE_µ00∞000_DOLLAR_BOAT_"
+Price4TS		String	3,16,16,"_A_NICE_¬µ00¬∞000_DOLLAR_BOAT_"
 Price5TS		String	3,16,16,"_A_HUGE_50_ROOM_MANSION_"
 Price6TS		String	3,16,16,"_THE_PRIVATE_JET_WITH_CREW_"
 \
@@ -1424,7 +1424,7 @@ ball_lostTS	LABEL WORD
 		dw _Sound_Effect,s_MultiLjud,0
 
 		DW _JBONUSX1,NoBonusXTS
-		CLEARIT	;CP! CLEARIT éR ONôDIGT BRUTAL!
+		CLEARIT	;CP! CLEARIT √ÑR ON√ñDIGT BRUTAL!
 		DW _BONUS_X_CALCS,?
 		DW _PRINT5,BONUS_X_TEXT,SW*1*2/4+16*7/4-4*2
 		DW _PRINT8_NUMBER_CENT,BONUSSIFFRORNA,7*2*SW/4+TOTCENT
@@ -1452,7 +1452,7 @@ no_cyclonesTS	LABEL WORD
 		DW _WAIT,120	;CPW!
 		dw _Sound_Effect,s_MultiLjud,0
 		CLEARIT
-		
+
 no_happy_stewartTS LABEL WORD
 
 		DW _JBCDZ,BONUSSIFFRORNA,no_bonus2TS
@@ -1478,7 +1478,7 @@ no_bonus2TS	LABEL WORD
 		DW 0
 SORRYNOBONUSTEXT DB '  SORRY ',94,' NO BONUS  ',0
 
-shoot_again_onTS LABEL BYTE	;Turn on shoot again . . . 
+shoot_again_onTS LABEL BYTE	;Turn on shoot again . . .
 		CLEARIT
 		DW _FLASHON,SHOOT_AGAIN_SPEED
 		DW _SHOOT_AGAIN_ONN,1
@@ -1488,14 +1488,14 @@ shoot_again_onTS LABEL BYTE	;Turn on shoot again . . .
 		DW 0
 
 
-out_of_ballsTS	LABEL WORD		;ér Stewarts fortfarande borta kanske?
+out_of_ballsTS	LABEL WORD		;√Ñr Stewarts fortfarande borta kanske?
 		CLEARIT
 		dw _matrixlgt,1
 		dw _knacket,?
 		DW _SETDECCOR,120
 		DW _WAITJINGLE2,?
 check_xxballTS LABEL WORD
-		DW _check_xxballs	;utfîr ev xxballs, hoppar sedan till after_xxballs!
+		DW _check_xxballs	;utf√∂r ev xxballs, hoppar sedan till after_xxballs!
 
 after_xxballTS	LABEL WORD
 
@@ -1536,14 +1536,14 @@ UrbanOverTS	LABEL WORD
 GAME_OVER_TEXT	DB '     GAME  OVER',0
 ;TUBORG!
 
-;********************** SLUT Pè BALL LOST *******************
+;********************** SLUT PÔøΩ BALL LOST *******************
 
 showithi	macro
 		DW _PRINT13,ALLTIME_TEXT,SW*2/4*2+16/4/2
 		dw _wait,40
 
 		CLEARIT
-		
+
 		DW _FLASHOFF,1
 		DW _MATRIXLGT,0
 		DW _PRINT13,hi_1,SW*2/4*2
@@ -1606,9 +1606,9 @@ ShowInfoTS	LABEL WORD
 		dw _print5,ballstext,sw*2*10/4+16*1/4
 
 		DW 0
-				
+
 ShowHighsTS	LABEL WORD
-;TEXTER	
+;TEXTER
 		CLEARIT
 		DW _FLASHON,1
 		DW _PRINT13,PF_TEXT,SW*2/4*2-2
@@ -1627,7 +1627,7 @@ ShowHighsTS	LABEL WORD
 		DW _SCROLL,SCROLL_TEXT1
 ;VISA HIGHSCORE
 		showithi
-;DI UPP è NED!
+;DI UPP ÔøΩ NED!
 		CLEARIT
 ;		dw _rullgardin_NED,DIGITAL_TEXT,16
 ;		dw _rullgardin_upp,DIGITAL_TEXT,-13
@@ -1642,7 +1642,7 @@ ShowHighsTS	LABEL WORD
 		DW _JMP,ShowHighsTS
 		dw 0
 
-			
+
 ShowPlayersTS	label word
 		clearit
 		dw _print5,playerstext,sw*2*2/4+16*1/4
@@ -1651,7 +1651,7 @@ ShowPlayersTS	label word
 first_no_of_playersTS LABEL WORD
 		clearit
 		dw _print5,playerstext,sw*2*2/4+16*1/4
-		DW _PRINT13,NOLLA,SW*2*2/4+16*19/4		
+		DW _PRINT13,NOLLA,SW*2*2/4+16*19/4
 no_of_playersTS	label word
 		dw _print5,no_of_players_text,sw*2*10/4+16*1/4
 		DW _WAIT_GAME_ON,?
@@ -1690,7 +1690,7 @@ MINUTE5TEXTB	DB 21 DUP (1)
 		DB "LOOK OUT FOR PINBALL FANTASIES PC - FULL GAME AVAILABLE SOON"
 		DB 21 DUP (1),255
 endif
-;***********************************************************		
+;***********************************************************
 
 GETTING_SICK_TEXT DB '    FALLING DOWN',0
 
@@ -1706,12 +1706,12 @@ show_totalbonus_TEXT DB 'TOTAL*BONUS',0
 BONUS_X_TEXT 	DB 'BONUS*X*??',0
 
 fld_TEXT	DB '  FRONTLINE DESIGN',0
-		
+
 PF_TEXT		DB '  PINBALL FANTASIES',0
 TRS_TEXT	DB ' THE REAL SIMULATOR',0
 PL_TEXT		DB 21 DUP (' '),'BILLION DOLLAR GAMESHOW',21 DUP (' '),255
 SCROLL_TEXT1	DB 21 DUP (' '),'ADD PLAYERS WITH F1 TO F8',21 DUP (' ')
-		DB 'WINNERS DO NOT USE DRUGS',21 DUP (' '),255		
+		DB 'WINNERS DO NOT USE DRUGS',21 DUP (' '),255
 ALLTIME_TEXT	DB 'ALL TIME HIGHSCORES',0
 SCROLL_TEXT2	DB 21 DUP (' '),'FLIP WITH LEFT AND RIGHT ALT SHIFT OR CTRL KEYS',21 DUP (' ')
 		DB 'PUSH TABLE WITH SPACE',21 DUP (' ')
@@ -1723,7 +1723,7 @@ PF_TEXT		DB '  PINBALL FANTASIES',0
 TRS_TEXT	DB ' THE REAL SIMULATOR',0
 PL_TEXT		DB '    PARTY LAND',0
 SCROLL_TEXT1	DB 21 DUP (' '),'ADD PLAYERS WITH F1 TO F8 OR ENTER',21 DUP (' ')
-		DB 'WINNERS DO NOT USE DRUGS',21 DUP (' '),255		
+		DB 'WINNERS DO NOT USE DRUGS',21 DUP (' '),255
 ALLTIME_TEXT	DB ' ALL TIMES HIGHSCORE',0
 SCROLL_TEXT2	DB 21 DUP (' '),'FLIP WITH LEFT AND RIGHT ALT SHIFT OR CTRL KEYS',21 DUP (' ')
 		DB 'PUSH TABLE WITH SPACE',21 DUP (' ')
@@ -1731,7 +1731,7 @@ SCROLL_TEXT2	DB 21 DUP (' '),'FLIP WITH LEFT AND RIGHT ALT SHIFT OR CTRL KEYS',2
 		DB 'WINNERS DO NOT USE DRUGS',21 DUP (' ')
 		DB 'P PAUSES GAME AND M TOGGLES INGAME MUSIC ON AND OFF',21 DUP (' ')
 		DB 'ESC EXITS AND SAVES NEW HIGHSCORES',21 DUP (' '),255
-\			
+\
 DIGITAL_TEXT	DB '  DIGITAL ILLUSIONS',0
 
 JACK_TEXT	DB 'JACKPOT IS',0
@@ -1742,7 +1742,7 @@ INFO_TEXT	DB 21 DUP (' ')
 		db ''
 		DB 21 DUP (1),255
 
-playerstext	db 'PLAYER 8',0		;8=1 (LôS EKVATIONEN!)
+playerstext	db 'PLAYER 8',0		;8=1 (L√ñS EKVATIONEN!)
 BALLSTEXT	DB 'BALL 8',0		;8=1
 
 hajjskar	db 'HIGHSCORE PL X ',92,'   ',93,0
@@ -1786,7 +1786,7 @@ RESET_VARS PROC NEAR
 	MOV	DI,OFFSET TM_TOTAL
 	MOV	CX,6
 	REP	STOSW
-	
+
 	MOV	BALLHIGH,FALSE
 
 	MOVEBCD	CASHPOTVAL,_500K
@@ -1807,7 +1807,7 @@ RESET_VARS PROC NEAR
 	MOV	HOUSECOUNTER,0
 
 	MOV	BILLION_ENABLED,FALSE
-	
+
 	mov	bonusmultiplier,0
 	MOV	BONUS_X,1
 	MOV	WORD PTR BONUS_TEXT[10],'8 '
@@ -1815,8 +1815,8 @@ RESET_VARS PROC NEAR
 	CALL	SLACK_LIGHTS
 ;	CALL	KILL_FLASHOR			;DOT MATRIX FLASH RESET
 	call	closegate1
-	
-	lighton	7		;slÑpp upp brickorna
+
+	lighton	7		;sl√§pp upp brickorna
 	call	closegate3
 	lighton	8
 	call	closegate4
@@ -1825,10 +1825,10 @@ RESET_VARS PROC NEAR
 	lighton	10
 	call	closegate6
 
-	endflash 1		
-	lightflash 1,15	;blinka med skill-lampan (ska det ligga hÑr?)
+	endflash 1
+	lightflash 1,15	;blinka med skill-lampan (ska det ligga h√§r?)
 
-;HéR VAR DEN! ;	mov	paRTYFLASh,false
+;H√ÑR VAR DEN! ;	mov	paRTYFLASh,false
 
 	RETN
 RESET_VARS ENDP
@@ -1841,7 +1841,7 @@ WHEN_NEW_GAME_RESET_TABLE:
 	NIL	AX
 	REP	STOSW
 	MOV	CYCLONECOUNTER,0
-	
+
 	MOV	TOP_THREE,FALSE
 	MOV	ALL_SIX,FALSE
 	CALL	SLACK_LIGHTS
@@ -1849,7 +1849,7 @@ WHEN_NEW_GAME_RESET_TABLE:
 	CALL	RESET_VARS
 	CALL	UPDATE_P_STRUC_4_ALL_PLAYERS
 	CALL	INITJACK
-		;cleara slutsiffrorna (di alla!) (Fîr knacket alltsÜ!!!)
+		;cleara slutsiffrorna (di alla!) (F√∂r knacket allts√•!!!)
 	push	es
 	move	es,ds
 	MOV	di,offset last_text
@@ -1905,14 +1905,14 @@ LOOSE_BALL PROC NEAR
 	JNE	NOTHIRES16
 	MOV	SCREENFORCE2,576-SH_HI+SPLH ;CP?
 NOTHIRES16:
-	SETBALLPOS 135,28,0,0,FALSE	;CP!!!!!!! LéGG BOLLEN Pè BéTTRE STéLLE
+	SETBALLPOS 135,28,0,0,FALSE	;CP!!!!!!! L√ÑGG BOLLEN PÔøΩ B√ÑTTRE ST√ÑLLE
 	mov	holdstill,true
 	MOV	ALLOWFLIP,FALSE	;KILL FLIPPERS!
 
 	MOV	SPECIALMODE,FALSE
 
 	MOV	CURRENT_PRIORITY,0
-	EFFECT	LOSTBALL	
+	EFFECT	LOSTBALL
 	MOV	LASTJINGLE,emptyjingle
 	ADDTASK SOUNDRINNER
 	RETN
@@ -1923,7 +1923,7 @@ SOUNDRINNER:
 	SUICIDE
 
 _FLORPA:
-	MOV	CS:LB6CNT,0			;RESET FôRDRôJNINGS-RéKNAREN
+	MOV	CS:LB6CNT,0			;RESET F√ñRDR√ñJNINGS-R√ÑKNAREN
 	MOV	ADDORPEK,OFFSET ADDOR		;STARTA MED SISTA NUFFRAN
 	MOV	BONUSPEK,OFFSET BONUSSIFFRORNA+11
 
@@ -1944,7 +1944,7 @@ _NEXTp_5:
 	RETN
 PLIPPA_SCORE:
 	mov	si,offset siffrorna
-	mov	bx,336*2/4+(320-12*16)/4	;hîger justerad!
+	mov	bx,336*2/4+(320-12*16)/4	;h√∂ger justerad!
 	MOVE	ES,CS
 	CALL	DWORD PTR ES:PEKOR
 	MOV	SI,0
@@ -1965,16 +1965,16 @@ DO_IT_AGAIN_AND_DO_IT_NOW:
 	MOV	AL,[BX]
 	OR	AL,AL				;IS DIGIT ZERO?
 	JZ	DIGIT_IS_ZERO
-	DEC	BYTE PTR [BX]			;RéKNA NED BONUSEN
+	DEC	BYTE PTR [BX]			;R√ÑKNA NED BONUSEN
 	JNZ	NO_WAITS_TODAY
-	
+
 	IFZEROBCD BONUSSIFFRORNA
 	JNC	NO_WAITS_TODAY
 
 	MOV	CS:LB6CNT,-10 ;CPW!
 NO_WAITS_TODAY:
 
-	MOV	SI,ADDORPEK			;RéKNA UPP POéNGEN
+	MOV	SI,ADDORPEK			;R√ÑKNA UPP PO√ÑNGEN
 	MOV	DI,OFFSET SIFFRORNA
 	CALL	ADDSCOREBCD
 
@@ -1984,7 +1984,7 @@ NO_WAITS_TODAY:
 
 DIGIT_IS_ZERO:
 	;FLER SIFFROR?
-	INC	ADDORPEK			;NEXT DIGIT IN POéNGEN
+	INC	ADDORPEK			;NEXT DIGIT IN PO√ÑNGEN
 	CMP	ADDORPEK,OFFSET ADDOR+12
 	JE	NO_MORE_NUFFROR
 	DEC	BONUSPEK			;NEXT DIGIT IN BONUS
@@ -1993,7 +1993,7 @@ DIGIT_IS_ZERO:
 STEP_DONE:
 	;SHOW BONUSSIFFRORNA & SIFFRORNA
 	MOV	SI_siffror,OFFSET BONUSSIFFRORNA
-	MOV	DI_siffror,7*2*SW/4-16*4/4	;10 RADER NED, 8 (12-4) TECKEN IN Pè RADEN!!
+	MOV	DI_siffror,7*2*SW/4-16*4/4	;10 RADER NED, 8 (12-4) TECKEN IN PÔøΩ RADEN!!
 	MOV	TABORT_DIOVRE_FNT,0
 	MOV	PRINTTASK,OFFSET PRINT8_task
 	CALL	PLIPPA_SCORE
@@ -2050,8 +2050,8 @@ spintsel_in_high:
 no_sad_jingle:
 	mov	highscore,false
 	mov	si,0
-	retn				;fÑrdig!
-	
+	retn				;f√§rdig!
+
 check_list:
 	push	cx
 	mov	cx,12
@@ -2069,10 +2069,10 @@ not_beaten:
 beaten:
 	pop	cx
 	mov	cs:hi_pos,cx
-;play the happy highscore jingle . . . 
+;play the happy highscore jingle . . .
 ;But only the first time!!
 	cmp	first_high,true
-	je	noplay_of_this	
+	je	noplay_of_this
 	mov	first_high,true
 	mov	current_priority,0
 	mov	jinglejumpcnt,1
@@ -2085,7 +2085,7 @@ noplay_of_this:
 
 poppera:
 	pop	cx
-	add	di,12+3+1		;12 nuffror, 3 bokstÑver
+	add	di,12+3+1		;12 nuffror, 3 bokst√§ver
 	loop	check_list
 
 done_hi_check:
@@ -2094,26 +2094,26 @@ done_hi_check:
 	jne	dont_getit
 ;*****************
 ;Print 'highscore pl x (   )' and install key-reader TS
-	
+
 	mov	al,cs:playerQ
 	mov	hajjskar[13],al
 	add	hajjskar[13],'7'
-	
+
 	mov	dotrut,offset get_it_from_keyboard
 
 	mov	hojd_1,13
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*13*2/4
 	mov	font_adr,offset font13
 	MOV	AX,offset hajjskar
 	MOVE	DI,sw*2*2/4
 	call	PRINT_TEXT
-	
+
 ;*****************
 	mov	si,1
 	retn
-	
+
 dont_getit:
 	retn
 
@@ -2122,7 +2122,7 @@ get_it_from_keyboard:
 	push	es
 	move	es,ds
 	mov	cx,cs:hi_pos
-	
+
 	mov	si,offset hi_score_list+(12+3+1)*3-1
 	mov	di,offset hi_score_list+(12+3+1)*4-1
 	dec	cx
@@ -2131,7 +2131,7 @@ get_it_from_keyboard:
 	mov	ax,12+3+1
 	mul	cx
 	mov	cx,ax
-		
+
 	std
 	rep	movsb
 
@@ -2147,10 +2147,10 @@ pos4:	sub	di,(12+3+1)-1
 	mov	cx,12
 	rep	movsb		;mov in new hiscore
 	pop	es
-;di pekar dÑr namnet ska petas in!!
+;di pekar d√§r namnet ska petas in!!
 	mov	cs:nof_chars_to_read,3
 	mov	cs:place_hi,di
-	mov	scan_code,-1		;lÑs ev. tidigare tangenttryck!
+	mov	scan_code,-1		;l√§s ev. tidigare tangenttryck!
 	mov	dotrut,offset read_keyboardet
 	mov	si,1
 	retn
@@ -2178,7 +2178,7 @@ read_keyboardet:
 	mov	di,offset hajjskar+16
 	add	di,ax
 	pop	ax
-	stosb		;skriv te skÑrm texten . . 
+	stosb		;skriv te sk√§rm texten . .
 	dec	cs:nof_chars_to_read
 	jnz	kvar_svar
 	mov	sisa,60		;cpw!
@@ -2186,27 +2186,27 @@ read_keyboardet:
 	pop	es
 
 	mov	hojd_1,13
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*13*2/4
 	mov	font_adr,offset font13
 	MOV	AX,offset hajjskar
 	MOVE	DI,sw*2*2/4
 	call	PRINT_TEXT
-	
+
 	;cleara namnet!
 	push	es
 	move	es,ds
 	mov	al,' '
 	mov	cx,3
 	mov	di,offset hajjskar+16
-	rep stosb		;skriv te skÑrm texten . . 
+	rep stosb		;skriv te sk√§rm texten . .
 	pop	es
-	jmp	dont_write_play	
+	jmp	dont_write_play
 kvar_svar:
 	pop	es
 	mov	hojd_1,13
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*13*2/4
 	mov	font_adr,offset font13
@@ -2216,14 +2216,14 @@ kvar_svar:
 dont_write_play:
 	mov	si,sisa
 	retn
-	
+
 wait_a_little:
 	dec	si
 	cmp	si,30	;cpw!
 	jne	dont_blame_me
 	push	si
 	mov	hojd_1,13
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*13*2/4
 	mov	font_adr,offset font13
@@ -2245,17 +2245,17 @@ _loop_:
 	mov	bx,[bx]
 	MOV	NEXT_A,BX
 	jmp	[bx]
-	
+
 looper	dw ?
-_setloop:	
+_setloop:
 NOJUMPER_tomorrow:
 ;reinstall loop val
 	mov	ax,[bx+2]
-	mov	cs:looper,ax	
+	mov	cs:looper,ax
 
 	MOV	SISA,1
 	mov	dotrut,offset WAITRUT
-	jmp	print_end	
+	jmp	print_end
 
 
 
@@ -2268,10 +2268,10 @@ _INIT_SCORE:
 	MOV	AL,PLAYERS
 	MOV	CS:SHOWER,AL
 	inc	CS:SHOWER
-	
+
 	MOV	SISA,1
 	mov	dotrut,offset WAITRUT
-	jmp	normal_end	
+	jmp	normal_end
 _SHOW_SCORE:
 	INC	PLAYERSTEXT[7]
 	add	cs:player_adr,size player_struc
@@ -2284,7 +2284,7 @@ _SHOW_SCORE:
 
 	cmp	CS:SHOWER,1
 	je	normal_end
-	
+
 	add	bx,2
 	mov	bx,[bx]
 	MOV	NEXT_A,BX
@@ -2293,11 +2293,11 @@ _SHOW_SCORE:
 NOJUMPER:
 	MOV	SISA,1
 	mov	dotrut,offset WAITRUT
-	jmp	normal_end	
+	jmp	normal_end
 
 ShowIt:
 	mov	hojd_1,5
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*5*2/4
 	mov	font_adr,offset font5
@@ -2310,7 +2310,7 @@ ShowIt:
 	mov	bx,cs:player_adr
 	LEA	SI,PLAYER_AREA[BX].P_SIFFRORNA
 
-	mov	bx,336*2/4+(320-12*16)/4	;hîger justerad!
+	mov	bx,336*2/4+(320-12*16)/4	;h√∂ger justerad!
 	MOVE	ES,CS
 	CALL	DWORD PTR ES:PEKOR
 	MOV	SI,0
@@ -2329,7 +2329,7 @@ _TurnOffSpecialMode:
 	mov	specialmode,false
 	PUSH	BX
 	ENDFLASH 32
-	LIGHTOFF 32	;CP!?	(SLéCK MONEYMANIA-LAMPAN)
+	LIGHTOFF 32	;CP!?	(SL√ÑCK MONEYMANIA-LAMPAN)
 	POP	BX
 	mov	current_priority,0
 	jmp	Normal_End
@@ -2344,11 +2344,11 @@ _LIGHTFLASH:
 _knacket:
 	mov	dotrut,offset knackrut1
 	mov	sisa,1
-	MOV	PLAYER,1		;FôR CHECK_XXBALL
-	jmp	normal_end	
+	MOV	PLAYER,1		;F√ñR CHECK_XXBALL
+	jmp	normal_end
 
 
-;tid mellan knack samt antal knack . . . 
+;tid mellan knack samt antal knack . . .
 	knacktid=14 ;12	;CPW!
 	nof_banks=15	;CPW!
 
@@ -2356,12 +2356,12 @@ knackrut1:
 	PLAYJINGLE_PENETRATE S_endfig
 	MOV	LASTJINGLE,62		;TYST EFTER FULLGJORD PENETRERING
 	mov	dotrut,offset knackrut2
-;gîr text me sista nuffrerna!!
+;g√∂r text me sista nuffrerna!!
 	mov	cl,players
 	nil	ch
 	mov	di,offset last_text
 	mov	ah,' '
-	mov	bx,10	;nÑst sista!
+	mov	bx,10	;n√§st sista!
 	LEA	SI,PLAYER_AREA[BX].P_SIFFRORNA
 	push	es
 	move	es,data
@@ -2371,14 +2371,14 @@ make_last:
 	add	si,size player_struc
 	add	al,'7'
 	stosw
-	mov	word ptr offset [flashlast+bx],ax	;kopiera texten fîr senare blink
+	mov	word ptr offset [flashlast+bx],ax	;kopiera texten f√∂r senare blink
 
 	add	bx,2
 	loop	make_last
 
 	pop	es
 	mov	hojd_1,5
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*5*2/4
 	mov	font_adr,offset font5
@@ -2396,15 +2396,15 @@ knackrut2:
 	dec	cs:timglas
 	jz	no_ret
 	ret
-no_ret:	
+no_ret:
 	push	si
 	mov	cs:timglas,knacktid
 	mov	ax,last_pos
 	;ax=linje adress, ett steg=32 pixel=> 1 steg= 8 adr.(mcgab)
 	;(1 char=8*2 pix, 1 steg=2 char)
-	shl	ax,3	
+	shl	ax,3
 	mov	hojd_1,5
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*5*2/4
 	mov	font_adr,offset font5
@@ -2413,13 +2413,13 @@ no_ret:
 	MOV	AX,offset startext
 	call	PRINT_TEXT
 	mov	si,1
-	
+
 	;knacka(????) fram en ny slutsiffra!
 	mov	ax,slump_countern
 	mov	dx,0
 	mov	cx,10
 	div	cx
-	;resten i deÑks e mellan nÜll Ü NIè
+	;resten i de√§ks e mellan n√•ll √• NIÔøΩ
 	CMP	LAST_POS,DX
 	JNE	ITS_ALRIGHT
 	NEG	DX
@@ -2430,9 +2430,9 @@ ITS_ALRIGHT:
 	add	ax,'7'
 	mov	slutsiffra[0],al
 	sub	ax,'7'
-	shl	ax,3	
+	shl	ax,3
 	mov	hojd_1,5
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*5*2/4
 	mov	font_adr,offset font5
@@ -2444,8 +2444,8 @@ ITS_ALRIGHT:
 	dec	si
 	cmp	si,0
 	jne	retta_nuda
-		
-;kolla om siffrorna stÑmmer fîr nÜen . . .
+
+;kolla om siffrorna st√§mmer f√∂r n√•en . . .
 	mov	cl,players
 	nil	ch
 	mov	si,offset last_text
@@ -2453,7 +2453,7 @@ ITS_ALRIGHT:
 	add	bx,'7'
 
 	mov	di,offset flashlast
-	
+
 	move	es,data
 	mov	cs:alla_glada,false
 READ_NUFFROR:
@@ -2470,11 +2470,11 @@ gladgnu_tu:
 	loop	READ_NUFFROR
 ture_sventton_kravdes_har:
 	cmp	cs:alla_glada,true
-	je	gladgnu	
+	je	gladgnu
 	mov	si,0
 	jmp	retta_nuda	;-(  ingen glad  )-:
 
-;Om javisst, spela glad gnu Ü flasha!
+;Om javisst, spela glad gnu √• flasha!
 gladgnu:
 	MOV	MATRIX_SPEED,3
 	MOV	MATRIX_CNT,3
@@ -2482,7 +2482,7 @@ gladgnu:
 	MOV	MATRIX_IS_FLASHING,TRUE
 
 	mov	hojd_1,5
-	mov	tabort_diovre,0	
+	mov	tabort_diovre,0
 	mov	tabort_diovre_fnt,0
 	mov	hojd_add,bredd_1/4-sw*5*2/4
 	mov	font_adr,offset font5
@@ -2501,17 +2501,17 @@ retta_nuda:
 	retn
 alla_glada db ?
 
-_CHECK_XXBALLS:		;OBS! TVè INGèNGAR TILL DENNA RUTIN
+_CHECK_XXBALLS:		;OBS! TVÔøΩ INGÔøΩNGAR TILL DENNA RUTIN
 			;INPUT: LAST_TEXT, LAST_POS, PLAYER, PLAYERS
 			;OUTPUT: FT_PEKARE, PLAYER
 TESTNEXTPL:
 	PUSH	BX
-	
+
 	MOV	BL,PLAYER
 	NIL	BH
 	SHL	BX,1
-	ADD	BX,OFFSET LAST_TEXT-2	;bx pekar pÜ spelare n's slutsiffra
-	
+	ADD	BX,OFFSET LAST_TEXT-2	;bx pekar p√• spelare n's slutsiffra
+
 	MOV	AL,[BX]
 	MOV	WORD PTR [BX],'XX'	;DESTROY HIM MY ROBOTS!
 	SUB	AL,'7'
@@ -2520,9 +2520,9 @@ TESTNEXTPL:
 	POP	BX
 
 	CMP	LAST_POS,AX
-	JE	THIS_ONE		;HAN SKA Fè XXBALL!!!
+	JE	THIS_ONE		;HAN SKA FÔøΩ XXBALL!!!
 
-	INC	PLAYER			;INGEN XXBALL FôR HONOM!
+	INC	PLAYER			;INGEN XXBALL F√ñR HONOM!
 	MOV	AL,PLAYER
 	CMP	AL,PLAYERS
 	JNA	TESTNEXTPL
@@ -2530,7 +2530,7 @@ TESTNEXTPL:
 	MOV	BX,OFFSET after_xxballTS
 	MOV	NEXT_A,BX
 	JMP	[BX]
-	
+
 THIS_ONE:
 	MOV	AL,PLAYER
 	ADD	AL,'7'	;SEPEKOMPENSERING
@@ -2544,7 +2544,7 @@ THIS_ONE:
 
 _KOLLA_XXBALL:
 	CMP	XXBALLE,FALSE
-	JE	HU_	
+	JE	HU_
 	PUSH	BX
 	CALL	VARS_2_P_STRUC			;STORE TABLE AND SCORE!
 	POP	BX
@@ -2614,7 +2614,7 @@ PLAYER_CHANGED:
 	ADDTASK	NEW_BALL_TASK			;TO GAME FROM GAME
 	POP	BX
 
-HU_:	ADD	BX,2		;TASKSYTEM, HOPPA TILL NéSTA/AVSLUT
+HU_:	ADD	BX,2		;TASKSYTEM, HOPPA TILL N√ÑSTA/AVSLUT
 	CMP	WORD PTR [BX],0
 	JNE	_NEXTp_7
 	MOV	BX,0
@@ -2625,7 +2625,7 @@ _NEXTp_7:
 	JMP	[BX]
 
 ;GNUERNA
-LET_HIM_SHOOT_AGAIN:		;2 INGèNGAR!
+LET_HIM_SHOOT_AGAIN:		;2 INGÔøΩNGAR!
 	MOV	BX,OFFSET shoot_again_onTS
 	MOV	NODOTCOUNT,0
 	UPDAT_SCORE
@@ -2649,7 +2649,7 @@ NO_MORE_BALLS:
 
 _2_DEMO_MODE:
 	ADDTASK	TO_DEMO_FROM_GAME
-	JMP	HU_	
+	JMP	HU_
 zeroscore:
 	push	es
 	move	es,ds
@@ -2659,7 +2659,7 @@ zeroscore:
 	rep stosw
 	pop	es
 	retn
-	
+
 TO_DEMO_FROM_GAME:
 	MOV	PLAYERS_CP,TRUE
 	CALL	GO_DEMO_MODE			;TO DEMO FROM GAME
@@ -2689,19 +2689,19 @@ COMMENT\
 KNACK_SEKVENS:
 	;CP! KNACKA!
 KNACK_KLART:
-;	ADDTASK LYCKY_GUY ;CP! OM NèGON FICK EN X-BALL
+;	ADDTASK LYCKY_GUY ;CP! OM NÔøΩGON FICK EN X-BALL
 	ADDTASK	AFTER_KNACK
 	SUICIDE
 
 AFTER_KNACK:
-	;CP! KOLLA OM NèN FICK HIGHSCORE!
+	;CP! KOLLA OM NÔøΩN FICK HIGHSCORE!
 HIGH_READY:
 	ADDTASK SHOW_SCORES
 	SUICIDE
 
 SHOW_SCORES:	;NOTE: TRIGGED BY AFTER_KNACK--- AND SHOW_GAME_OVER---
-	;CP! RéKNARE1 = 0: KOLLA OM ALLA VISADE 2 GGR.
-	;                   VISA SEDAN POéNG FôR SPELARE (SPELARE-RéKNARE).
+	;CP! R√ÑKNARE1 = 0: KOLLA OM ALLA VISADE 2 GGR.
+	;                   VISA SEDAN PO√ÑNG F√ñR SPELARE (SPELARE-R√ÑKNARE).
 	;             = CA 2*60: ADDTASK SHOW_GAME_OVER.
 ;	ADDTASK SHOW_GAME_OVER
 	ADDTASK TO_DEMO_FROM_GAME
@@ -2729,7 +2729,7 @@ NEW_BALL_TASK:
 	CALL	NEW_BALL
 	RETN	;PGA NEWBALL
 
-NEW_BALL PROC NEAR	;ENDA SéTTET ATT Fè UT EN BOLL Pè BANAN!
+NEW_BALL PROC NEAR	;ENDA S√ÑTTET ATT FÔøΩ UT EN BOLL PÔøΩ BANAN!
 	MOV	LOOSING,FALSE
 	MOV	BALL_DOWN,FALSE
 	MOV	I_UTSKJUT,TRUE
@@ -2790,7 +2790,7 @@ NEW_BALL ENDP
 MOTA_BORT_INACTIVE_SLINGAN:
 	;OBS! AVINSTALLERA DENNA GENOM "MOV I_UTSKJUT,FALSE"
 	MOV	NODOTCOUNT,0
-;	UPDAT_INFOBAR	;CP? JOHAN FèR FIXA DETTA!
+;	UPDAT_INFOBAR	;CP? JOHAN FÔøΩR FIXA DETTA!
 	CMP	I_UTSKJUT,FALSE
 	JE	TA_BORT_MEJ
 	RETN
@@ -2828,7 +2828,7 @@ P_STRUC_2_VARS PROC NEAR	;INPUT:PLAYER
 	LIGHTON 28
 	LIGHTON 29
 	LIGHTON 30
-NO_PRIZES:	
+NO_PRIZES:
 	RETN
 P_STRUC_2_VARS ENDP
 
@@ -2856,7 +2856,7 @@ VARS_2_P_STRUC ENDP
 ;******************************** TILT TILT TILT *****************************
 HE_TILTED PROC NEAR
 	MOV	ALLOWFLIP,FALSE
-	PLAYJINGLE S_TILT	
+	PLAYJINGLE S_TILT
 	MOV	LASTJINGLE,EMPTYJINGLE
 	MOV	BX,OFFSET tiltTS
 	CALL	DO_MATRIX
@@ -3015,7 +3015,7 @@ UP_B:	WAITSYNCS 60
 	LIGHTON 8
 	CALL	CLOSEGATE3
 	CALL	CLOSEGATE4
-	SUICIDE	
+	SUICIDE
 dropC1:
 	CALL	ADDMONEY
 	CMP	LIGHTSTATUS[9],FALSE
@@ -3046,7 +3046,7 @@ UP_C:	WAITSYNCS 60
 	LIGHTON 10
 	CALL	CLOSEGATE5
 	CALL	CLOSEGATE6
-	SUICIDE	
+	SUICIDE
 ;************************* SUPER MODES CHECKS *********************************
 
 
@@ -3063,7 +3063,7 @@ dropa1:
 	mov	lightstatus[2],true
 	addtask flasha2
 	effect	dollartouch
-	retn	
+	retn
 dropa2:
 	CALL	ADDMONEY
 	soundeffect s_touch2,0
@@ -3082,7 +3082,7 @@ doret2:	lightflash 3,6
 	mov	lightstatus[3],true
 	addtask flasha3
 	effect	dollartouch
-	retn	
+	retn
 flasha2:
 	waitsyncs 25
 	endflash 2
@@ -3119,7 +3119,7 @@ CLOSE1:					;GAME ON
 	MOV	LASTJINGLE,1
 	MOV	BX,OFFSET PARTY_OFFTS
 	CALL	DO_MATRIX
-	MOV	I_UTSKJUT,FALSE		;TILLèTER INACTIVE-SLINGAN (DOTMATRIX)
+	MOV	I_UTSKJUT,FALSE		;TILLÔøΩTER INACTIVE-SLINGAN (DOTMATRIX)
 	MOV	PARTYFLASH,FALSE
 NOT_GAME_ON:
 	RETN
@@ -3179,14 +3179,14 @@ DONT_NOW:
 	mov	holdstill,TRUE
 	setballpos 4,529,0,0,false
 	ADDTASK	SLAPP_HONOM
-	RETN		
+	RETN
 SLAPP_HONOM:
 	WAITSYNCS 30
 	mov	y_hast,-3500
 	SOUNDEFFECT SNEWBALL,0
 	MOV	HOLDSTILL,FALSE
 	SUICIDE
-	
+
 gropB:	call	opengate8
 	CMP	SPECIALMODE,TRUE
 	JE	DONT_NOW
@@ -3197,11 +3197,11 @@ gropB:	call	opengate8
 	mov	holdstill,true
 	cmp	lightstatus[17],0
 	jnz	noclose1
-	call	closegate1	;stÑng till spin wheel
+	call	closegate1	;st√§ng till spin wheel
 noclose1:
 	setballpos 4,529,0,0,false
 			;spin wheel (lights 19-26)
-	playjingle s_mystery	
+	playjingle s_mystery
 	mov	nextspintime,offset SPINtimes_hi
 	cmp	hi_res,true
 	je	nohej
@@ -3215,8 +3215,8 @@ nohej:
 	add	al,spinlight
 	lightoff al
 	cmp	lightstatus[17],1
-	jne	nofusk	
-	mov	al,0		;fuska sÜ att lampan stannar pÜ rÑtt sak!
+	jne	nofusk
+	mov	al,0		;fuska s√• att lampan stannar p√• r√§tt sak!
 	cmp	tvflag,1
 	je	dosp
 	mov	al,1
@@ -3266,7 +3266,7 @@ nextSPIN:
 	mov	al,12
 	mul	spinlight
 	add	ax,offset spinscores
-	mov	spinscoreptr,ax	;addressen till current poÑng
+	mov	spinscoreptr,ax	;addressen till current po√§ng
 	mov	bx,offset spinTS
 	call	do_matrix
 	retn
@@ -3328,11 +3328,11 @@ won_trip:
 	MOV	LIGHTSTATUS[16],1	;ENABLE JACKPOT
 	MOV	JP_COUNTER,JP_TIME
 	mov	top_three,true
-	call	closegate1 ;stÑng till spin wheel
+	call	closegate1 ;st√§ng till spin wheel
 	jmp	endofyw
 endofyw:
 	suicide
-gottopthree:	
+gottopthree:
 	cmp	BOATflag,2
 	je	won_BOAT
 	endflash 28
@@ -3352,7 +3352,7 @@ won_BOAT:
 	jmp	endofyw
 won_HOUSE:
 	endflash 30
-	lighton	30 
+	lighton	30
 	ENDFLASH 17
 	LIGHTOFF 17
 	mov	PLANEflag,2
@@ -3362,7 +3362,7 @@ won_HOUSE:
 ;	MOV	LIGHTSTATUS[16],1	;ENABLE JACKPOT
 ;	MOV	JP_COUNTER,JP_TIME
 	mov	all_six,true
-	call	closegate1	;stÑng till spin wheel
+	call	closegate1	;st√§ng till spin wheel
 	jmp	endofyw
 LOCK_THE_BALL:
 	LIGHTON	6
@@ -3373,9 +3373,9 @@ LOCK_THE_BALL:
 	mov	holdstill,false
 	MOV	CURRENT_PRIORITY,0
 	MOV	LASTJINGLE,0
-	CALL	OPENGATE1	;ôPPNA TILL SPIN WHEEL
+	CALL	OPENGATE1	;√ñPPNA TILL SPIN WHEEL
 	MOV	BILLION_ENABLED,TRUE
-	RETN	
+	RETN
 gropA:	mov	holdstill,true
 	CMP	SPECIALMODE,TRUE
 	JE	RELEASE_HIM
@@ -3389,7 +3389,7 @@ go_cashpot:
 	addtask	release_ball
 	retn
 cash_times_5:
-	mov	cash5counter,10	;stÑng av cash5lampan
+	mov	cash5counter,10	;st√§ng av cash5lampan
 	mov	cx,5
 addcash:
 	addbcd	cashpot5val,cashpotval
@@ -3428,7 +3428,7 @@ RELEASE_IT:
 	SETBALLPOS 103,233,100*TT/NN,1700*TT/NN,FALSE
 	mov	holdstill,false
 	RETN
-	
+
 bygel5:
 	CALL	CASHADD
 	CALL	ADDMONEY2
@@ -3437,7 +3437,7 @@ bygel5:
 	call	opengate7
 	CMP	JP_COUNTER,0
 	JZ	NO_JP2
-	MOV	JP_COUNTER,1	;Sè ATT LAMPAN SLOCKNAR VID NéSTA DOWNCOUNT
+	MOV	JP_COUNTER,1	;SÔøΩ ATT LAMPAN SLOCKNAR VID N√ÑSTA DOWNCOUNT
 	EFFECT	JACKPOT
 	CALL	INITJACK
 	MOV	SJP_COUNTER,SJP_TIME
@@ -3458,7 +3458,7 @@ bygel7:			;clockwise ramp
 	CMP	SJP_COUNTER,0
 	JZ	NO_SJP7
 	EFFECT	S_JACKPOT
-	MOV	SJP_COUNTER,1	;Sè ATT DEN SLéCKS VID NéSTA DOWNCOUNT
+	MOV	SJP_COUNTER,1	;SÔøΩ ATT DEN SL√ÑCKS VID N√ÑSTA DOWNCOUNT
 NO_SJP7:
 	mov	cash5counter,cash5_time
 	endflash 12
@@ -3490,7 +3490,7 @@ noCAR:
 	cmp	all_six,true
 	je	nohouse2
 	jmp	show_where_plane
-	
+
 noHOUSE2:
 	cmp	MBcounter,0
 	jz	RAISING_MILLIONS
@@ -3570,7 +3570,7 @@ noBOAT:
 	retn
 noHOUSE:
 	retn
-bygel12:	
+bygel12:
 	CALL	ADDMONEY2
 	effect	bygelsetJ
 	cmp	lastarea,offset bygel11
@@ -3601,11 +3601,11 @@ NOXB:
 	retn
 
 noPLANE:
-	call	closegate7	;vÑxla till vÑnster bana
+	call	closegate7	;v√§xla till v√§nster bana
 	mov	MBcounter,MB_time
 	mov	TRIPcounter,TRIP_time
 	retn
-	
+
 close3:
 	retn
 bygel10:
@@ -3690,13 +3690,13 @@ another_skill:
 	DIV	BL
 	OR	AH,AH
 	JZ	MONEY_MANIA
-	
+
 	CMP	AL,1
 	JB	NO_PUT
 	JE	NEXT_IS_XB
 	INC	AL
 	MUL	BL
-	mov	bx,offset SKILLTEXT+16 ;vilken text Ü stoppa in vÑrdet i
+	mov	bx,offset SKILLTEXT+16 ;vilken text √• stoppa in v√§rdet i
 	CMP	AX,100
 	JB	NOIB
 	INC	BX
@@ -3716,16 +3716,16 @@ N_MM:
 	MOV	TURBOMODE,TRUE
 	MOV	SPECIALMODE,TRUE
 	MOV	LOOPS_N_TRAPS,FALSE
-	lighton	32	
+	lighton	32
 	retn
 LT_MM:
 	EFFECT	MONEYMANIA2
 	MOV	TURBOMODE,TRUE
 	MOV	SPECIALMODE,TRUE
 	MOV	LOOPS_N_TRAPS,TRUE
-	lighton	32	
+	lighton	32
 	retn
-	
+
 X_BALL:
 	PLAYJINGLE SJINGLE19
 	invertedsyncedFLASH 11,sfspeed,syncflasher
@@ -3735,7 +3735,7 @@ NEXT_IS_XB:
 	EFFECT	SKILLSHOT_XB
 	RETN
 	;*****************************
-;Input: Ax= NextRÑknare  Bx=offset till texten
+;Input: Ax= NextR√§knare  Bx=offset till texten
 Put_In_Text:
 	mov	di,2
 	mov	cx,3
@@ -3847,9 +3847,9 @@ notfastend:
 	JNE	NOHST_FLASH
 	ENDFLASH 4
 	LIGHTFLASH 4,3
-NOHST_FLASH:	
+NOHST_FLASH:
 	RETN
-ENDLM:	ENDFLASH 4	;STéNG AV LOOP MILLION LAMPAN
+ENDLM:	ENDFLASH 4	;ST√ÑNG AV LOOP MILLION LAMPAN
 	LOFF 4
 	RETN
 UPDATE_COUNTERS	ENDP
@@ -3868,11 +3868,11 @@ INITJACK:
 	RETN
 ENDP
 CASHADD PROC NEAR
-	ADDBCD	CASHPOTVAL,CASHPOTSTEP    
+	ADDBCD	CASHPOTVAL,CASHPOTSTEP
 	RETN
 ENDP
 CASHADD2 PROC NEAR
-	ADDBCD	CASHPOTVAL,CASHPOTSTEP2    
+	ADDBCD	CASHPOTVAL,CASHPOTSTEP2
 	RETN
 ENDP
 ADDMONEY PROC NEAR
@@ -3918,7 +3918,7 @@ _SHOOT_AGAIN_ONN:
 	JMP	NORMAL_END
 _PARTYON:		;BX NOT USED!
 	MOV	PARTYFLASH,TRUE
-	MOVE	SISA,1		;HUR MÜNGA
+	MOVE	SISA,1		;HUR M√ÖNGA
 	MOV	DOTRUT,OFFSET PARTYRUT
 	JMP	NORMAL_END
 
@@ -3937,10 +3937,10 @@ GONRUT:
 	MOV	SI,0
 	RETN
 INTE_SATT_IGANG:
-	MOV	SI,34		;INTE 0 = INTE IGèNG !!
+	MOV	SI,34		;INTE 0 = INTE IGÔøΩNG !!
 	RETN
 
-	
+
 _JBCDZ:
 	IFZEROBCD [BX+2]
 	JC	OVERIT_
@@ -3974,7 +3974,7 @@ DO_IT_AGAIN:
 	CALL	ADDSCOREBCD
 	POP	CX
 	LOOP	DO_IT_AGAIN
-NO_X_BONUS:	
+NO_X_BONUS:
 	MOV	BONUS_X_TEXT[8],1+'7'
 	MOV	BONUS_X_TEXT[9],0+'7'
 	MOV	AL,BONUS_X
@@ -3990,7 +3990,7 @@ ITS10:
 	MOV	DOTRUT,OFFSET WAITRUT
 	JMP	NORMAL_END
 
-	
+
 _JBONUSX1:
 	CMP	BONUS_X,1
 	JNE	QJBX1
@@ -4000,8 +4000,8 @@ _JBONUSX1:
 	JMP	[BX]
 QJBX1:	MOV	SISA,1
 	MOV	DOTRUT,OFFSET WAITRUT
-	JMP	NORMAL_END	
-_CALC_HAPPY:	
+	JMP	NORMAL_END
+_CALC_HAPPY:
 	MOV	DOTRUT,OFFSET WAITRUT
 	MOV	SISA,1
 	PUSHA
@@ -4023,7 +4023,7 @@ _Jmp:
 	MOV	NEXT_A,BX
 	JMP	[BX]
 	retn
-	
+
 _NEXTp_3Q:
 _NEXTp_3:
 	MOV	NEXT_A,BX
@@ -4037,7 +4037,7 @@ _CALC_CYCLO:
 	MOV	CX,12/2 ;(12/6=6!!!)
 	REP	STOSW
 	POP	ES
-	
+
 	MOV	DOTRUT,OFFSET WAITRUT
 	MOV	SISA,1
 	MOV	CX,CYCLONECOUNTER
@@ -4048,7 +4048,7 @@ URBANLOOP:
 	CALL	ADDSCOREBCD
 	POP	BX CX
 	LOOP	URBANLOOP
-	
+
 	MOV	SI,OFFSET CYCLONESCOREBCD	;CYCLONES -> TOTAL BONUS
 	MOV	DI,OFFSET BONUSSIFFRORNA
 	CALL	ADDSCOREBCD
@@ -4063,8 +4063,8 @@ _NEXTp_3gg:
 
 READ_SPECIAL_MODE_COUNTER PROC NEAR
 
-;[SEC_ASC] PEKAR Pè MSD, (0='*')	[SEC_ASC+1] PEKAR Pè LSD
-;LéS AV BARA!
+;[SEC_ASC] PEKAR PÔøΩ MSD, (0='*')	[SEC_ASC+1] PEKAR PÔøΩ LSD
+;L√ÑS AV BARA!
 	MOVE	DS,DATA
 	cmp	[sec_asc],'*'
 	jne	no_end
@@ -4203,7 +4203,7 @@ comment\
 _happy	dw happy_1,1;<---start!
 	dw happy_2,2;<-, loop!
 	dw happy_3,2;  I
-	dw happy_4,2;  I 
+	dw happy_4,2;  I
 	dw happy_5,2;__I
 \
 ;*______________________/Billion Dollar GameShow\______________________*
@@ -4211,17 +4211,17 @@ _happy	dw happy_1,1;<---start!
 ;Multiply	6		7		3
 ;2,3,4 . . 	12	    alla i anim 4 !!
 ;MoneyMania	40		9		5
-;JackPot	40		37		1	;Puhhhh vicken jÑvla mega anim!!! è den e 15 hîg ÜxÜ!!!
+;JackPot	40		37		1	;Puhhhh vicken j√§vla mega anim!!! ÔøΩ den e 15 h√∂g √•x√•!!!
 ;ExtraBall	40		17		2
 ;Million	40		16		8
 ;Billion	32		16		9
 
-;YouWin		24		16		7	;Olika hîjd pÜ alla!!!
+;YouWin		24		16		7	;Olika h√∂jd p√• alla!!!
 
 extrn	a_01_00,a_01_01,a_01_02	,a_01_03 ,a_01_04 ,a_01_05 ,a_01_06 ,a_01_07 ,a_01_08 ,a_01_09 ,a_01_10 ,a_01_11 ,a_01_12 ,a_01_13 ,a_01_14 ,a_01_15,a_01_16,a_01_17,a_01_18,a_01_19,a_01_20,a_01_21,a_01_22,a_01_23,a_01_24,a_01_25,a_01_26,a_01_27,a_01_28,a_01_29,a_01_30,a_01_31,a_01_32,a_01_33,a_01_34,a_01_35,a_01_36,a_01_37
 extrn	a_02_00,a_02_01,a_02_02	,a_02_03 ,a_02_04 ,a_02_05 ,a_02_06 ,a_02_07  ,a_02_08 ,a_02_09 ,a_02_10 ,a_02_11 ,a_02_12 ,a_02_13 ,a_02_14 ,a_02_15,a_02_16,a_02_17
 extrn	a_03_00,a_03_01,a_03_02	,a_03_03 ,a_03_04 ,a_03_05 ,a_03_06 ,A_03_07
-extrn	a_14_00,a_24_00,a_34_00	,a_44_00 ,a_54_00 ,a_64_00 
+extrn	a_14_00,a_24_00,a_34_00	,a_44_00 ,a_54_00 ,a_64_00
 extrn	a_05_00,a_05_01,a_05_02	,a_05_03 ,a_05_04 ,a_05_05 ,a_05_06 ,A_05_07,A_05_08
 extrn	a_06_00,a_06_01,a_06_02	,a_06_03 ,a_06_04 ,a_06_05 ,a_06_06,a_06_07 ,a_06_08 ,a_06_09 ,a_06_10 ,a_06_11
 extrn	a_07_00,a_07_01,a_07_02	,a_07_03 ,a_07_04 ,a_07_05 ,a_07_06,a_07_07 ,a_07_08 ,a_07_09 ,a_07_10 ,a_07_11 ,a_07_12 ,a_07_13 ,a_07_14 ,a_07_15
@@ -4230,7 +4230,7 @@ extrn	a_09_00,a_09_01,a_09_02	,a_09_03 ,a_09_04 ,a_09_05 ,a_09_06,a_09_07 ,a_09_
 extrn	a_10_00,a_10_01,a_10_02
 extrn	a_10b00,a_10b01,a_10b02
 
-	dw 0		;adressen till bilden fîre den fîrsta i loopen
+	dw 0		;adressen till bilden f√∂re den f√∂rsta i loopen
 	dw 10		;antal loopar
 	dw 2*4		;adressen till den sista bilden i loopen
 _liteprize_right label word
@@ -4245,7 +4245,7 @@ _liteprize_left label word
 	dw a_10b00,15
 	dw a_10b01,15
 	dw a_10b02,15
- 
+
 MONEYMSPEED=5
 	DW 0
 	dw 5
@@ -4271,7 +4271,7 @@ _multiply label word
 	dw a_03_04,multiplyspeed
 	dw a_03_05,multiplyspeed
 	dw a_03_06,multiplyspeed
-	
+
 	dw 1,4*1
 _x2	dw a_14_00,50
 	dw 1,4*1

@@ -1,7 +1,7 @@
 jumps
-FLIPPERL EQU 2	;OBS! MèSTA VARA 2 FôR ATT DET SKA BLI RéTT SHIFTKEYS
+FLIPPERL EQU 2	;OBS! M√ÖSTA VARA 2 F√ñR ATT DET SKA BLI R√ÑTT SHIFTKEYS
 FLIPPERR EQU 1
-tt equ 5	;cpe 
+tt equ 5	;cpe
 nn equ 6
 rotslowdown=2
 SPLH=33
@@ -24,7 +24,7 @@ RotCentX	DW    1
 RotCentY	DW    1
 PowerZonE	DW    1       ;Quadrants for power calculations
 FlipSize	DW    1       ;Offset to next flipper
-FlipVinkelHast	DW    1       ;Speed ∞/200:th second
+FlipVinkelHast	DW    1       ;Speed ¬∞/200:th second
 FlipVinkel	DW    1       ;Angel from zero
 FlipFrame	DW    1       ;Frame to use
 FlipFrames	DW    1       ;Last frame
@@ -57,7 +57,7 @@ ANTALPIX		DB ?
 EVENDATA
 xtoadd	dw 0
 ytoadd	dw 0
-;********************************** RôR EJ
+;********************************** R√ñR EJ
 materialinfo label word
 FRVAGG  DW      ?
 FRBoLL	DW	?
@@ -103,41 +103,41 @@ KollaKulan endp
 sc_program proc near
 	CMP	HOLDSTILL,TRUE
 	JE	NOMOVE
-	
+
 	call	sc_krock
 	jc	sc_nocoll
 	call	sc_newdir
 sc_nocoll:
 	call	tilt0
-	call	sc_move		
+	call	sc_move
 	call	draw_flippers
 
-	mov	al,shiftkeys	
+	mov	al,shiftkeys
 	and	al,inside_rastint
 	test	al,100b
 	jnz	slutt
-	
+
 	call	sc_krock
 	jc	sc_nocoll2
 	call	sc_newdir
 sc_nocoll2:
 	call	tilt0
-	call	sc_move		
+	call	sc_move
 	call	draw_flippers
 SLUTT:	retn
 NOMOVE:
 	CALL	TILT0
-	CALL	DRAW_FLIPPERS	
-	mov	al,shiftkeys	
+	CALL	DRAW_FLIPPERS
+	mov	al,shiftkeys
 	and	al,inside_rastint
 	test	al,100b
 	jnz	slutt
 	CALL	TILT0
-	CALL	DRAW_FLIPPERS	
+	CALL	DRAW_FLIPPERS
 	JMP	SLUTT
 sc_program endp
 CHECKBOUNDS MACRO REG,MINST,MEST
-	LOCAL	ND00,ND01	
+	LOCAL	ND00,ND01
 	CMP	REG,MINST
 	JGE	ND00
 	MOV	REG,MINST
@@ -145,12 +145,12 @@ CHECKBOUNDS MACRO REG,MINST,MEST
 ND00:	CMP	REG,MEST
 	JLE	ND01
 	MOV	REG,MEST
-ND01:	
+ND01:
 	ENDM
 v_up equ dl
 v_dn equ dh
-v_left equ bh	
-v_right equ bl	;mÜste vara bl
+v_left equ bh
+v_right equ bl	;m√•ste vara bl
 last_point equ ch
 angel equ bp
 kvartingar equ di
@@ -184,20 +184,20 @@ checkpoint macro bitno,vinkel,kvart,punktno
 ifidn <kvart>,<v_upleft>
 	inc	v_up
 	inc	v_left
-endif		
+endif
 ifidn <kvart>,<v_upright>
 	inc	v_up
 	inc	v_right
-endif		
+endif
 ifidn <kvart>,<v_dnleft>
 	inc	v_dn
 	inc	v_left
-endif		
+endif
 ifidn <kvart>,<v_dnright>
 	inc	v_dn
 	inc	v_right
-endif		
-nohit:	endm	
+endif
+nohit:	endm
 checkpoint2 macro raster,byteno,bitno,vinkel,kvart,punktno
 	mov	ax,es:[si+40*raster+byteno]
 	rol	ax,cl
@@ -214,16 +214,16 @@ LOWER_PLANE:
 	mov	es,ax
 	mov	ax,sc_y
 	add	ax,screenposY
-	dec	ax	;ringen Ñr runt bollen
+	dec	ax	;ringen √§r runt bollen
 	mov	si,40
 	mul	si
 	mov	si,ax
 	mov	ax,sc_x
-	dec	ax	;ringen Ñr runt bollen
+	dec	ax	;ringen √§r runt bollen
 	shr	ax,3
-	add	si,ax	;si=adr till îversta vÑnstra byten i bollen
+	add	si,ax	;si=adr till √∂versta v√§nstra byten i bollen
 	mov	cx,sc_x
-	dec	cx	;ringen Ñr runt bollen
+	dec	cx	;ringen √§r runt bollen
 	and	cl,111b
 	inc	cl
 
@@ -233,7 +233,7 @@ LOWER_PLANE:
 	xor	v_right,v_right
 	xor	angel,angel
 	xor	kvartingar,kvartingar
-		
+
 	mov	ax,es:[si+1]
 	rol	ax,cl
 	checkpoint bit6,1616,v_upleft,35
@@ -247,7 +247,7 @@ sc_k00l:mov	ax,es:[si+41]
 	rol	ax,cl
 	checkpoint bit4,1705,v_upleft,37
 	checkpoint bit5,1668,v_upleft,36
-sc_k00r:mov	ax,es:[si+40]	
+sc_k00r:mov	ax,es:[si+40]
 	rol	ax,cl
 	checkpoint bit3,1404,v_upright,30
 	checkpoint bit4,1367,v_upright,29
@@ -296,7 +296,7 @@ sc_k14:
 sc_k14r:
 	checkpoint2 15,0,bit3,0644,v_dnright,14
 	checkpoint bit4,0681,v_dnright,15
-	
+
 sc_k15l:
 	checkpoint2 16,1,bit6,0432,v_dnleft,9
 	checkpoint bit7,0471,v_dnleft,10
@@ -304,7 +304,7 @@ sc_k15r:
 	checkpoint2 16,0,bit0,0512,v_dnright,11
 	checkpoint bit1,0553,v_dnright,12
 	checkpoint bit2,0592,v_dnright,13
-	
+
 sc_k16:
 	cmp	kvartingar,11
 	je	scq0
@@ -313,12 +313,12 @@ sc_k16:
 	cmp	kvartingar,13
 	je	scq0
 	jmp	short scq1
-scq0:					
+scq0:
 	mov	ah,v_dn
 	xor	al,al
 	shl	ax,3
 	add	angel,ax
-	
+
 scq1:	add	v_left,v_up
 	add	v_dn,v_left
 	add	v_right,v_dn
@@ -330,8 +330,8 @@ scq1:	add	v_left,v_up
 	xor	bh,bh	;bl=v_right
 	div	bx
 	and	ax,2047
-	mov	sc_kv,ax		;krock_vinkel berÑknad!!!!
-	
+	mov	sc_kv,ax		;krock_vinkel ber√§knad!!!!
+
 GET_MATERIAL:
 	mov	bl,last_point
 	xor	bh,bh
@@ -343,7 +343,7 @@ GET_MATERIAL:
 	add	bx,sc_y
 	DEC	BX
 	CMP	BX,576
-	JgE	NO_KROCK		;NEDANFôR BANANS SLUT
+	JgE	NO_KROCK		;NEDANF√ñR BANANS SLUT
 	mov	ax,40
 	add	bx,ScreenPosY
 	;add screenposy,d1
@@ -439,7 +439,7 @@ storemtrl:
 	mov	xtoadd,0
 	mov	ytoadd,0
 
-	push	si di	
+	push	si di
 	mov	cl,hitvalue
 	xor	ch,ch
 	mov	si,cx
@@ -452,7 +452,7 @@ storemtrl:
 	rep     movsw
 	pop	di si
 
-	mov	cl,hitvalue	
+	mov	cl,hitvalue
 	cmp	cl,flipbit
 	je	findflip
         CMP	cl,PLASTBIT
@@ -489,10 +489,10 @@ lastbump:
 	retn
 nobump:
 	add	bx,10
-	jmp	findbump	
+	jmp	findbump
 findflip:
 	mov	bx,offset FlipLInfo
-findfliploop:	
+findfliploop:
 	test	[bx].typ,0ffh
 	jz	noflipfound
 	cmp	si,[bx].flipx1
@@ -509,7 +509,7 @@ nextflipl:
 noflipfound:
 	clc
 	retn
-	
+
 thisflipl:
 	cmp	[bx].typ,flipperR
 	je	thisflipR
@@ -531,7 +531,7 @@ noswapL:mov	ax,di
 	neg	ax
 nonegflipL:
 	sar	ax,2
-nonegflipL2:	
+nonegflipL2:
 	add	si,ax
 	neg	si
 	mov	ax,[bx].flipvinkelhast
@@ -542,7 +542,7 @@ nonegflipL2:
 	mov	xtoadd,ax
 flipfixL:
 	clc
-	retn	
+	retn
 thisflipR:
 	sub	si,[bx].rotcentx
 	jns	flipfixR
@@ -562,7 +562,7 @@ noswapR:neg	si
 	neg	ax
 nonegflipR:
 	sar	ax,2
-nonegflipR2:	
+nonegflipR2:
 	add	si,ax
 	neg	si
 	mov	ax,[bx].flipvinkelhast
@@ -573,14 +573,14 @@ nonegflipR2:
 	mov	xtoadd,ax
 flipfixR:
 	clc
-	retn	
-	
+	retn
+
 
 no_krock:
 ;	MOV	EXAHITX,0	;CP?
 ;	MOV	EXAHITY,0
 	stc
-	retn	
+	retn
 sc_krock endp
 sc_newdir proc near
 	mov	si,x_hast
@@ -594,7 +594,7 @@ sc_newdir proc near
 
 	mov	bx,2048
 	sub	bx,sc_kv
-	and	bx,2047	;behîvs om sc_kv=0 (det kan nog va en bug, sa ulf)
+	and	bx,2047	;beh√∂vs om sc_kv=0 (det kan nog va en bug, sa ulf)
 	add	bx,bx
 	mov	ax,cos[bx]
 	imul	si
@@ -604,10 +604,10 @@ sc_newdir proc near
 	imul	di
 	sub	cx,ax
 	sbb	bp,dx
-rept 3	
+rept 3
 	shl	cx,1
 	rcl	bp,1	;bp=x cos(v)-y sin(v) (normalhast)
-endm	
+endm
 	mov	ax,sin[bx]
 	imul	si
 	mov	si,dx
@@ -616,10 +616,10 @@ endm
 	imul	di
 	add	cx,ax
 	adc	si,dx
-rept 3	
+rept 3
 	shl	cx,1
 	rcl	si,1	;si=x sin(v)+y cos(v)
-endm	
+endm
 	xchg	si,bp	;si=d0
 	mov	di,BP	;di=d2
 ;****************
@@ -638,12 +638,12 @@ ok001:	mov	ax,16
 	idiv	si
 	or	ax,ax
 	jns	ok000
-	neg	ax	
+	neg	ax
 ok000:	cmp	ax,infvink
 	jb	ssab
 	xor	si,si
 	jmp	toosloow
-ssab:	
+ssab:
 	or	si,si
 	jz	toosloow
 	cmp	bumperwashit,false
@@ -679,15 +679,15 @@ nobumperpower:
 	mov	ax,bx
 	mul	bp
 	mov	bp,ax
-	
+
 sincos:
 	mov	ax,rotation
 	add	ax,screenhast	;make tilt instable
 	sub	ax,di
-	imul_256	
+	imul_256
 	push	ax dx
 	JCXZ	NOTC
-	idiv	cx	
+	idiv	cx
 NOTC:	mov	cx,ax
 	pop	dx ax
 	OR	BP,BP
@@ -695,13 +695,13 @@ NOTC:	mov	cx,ax
 	idiv	bp
 NOD:	add	di,cx
 	sub	rotation,ax
-	
+
 	mov	ax,2048			;friktion y-led
 	imul	di
 	mov	di,2048+1
 	idiv	di
 	mov	di,ax
-	
+
 	mov	bx,sc_kv
 	add	bx,bx
 	mov	ax,cos[bx]
@@ -725,11 +725,11 @@ NOD:	add	di,cx
 	adc	si,dx
 	shl	cx,1
 	rcl	si,1	;si=x sin(v)+y cos(v)
-	
+
 	sub	bp,xtoadd
 	sub	si,ytoadd
 	sub	si,screenhast
-	
+
 	CHECKBOUNDS BP,MINUSHAST,PLUSHAST
 	CHECKBOUNDS SI,MINUSHAST,PLUSHAST
 
@@ -786,7 +786,7 @@ FINY:
 	ADD	Y_HAST,AX
 	MOV	AX,GRAVX
 	ADD	X_HAST,AX
-	
+
 
 	mov	ax,rotation
 	or	ax,ax
@@ -820,7 +820,7 @@ draw_flip:
 	CALL	MOVEFLIPMASK
 no_idea:add	bx,size flipstruc
 	jmp	draw_flip
-flippers_drawn:	
+flippers_drawn:
 	retn
 draw_flippers endp
 TILT0 PROC NEAR
@@ -848,8 +848,8 @@ FLIPPER4:
 	MOV	AX,SCREENPOS
 	SHR	AX,9
 	MOV	SCREENPOSY,AX
-FLIPPER3:		
-	
+FLIPPER3:
+
 	MOV	BX,OFFSET FLIPLINFO
 NEXTFLIPFIX:
 	CMP	[BX].TYP,flipperL
@@ -860,16 +860,16 @@ NEXTFLIPFIX:
 fixRflip:
 	test	SHIFTKEYS,1
 	jz	downflip
-	jmp	short upflip	
+	jmp	short upflip
 fixLflip:
 	test	SHIFTKEYS,10b
 	jz	downflip
 UpFlip:	cmp	AllowFlip,false
 	je	DownFlip
-	MOV	AX,[BX].FLIPVINKELHAST 
+	MOV	AX,[BX].FLIPVINKELHAST
 	ADD	AX,[BX].FLIPAXUP
 	CMP	AX,[BX].FLIPMAXHASTUP ;
-	JLE	TOOSLOW	
+	JLE	TOOSLOW
 	MOV	AX,[BX].FLIPMAXHASTUP
 TooSlow:
 	MOV	[BX].FLIPVINKELHAST,AX
@@ -889,14 +889,14 @@ fli03:	Cmp	ax,[BX].FlipFrames
 	MOV	[BX].FLIPVINKELHAST,0
 	MOVA	[BX].FLIPVINKEL,[BX].FLIPFRAMESMAX
 	MOV	AX,[BX].FLIPFRAMES
-fli01:	
+fli01:
 	MOV	[BX].FLIPFRAME,AX
 	ADD	BX,SIZE FLIPSTRUC
 	JMP	NEXTFLIPFIX
-	
+
 downflip:
-	
-	MOV	AX,[BX].FLIPVINKELHAST 
+
+	MOV	AX,[BX].FLIPVINKELHAST
 	ADD	AX,[BX].FLIPAXdown
 	MOV	[BX].FLIPVINKELHAST,AX
 	NEG	AX

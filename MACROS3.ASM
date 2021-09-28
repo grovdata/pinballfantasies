@@ -1,10 +1,10 @@
-;ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ                                                                            บ
-;บ                              F.L.D. Macros (3)                             บ
-;บ                                                                            บ
-;บ                                Debug Macros                                บ
-;บ                                                                            บ
-;ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;รรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรยป
+;ยบ                                                                            ยบ
+;ยบ                              F.L.D. Macros (3)                             ยบ
+;ยบ                                                                            ยบ
+;ยบ                                Debug Macros                                ยบ
+;ยบ                                                                            ยบ
+;รรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรยผ
 
 CODE SEGMENT PARA PUBLIC 'CODE'
 THE_X	DW 0
@@ -29,7 +29,7 @@ GNU:	PUSHA
 	mul	bx
 	add	ax,x
 	add	ax,x
-	mov	di,ax	
+	mov	di,ax
 	mov	ah,07h
 gnet:
 	lodsb
@@ -37,7 +37,7 @@ gnet:
 	jz	done
 	stosw
 	jmp	gnet
-done:	
+done:
 	pop	ds
 
 	pop	ax
@@ -76,7 +76,7 @@ done:
 	mov	ah,7
 	add	al,'0'
 	stosw
-	
+
 	pop	es
 	popa
 	endm
@@ -96,7 +96,7 @@ GNU:	PUSHA
 	mul	bx
 	add	ax,x
 	add	ax,x
-	mov	di,ax	
+	mov	di,ax
 	mov	ah,07h
 gnet:
 	lodsb
@@ -104,20 +104,20 @@ gnet:
 	jz	done
 	stosw
 	jmp	gnet
-done:	
+done:
 	pop	ds
 
 	mov	si,offset value
 	mov	cx,12
 	mov	ah,7
-skriv:	lodsb	
+skriv:	lodsb
 	add	al,'0'
 	stosw
 	loop	skriv
 	pop	es
 	popa
 	endm
-		
+
 debugmess macro x,y,message
 	LOCAL	MESS,GNU,gnet,done
 	JMP	SHORT GNU
@@ -133,7 +133,7 @@ GNU:	PUSHA
 	mul	bx
 	add	ax,x
 	add	ax,x
-	mov	di,ax	
+	mov	di,ax
 	mov	si,offset cs:mess
 	mov	ah,07h
 gnet:
@@ -142,7 +142,7 @@ gnet:
 	jz	done
 	stosw
 	jmp	gnet
-done:	
+done:
 	POP	es DS
 	POPA
 	endm
@@ -157,7 +157,7 @@ debugclear macro
 	rep	stosw
 	pop es
 	popa
-	endm	
+	endm
 
 DPRINT	MACRO MESSAGE
 	LOCAL	VRRR,MARKER1,MARKER2,OKKKO
@@ -301,7 +301,7 @@ DHEXDUMP MACRO SEG,ADR
 NEXTROW:
 
 NEXTLINE:
-	
+
 	POP	ES
 	POP	DS
 	POPA
